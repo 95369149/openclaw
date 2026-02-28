@@ -135,6 +135,20 @@ Repo: https://github.com/openclaw/openclaw
 - **不写视为任务未闭环**
 - 读取记忆文件时使用绝对路径 `/Users/apple/.openclaw/workspace/memory/`
 
+## ⚠️ 压缩后恢复铁律（所有 Agent 必须执行）
+
+**每次上下文压缩/重启/新 session 后，第一步必须读记忆，不读完不许回复任何消息。**
+
+```
+1. read memory/.abstract          → 系统架构、agent 编制
+2. read memory/task-board.json    → 当前任务状态
+3. read memory/2026-MM-DD.md      → 今日工作日志（不存在读昨天）
+4. session_status                 → 确认当前模型
+```
+
+**违反后果：用过时信息操作，改坏配置，浪费厂长时间。**
+**2026-02-26 教训：kitt 压缩后没读记忆，用旧数据把 jimmy 模型改错、写重复文件、改坏 channels 配置。**
+
 ## 子 Agent 调度规则
 
 - **派发后不傻等**：spawn 后继续处理其他事务
@@ -144,3 +158,38 @@ Repo: https://github.com/openclaw/openclaw
 - **注意**：子 agent 只注入 AGENTS.md + TOOLS.md，不注入 SOUL.md/IDENTITY.md/USER.md
 - **sessions_send 不可用**：子 agent 默认没有 session 工具，这是设计如此，不要尝试开放
 - **workspace 已共享**：所有 agent 共享 /Users/apple/.openclaw/workspace/，可互相读写记忆文件
+
+### 子 Agent 写文件兜底机制（v1.0）
+
+子 agent 写文件成功率低（实测 <30%），必须有兜底流程。
+
+**派发规则：**
+1. 任务描述第一句就写"⚠️ 第一步：创建文件 memory/shared/xxx.md 并写入标题"
+2. 输出要求控制在 1000 字以内（减少 token 耗尽风险）
+3. 复杂任务拆成 2-3 个子任务分别派发
+
+**验收流程（子 agent 完成后 jimmy 必须执行）：**
+```
+1. ls memory/shared/ | grep "<预期文件名>"
+2. 文件存在 → 读取验收质量
+3. 文件不存在 → sessions_history(sessionKey, limit=5, includeTools=true)
+4. 从 history 提取有价值内容 → jimmy 自己写入文件
+5. 更新 task-board.json
+```
+
+**派发模板（更新版）：**
+```
+sessions_spawn(agentId="<agent>", task="
+⚠️ 第一步：立即创建文件 memory/shared/2026-MM-DD_<agent>_<简述>.md，写入标题和时间戳。
+然后开始任务：<一句话任务描述>
+背景：<1-2句>
+输出：<格式要求，控制在1000字以内>
+每完成一个章节就追加写入文件，不要等全部完成再写。
+")
+```
+
+### 配置变更协议（v1.0）
+
+子 agent **禁止**直接修改 `openclaw.json` 或重启 gateway。
+如需配置变更，写入 `memory/shared/pending-config-<日期>_<agent>_<简述>.md`，格式见 `memory/shared/config-change-protocol.md`。
+jimmy 心跳时检查 pending 文件 → 验证 → 展示厂长确认 → 执行。
