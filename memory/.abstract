@@ -30,8 +30,8 @@
 
 | Agent | 模型 | 层级 | 定位 | 成本 |
 |-------|------|------|------|------|
-| jimmy | metaapi/gpt-5.3-codex | L0 | 调度中枢 + 浏览器 + 碰撞 | 💰 |
-| deep | metaapi/gpt-5.3-codex | L1 | 中文/代码/批量（主力）| 💰 |
+| jimmy | metaapi/gpt-5.3-codex | L0 | 调度中枢 + 验收（不接重活） | 💰 |
+| deep | metaapi/gpt-5.3-codex | L1 | 中文/代码/批量/全量审计 | 💰 |
 | logic | mynewapi/claude-sonnet-4-6 | L1 | 数学/推理 | 💰 |
 | main | google-gemini-cli/gemini-3-pro-preview | L1 | 多模态/长文档 | 🆓 |
 | kitt | mynewapi/claude-sonnet-4-6 | L2 | 架构/决策（慎用）| 💰 |

@@ -129,11 +129,22 @@ Repo: https://github.com/openclaw/openclaw
 
 ## 子 Agent 强制规则
 
+> **详细协议见**：`/Users/apple/.openclaw/workspace/memory/01_强制规则/多Agent协同与公共记忆协议.md`
+
 - **主工作区路径**：`/Users/apple/.openclaw/workspace/`（记忆文件、配置文件都在这里，不是你自己的 workspace）
-- **任务完成后必须写入** `/Users/apple/.openclaw/workspace/memory/shared/YYYY-MM-DD_<agentId>_<简述>.md`
-- 内容包含：做了什么、结果、关键发现
-- **不写视为任务未闭环**
-- 读取记忆文件时使用绝对路径 `/Users/apple/.openclaw/workspace/memory/`
+- **权限边界铁律**：除了 Jimmy，其他子 Agent 绝对禁止修改 `openclaw.json` 和 `task-board.json`。
+- **开始任务前必须先读公共记忆**：
+  ```
+  1. cat memory/task-board.json     → 了解当前任务全局状态
+  2. ls -t memory/shared/ | head -5 → 看最新的共享记忆
+  3. 读取与当前任务相关的 shared/ 文件
+  ```
+  **不读就开始干活 = 重复劳动 + 浪费 token**
+- **任务中必须留痕**：执行多步任务时，随时追加写入中间态到 `shared/`。
+- **任务完成后必须闭环**：
+  1. 写入 `/Users/apple/.openclaw/workspace/memory/shared/YYYY-MM-DD_<agentId>_<简述>.md`
+  2. 写完后必须调用 `read` 或检索工具验证文件已落盘
+  3. **不写或不验，视为任务未完成**
 
 ## ⚠️ 压缩后恢复铁律（所有 Agent 必须执行）
 
@@ -177,14 +188,19 @@ Repo: https://github.com/openclaw/openclaw
 5. 更新 task-board.json
 ```
 
-**派发模板（更新版）：**
+**派发模板（v2.0 强制读记忆版）：**
 ```
 sessions_spawn(agentId="<agent>", task="
-⚠️ 第一步：立即创建文件 memory/shared/2026-MM-DD_<agent>_<简述>.md，写入标题和时间戳。
+⚠️ 强制前置步骤（不执行则任务无效）：
+1. read /Users/apple/.openclaw/workspace/memory/task-board.json
+2. exec: ls /Users/apple/.openclaw/workspace/memory/shared/ | tail -5
+3. 创建文件 /Users/apple/.openclaw/workspace/memory/shared/2026-MM-DD_<agent>_<简述>.md，写入标题和时间戳
+
 然后开始任务：<一句话任务描述>
 背景：<1-2句>
 输出：<格式要求，控制在1000字以内>
 每完成一个章节就追加写入文件，不要等全部完成再写。
+所有文件路径必须使用绝对路径 /Users/apple/.openclaw/workspace/
 ")
 ```
 

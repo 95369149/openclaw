@@ -1,0 +1,34 @@
+# OpenClaw workspace rsync 排除规则 v2.0
+# 防套娃
+黄金备份
+agents
+
+# 旧目录（已废弃，内容已迁移到正式目录）
+short_term
+long_term
+inbox
+working
+_meta
+建议提案箱
+03_semantic-memory
+03_知识库
+03_%E8%AF%AD%E4%B9%89%E8%AE%B0%E5%BF%86
+
+# iCloud 冲突副本（根因：双向同步产生 " 2.md", " 3.md" 等）
+*\ [0-9].md
+*\ [0-9][0-9].md
+*\ [0-9][0-9][0-9].md
+*\ 2
+*\ 3
+*\ 4
+*\ 5
+
+# 运行时/临时文件
+engine_data
+__pycache__
+*.pyc
+.DS_Store
+node_modules
+.git
+*.log
+*.icloud

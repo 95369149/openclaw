@@ -1,0 +1,142 @@
+# Repository Guidelines
+
+- Repo: https://github.com/openclaw/openclaw
+- GitHub issues/comments/PR comments: use literal multiline strings or `-F - <<'EOF'` for real newlines; never embed `\\n`.
+
+## Project Structure & Module Organization
+
+- Source: `src/` (CLI in `src/cli`, commands in `src/commands`, web provider in `src/provider-web.ts`, infra in `src/infra`, media in `src/media`).
+- Tests: colocated `*.test.ts`. Docs: `docs/`. Built output: `dist/`.
+- Plugins/extensions: `extensions/*` (workspace packages). Plugin-only deps stay in extension `package.json`.
+- Plugins: `npm install --omit=dev` in plugin dir; runtime deps in `dependencies`. Avoid `workspace:*` in `dependencies`; put `openclaw` in `devDependencies` or `peerDependencies`.
+- Installers: sibling repo `../openclaw.ai` (`public/install.sh`, `public/install-cli.sh`, `public/install.ps1`).
+- Channels: consider **all** built-in + extension channels when refactoring shared logic.
+  - Core: `src/telegram`, `src/discord`, `src/slack`, `src/signal`, `src/imessage`, `src/web`, `src/channels`, `src/routing`
+  - Extensions: `extensions/*` (msteams, matrix, zalo, zalouser, voice-call, etc.)
+- When adding channels/extensions/docs, update `.github/labeler.yml` and create matching GitHub labels.
+
+## Docs (Mintlify)
+
+- Hosted at docs.openclaw.ai. Internal links: root-relative, no `.md`/`.mdx` (e.g. `[Config](/configuration)`).
+- Anchors: `[Hooks](/configuration#hooks)`. Avoid em dashes/apostrophes in headings (breaks anchors).
+- README: use absolute `https://docs.openclaw.ai/...` URLs. Docs content must be generic (no personal hostnames/paths).
+- When working with docs, read the mintlify skill. End replies with referenced URLs.
+- i18n (`docs/zh-CN/**`): generated — don't edit unless asked. Pipeline: update English → adjust glossary → run `scripts/docs-i18n`.
+
+## Build, Test & Dev Commands
+
+- Runtime: Node **22+** (keep Node + Bun paths working). Prefer Bun for TS execution.
+- Install: `pnpm install` (also: `bun install`, keep lockfiles in sync)
+- If deps missing, run install then retry the command once.
+- Pre-commit: `prek install`
+- Dev CLI: `pnpm openclaw ...` or `pnpm dev`
+- Build/typecheck: `pnpm build` / `pnpm tsgo`
+- Lint: `pnpm check` / Format: `pnpm format` (check) / `pnpm format:fix` (write)
+- Tests: `pnpm test` (vitest) / `pnpm test:coverage`
+- Live tests: `CLAWDBOT_LIVE_TEST=1 pnpm test:live` or `LIVE=1 pnpm test:live`
+- Docker: `pnpm test:docker:live-models`, `pnpm test:docker:live-gateway`, `pnpm test:docker:onboard`
+- Mac packaging: `scripts/package-mac-app.sh`. Release checklist: `docs/platforms/mac/release.md`.
+
+## Coding Style & Naming
+
+- TypeScript (ESM). Strict typing; avoid `any`. Never add `@ts-nocheck`.
+- Formatting/linting: Oxlint + Oxfmt; run `pnpm check` before commits.
+- No prototype mutation for sharing class behavior. Use explicit inheritance/composition.
+- Brief comments for tricky logic. Keep files under ~500-700 LOC; extract helpers.
+- Naming: **OpenClaw** for product/docs headings; `openclaw` for CLI/package/paths/config.
+- CLI progress: use `src/cli/progress.ts`. Status tables: `src/terminal/table.ts`. Colors: `src/terminal/palette.ts`.
+- Tool schema guardrails: no `Type.Union` in tool inputs; no `anyOf`/`oneOf`/`allOf`. Use `stringEnum`/`optionalStringEnum`. Avoid raw `format` property names.
+- SwiftUI: prefer `Observation` framework (`@Observable`, `@Bindable`) over `ObservableObject`/`@StateObject`.
+
+## Testing Guidelines
+
+- Vitest with V8 coverage (70% threshold). Naming: `*.test.ts`; e2e: `*.e2e.test.ts`.
+- Run `pnpm test` before pushing. Max 16 test workers.
+- Prefer per-instance stubs over prototype mutation in tests.
+- Prefer real connected devices (iOS/Android) over simulators.
+- Full details: `docs/testing.md`.
+
+## Release Channels
+
+- **stable**: tagged `vYYYY.M.D`, npm `latest`.
+- **beta**: `vYYYY.M.D-beta.N`, npm `beta`.
+- **dev**: `main` branch head (no tag).
+
+## Commit & PR Guidelines
+
+- Create commits with `scripts/committer "<msg>" <file...>` (avoid manual `git add`/`git commit`).
+- Concise, action-oriented messages (e.g. `CLI: add verbose flag to send`). Group related changes.
+- PR template: `.github/pull_request_template.md`. Issue templates: `.github/ISSUE_TEMPLATE/`.
+- Full maintainer workflow: `.agents/skills/PR_WORKFLOW.md`.
+- `sync` shorthand: commit dirty changes → `git pull --rebase` → `git push`.
+- If `git branch -d` is blocked: `git update-ref -d refs/heads/<branch>`.
+
+## Multi-Agent Safety
+
+- Do **not** create/apply/drop `git stash` (including `--autostash`).
+- Do **not** create/remove/modify `git worktree` or switch branches unless explicitly requested.
+- Scope commits to your changes only ("commit all" = grouped chunks). Keep unrecognized files untouched.
+- Focus reports on your edits; brief "other files present" note only if relevant.
+- Lint/format churn: auto-resolve formatting-only diffs without asking; only ask for semantic changes.
+
+## Security & Configuration
+
+- Web creds: `~/.openclaw/credentials/`. Pi sessions: `~/.openclaw/sessions/`.
+- Never commit real phone numbers, videos, or live config values — use fake placeholders.
+- Release flow: read `docs/reference/RELEASING.md` and `docs/platforms/mac/release.md` first.
+- Do not change version numbers without explicit consent. Always ask before npm publish/release.
+- Never send streaming/partial replies to external messaging (WhatsApp, Telegram) — only final replies.
+
+## Version Locations
+
+`package.json` (CLI), `apps/android/app/build.gradle.kts`, `apps/ios/Sources/Info.plist` + `apps/ios/Tests/Info.plist`, `apps/macos/Sources/OpenClaw/Resources/Info.plist`, `docs/install/updating.md`, `docs/platforms/mac/release.md`, Peekaboo Xcode Info.plists. "Bump everywhere" excludes `appcast.xml` (only for Sparkle releases).
+
+## Agent-Specific Notes
+
+- Vocabulary: "makeup" = "mac app".
+- Never edit `node_modules`. Skill notes go in `TOOLS.md` or `AGENTS.md`.
+- When adding `AGENTS.md` anywhere, also add a `CLAUDE.md` symlink.
+- When working on a GitHub Issue/PR, print the full URL at the end.
+- Respond with high-confidence answers only; verify in code, don't guess.
+- Never update the Carbon dependency.
+- Patched deps (`pnpm.patchedDependencies`) must use exact versions (no `^`/`~`). Patching requires explicit approval.
+- Connection providers: update every UI surface and docs when adding new ones.
+- A2UI bundle hash (`src/canvas-host/a2ui/.bundle.hash`): auto-generated, regenerate via `pnpm canvas:a2ui:bundle`.
+- Do not rebuild macOS app over SSH; run directly on Mac.
+- Bug investigations: read source of relevant npm deps and local code before concluding.
+- Session files: `~/.openclaw/agents/<agentId>/sessions/*.jsonl`.
+- Changelog: user-facing changes only; pure test additions don't need entries.
+
+## NPM Publish & Plugin Release
+
+- Use 1password skill; all `op` commands in a fresh tmux session.
+- Sign in: `eval "$(op signin --account my.1password.com)"`
+- OTP: `op read 'op://Private/Npmjs/one-time password?attribute=otp'`
+- Publish: `npm publish --access public --otp="<otp>"` from package dir.
+- Verify: `npm view <pkg> version --userconfig "$(mktemp)"`.
+- Plugin fast path: release only already-on-npm plugins (list in `docs/reference/RELEASING.md`). Compare local version to npm; only publish when different. Never publish from repo root unless requested.
+
+## Changelog & Release Notes
+
+- Mac beta: tag `vYYYY.M.D-beta.N`, create prerelease, attach `.zip` + `.dSYM.zip` (+ `.dmg` if available).
+- `CHANGELOG.md`: `### Changes` first, then `### Fixes` (deduped, user-facing first).
+- Pre-release checks: `pnpm release:check`, `pnpm test:install:smoke`.
+
+## exe.dev VM Ops
+
+- Access: `ssh exe.dev` → `ssh vm-name`. Keep tmux for long ops.
+- Update: `sudo npm i -g openclaw@latest`. Config: `openclaw config set ...`; ensure `gateway.mode=local`.
+- Restart: `pkill -9 -f openclaw-gateway || true; nohup openclaw gateway run --bind loopback --port 18789 --force > /tmp/openclaw-gateway.log 2>&1 &`
+- Verify: `openclaw channels status --probe`.
+
+## GHSA Advisory Patches
+
+- Fetch: `gh api /repos/openclaw/openclaw/security-advisories/<GHSA>`
+- Private fork PRs must be closed before publish. Build patch JSON via jq with heredoc for description.
+- Patch+publish: `gh api -X PATCH .../<GHSA> --input /tmp/ghsa.patch.json` (include `"state":"published"`).
+
+## Troubleshooting
+
+- Run `openclaw doctor` for rebrand/migration issues (see `docs/gateway/doctor.md`).
+- macOS gateway: start/stop via the app or `scripts/restart-mac.sh`; verify with `launchctl print gui/$UID | grep openclaw`.
+- macOS logs: `./scripts/clawlog.sh`.
