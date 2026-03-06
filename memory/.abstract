@@ -1,6 +1,6 @@
 # Memory Index (L0)
 > 每次启动只读这个文件 + task-board.json + 今日日志。需要详情再读 L1/L2。
-> Last Updated: 2026-03-03 18:58
+> Last Updated: 2026-03-04 03:00
 
 ## 目录结构
 | 目录 | 内容 | 优先级 |
@@ -23,36 +23,38 @@
 | ops/ | 运维状态（cron 写入，心跳读取）| P0 |
 | templates/ | 模板文件 | P1 |
 
-## Agent 编制（5员）
+## Agent 编制（4员）
 
-> ⚠️ 唯一权威源：`01_强制规则/排兵布阵.md` v6.0
+> ⚠️ 唯一权威源：`01_强制规则/排兵布阵.md` v8.0
 > 以下为速查摘要，冲突时以排兵布阵为准。
-> 最后校准：2026-03-03 18:58（以 openclaw.json 实际配置为准）
+> 最后校准：2026-03-06 18:27（以 openclaw.json 实际配置为准）
 
 | Agent | 模型 | 层级 | 定位 | 成本 |
 |-------|------|------|------|------|
-| jimmy | mynewapi/claude-opus-4-6 | L0 | 调度中枢 + 浏览器 + 碰撞 | 💰 |
-| deep | metaapi/gpt-5.3-codex | L1 | 中文/代码/批量（主力）| 💰 |
-| logic | mynewapi/claude-sonnet-4-6 | L1 | 数学/推理 | 💰 |
+| jimmy | mygptapi/gpt-5.4 | L0 | 调度中枢 + 浏览器 + 碰撞 | 💰 |
+| deep | mygptapi/gpt-5.4 | L1 | 中文/代码/批量（主力）| 💰 |
 | main | google-gemini-cli/gemini-3-pro-preview | L1 | 多模态/长文档 | 🆓 |
-| kitt | mynewapi/claude-sonnet-4-6 | L2 | 架构/决策（慎用）| 💰 |
+| kitt | mynewapi/claude-sonnet-4-6-thinking | L1 | 深度推理+架构决策（合并原logic）| 💰💰 |
+
+> v8.0 变更：logic 已合并入 kitt，编制从5员精简为4员。
 
 ## 快速路由
-- 厂长指令 → jimmy 判断意图桶（10桶）→ 派发对应 agent
+- 厂长指令 → jimmy 判断意图桶（11桶）→ 派发对应 agent
 - 不确定派谁 → 默认 deep（成本最低）
+- 需要推理>2步 或 不可逆决策 → kitt
 - 厂长指定 agent → 无条件服从
 - 需要外部信息 → jimmy 自己碰撞（web_search/Perplexity）
 - agent 失败 → 换 agent 重试一次，再失败报告厂长
 
-## Provider 状态（2026-03-03 更新）
+## Provider 状态（2026-03-06 更新）
 | Provider | 状态 |
 |----------|------|
-| mynewapi | ✅ 已恢复（opus + sonnet） |
-| metaapi | ✅ 正常（gpt-5.3-codex） |
-| xjrouter | ❌ auth_unavailable |
+| mynewapi | ✅ 正常（opus + sonnet + sonnet-thinking） |
+| mygptapi | ✅ 正常（gpt-5.4 + gpt-5.3-codex） |
+| xjrouter | 已从默认轮换移除 |
 | google-gemini-cli | ✅ 正常 |
-| google-gemini | ✅ 正常 |
-| groq | ✅ 正常 |
+| google-gemini | 保留定义，已从默认轮换移除 |
+| groq | 保留定义，已从默认轮换移除 |
 
 ## 公共记忆
 - `shared/` — agent 完成任务后必须写记录
@@ -65,12 +67,17 @@
 - **softThresholdTokens = 40000**：提前触发记忆刷新
 - **sessionMemory = true**：历史会话可搜索
 
-## 新增工具（2026-03-03）
+## 新增工具（2026-03-05）
 - **agent-browser**：AI Agent 专用浏览器自动化 CLI，Token 节省 95%+
 - **Perplexity 外链浏览器**：通过 OpenClaw browser 工具操作 Perplexity 进行外部碰撞
+- **apply_manifest.py**：确定性 manifest 落地执行器（/workspace/bin/），子 agent 返回 JSON → 脚本原子写入文件
+- **next_section.py**：长文档续写指针（待部署）
 
 ## 当前状态
 - 活跃任务: 见 task-board.json
-- 今日日志: 2026-03-03.md
+- 今日日志: 2026-03-06.md
 - 碰撞规则: 01_强制规则/外部碰撞规则.md
-- 排兵布阵: 01_强制规则/排兵布阵.md v6.0（唯一权威源）
+- 排兵布阵: 01_强制规则/排兵布阵.md v8.0（唯一权威源）
+- QMD: 已修复到稳定路径 `/Users/apple/.npm-global/bin/qmd`
+- Heartbeat: 已关闭，改为后续 cron 方案接管
+- WhatsApp: 已关闭，避免 TLS 重连噪音影响主系统
