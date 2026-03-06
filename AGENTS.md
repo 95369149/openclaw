@@ -77,6 +77,8 @@ Repo: https://github.com/openclaw/openclaw
 - Release flow: read `docs/reference/RELEASING.md` and `docs/platforms/mac/release.md` first
 - Do not change version numbers without explicit consent. Always ask before npm publish/release
 - Never send streaming/partial replies to external messaging — only final replies
+- Before modifying `~/.openclaw/openclaw.json` or other startup-critical files, create a timestamped backup first, explain risk + rollback plan, and after changes run `openclaw gateway status`
+- Any startup/config change must leave the user with a one-line rollback command, typically: `cp <backup> ~/.openclaw/openclaw.json && openclaw gateway restart`
 
 ## Version Locations
 
@@ -163,7 +165,7 @@ Repo: https://github.com/openclaw/openclaw
 ## 子 Agent 调度规则
 
 - **派发后不傻等**：spawn 后继续处理其他事务
-- **回报机制**：子 agent 完成后 OpenClaw 自动 announce 到厂长的聊天渠道
+- **回报机制**：子 agent 完成后静默落盘到 memory/shared/，由 jimmy 验收并向厂长汇报摘要，系统绝对禁止自动 announce 原始信息打扰厂长。
 - **jimmy 验收**：用 `subagents list` 查状态，完成后读 `memory/shared/` 新文件验收
 - **超时处理**：超过预期时间未完成，查 subagents list 状态，失败则换 agent 或降级自己做
 - **注意**：子 agent 只注入 AGENTS.md + TOOLS.md，不注入 SOUL.md/IDENTITY.md/USER.md
