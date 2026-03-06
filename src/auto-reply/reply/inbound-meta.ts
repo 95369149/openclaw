@@ -60,18 +60,20 @@ export function buildInboundUserContextPrefix(ctx: TemplateContext): string {
   const chatType = normalizeChatType(ctx.ChatType);
   const isDirect = !chatType || chatType === "direct";
 
-  const conversationInfo = {
-    message_id: safeTrim(ctx.MessageSid),
-    conversation_label: isDirect ? undefined : safeTrim(ctx.ConversationLabel),
-    sender: safeTrim(ctx.SenderE164) ?? safeTrim(ctx.SenderId) ?? safeTrim(ctx.SenderUsername),
-    group_subject: safeTrim(ctx.GroupSubject),
-    group_channel: safeTrim(ctx.GroupChannel),
-    group_space: safeTrim(ctx.GroupSpace),
-    thread_label: safeTrim(ctx.ThreadLabel),
-    is_forum: ctx.IsForum === true ? true : undefined,
-    was_mentioned: ctx.WasMentioned === true ? true : undefined,
-  };
-  if (Object.values(conversationInfo).some((v) => v !== undefined)) {
+  const conversationInfo = isDirect
+    ? undefined
+    : {
+        message_id: safeTrim(ctx.MessageSid),
+        conversation_label: safeTrim(ctx.ConversationLabel),
+        sender: safeTrim(ctx.SenderE164) ?? safeTrim(ctx.SenderId) ?? safeTrim(ctx.SenderUsername),
+        group_subject: safeTrim(ctx.GroupSubject),
+        group_channel: safeTrim(ctx.GroupChannel),
+        group_space: safeTrim(ctx.GroupSpace),
+        thread_label: safeTrim(ctx.ThreadLabel),
+        is_forum: ctx.IsForum === true ? true : undefined,
+        was_mentioned: ctx.WasMentioned === true ? true : undefined,
+      };
+  if (conversationInfo && Object.values(conversationInfo).some((v) => v !== undefined)) {
     blocks.push(
       [
         "Conversation info (untrusted metadata):",

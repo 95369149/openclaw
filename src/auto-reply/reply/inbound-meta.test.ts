@@ -121,6 +121,8 @@ describe("buildInboundUserContextPrefix", () => {
     const text = buildInboundUserContextPrefix({
       ChatType: "direct",
       ConversationLabel: "openclaw-tui",
+      MessageSid: "msg-123",
+      SenderId: "user@example.com",
     } as TemplateContext);
 
     expect(text).toBe("");
@@ -136,9 +138,9 @@ describe("buildInboundUserContextPrefix", () => {
     expect(text).toContain('"conversation_label": "ops-room"');
   });
 
-  it("includes sender identifier in conversation info", () => {
+  it("includes sender identifier in conversation info for group chats", () => {
     const text = buildInboundUserContextPrefix({
-      ChatType: "direct",
+      ChatType: "group",
       SenderE164: " +15551234567 ",
     } as TemplateContext);
 
@@ -146,9 +148,9 @@ describe("buildInboundUserContextPrefix", () => {
     expect(conversationInfo["sender"]).toBe("+15551234567");
   });
 
-  it("includes message_id in conversation info", () => {
+  it("includes message_id in conversation info for group chats", () => {
     const text = buildInboundUserContextPrefix({
-      ChatType: "direct",
+      ChatType: "group",
       MessageSid: "  msg-123  ",
     } as TemplateContext);
 
@@ -156,9 +158,9 @@ describe("buildInboundUserContextPrefix", () => {
     expect(conversationInfo["message_id"]).toBe("msg-123");
   });
 
-  it("falls back to SenderId when sender phone is missing", () => {
+  it("falls back to SenderId when sender phone is missing in group chats", () => {
     const text = buildInboundUserContextPrefix({
-      ChatType: "direct",
+      ChatType: "group",
       SenderId: " user@example.com ",
     } as TemplateContext);
 
