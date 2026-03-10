@@ -19,11 +19,15 @@
   - 子 agent 仍在运行 → 继续等待，不干预
 - 无活跃任务 → 跳过
 
-### 3. 轻量 Provider Ping
-- mynewapi: 发一次最短请求（max_tokens:1），5s 超时
-- xjrouter: 发一次最短请求（max_tokens:1），5s 超时
-- 单个失败 → 告警并标记该 provider 不可用
-- 全部失败 → 告警厂长："所有付费 provider 不可用，今天只用 main(gemini)"
+### 3. Provider 状态检查（v4.0 新增）
+- 运行 `bash memory/scripts/check-provider-status.sh`
+- 读取 `ops/provider-status.json`
+- 检查各 provider 状态：
+  - `status: "ok"` → 正常
+  - `status: "degraded"` → 降级，告警但不阻断
+  - `status: "down"` → 不可用，从路由中临时移除
+- 如果所有付费 provider 都 down → 告警厂长："所有付费 provider 不可用，今天只用 main(gemini)"
+- 状态写入 `ops/state.json` 的 `providerStatus` 字段
 
 ### 4. Gateway 状态
 - `openclaw gateway status`
