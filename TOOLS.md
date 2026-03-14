@@ -38,3 +38,14 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+### PinchTab (Browser Automation)
+
+- **Executable**: `~/bin/pinchtab`
+- **Server URL**: `http://127.0.0.1:9867`
+- **Skill Path**: `~/.openclaw/workspace/skills/pinchtab/SKILL.md`
+- **Usage**:
+  - `~/bin/pinchtab nav <url>` (Navigate)
+  - `~/bin/pinchtab snap -i -c` (Get interactive elements)
+  - `~/bin/pinchtab click <ref>` (Click element)
+  - `~/bin/pinchtab text` (Extract readable text, ~800 tokens)

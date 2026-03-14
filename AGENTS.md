@@ -206,8 +206,18 @@ sessions_spawn(agentId="<agent>", task="
 ")
 ```
 
-### 配置变更协议（v1.0）
+### 交叉审核机制（Reality Checker 模式）
 
-子 agent **禁止**直接修改 `openclaw.json` 或重启 gateway。
-如需配置变更，写入 `memory/shared/pending-config-<日期>_<agent>_<简述>.md`，格式见 `memory/shared/config-change-protocol.md`。
-jimmy 心跳时检查 pending 文件 → 验证 → 展示厂长确认 → 执行。
+借鉴 `agency-agents` 最佳实践，系统引入**现实检查器（Reality Checker）**机制来防止幻觉和质量下降：
+
+**核心原则**：
+- **执行与审核分离**：干活的 Agent 不能自己审核自己。
+- **Kitt 负责终审**：涉及架构设计、复杂代码、长文报告、对外发布的内容，Jimmy/Deep 完成初稿后，必须提交给 Kitt 审查。
+- **只审结果，不接管任务**：Kitt 的职责是挑刺、找漏洞、查文档一致性，而不是替 Deep 写代码。
+- **一键回炉**：Kitt 发现问题后，输出修正要求，由原 Agent 重做。
+
+**典型流程**：
+1. Jimmy 派发编写代码任务给 Deep
+2. Deep 完成并输出到 `memory/tmp/`
+3. Jimmy 触发 Kitt 审核："请作为 Reality Checker 审查该输出，重点看红线安全和架构规范"
+4. 审核通过 → 写入最终路径；审核失败 → 打回重做
