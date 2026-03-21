@@ -379,17 +379,20 @@ function buildChannelManagementSchema() {
   };
 }
 
-function buildMessageToolSchemaProps(options: {
-  includeButtons: boolean;
-  includeCards: boolean;
-  includeComponents: boolean;
-}) {
+function buildMessageToolSchemaProps(
+  actions: readonly string[],
+  options: {
+    includeButtons: boolean;
+    includeCards: boolean;
+    includeComponents: boolean;
+  },
+) {
   return {
     ...buildRoutingSchema(),
     ...buildSendSchema(options),
     ...buildReactionSchema(),
     ...buildFetchSchema(),
-    ...buildPollSchema(),
+    ...(actions.includes("poll") ? buildPollSchema() : {}),
     ...buildChannelTargetSchema(),
     ...buildStickerSchema(),
     ...buildThreadSchema(),
@@ -405,7 +408,7 @@ function buildMessageToolSchemaFromActions(
   actions: readonly string[],
   options: { includeButtons: boolean; includeCards: boolean; includeComponents: boolean },
 ) {
-  const props = buildMessageToolSchemaProps(options);
+  const props = buildMessageToolSchemaProps(actions, options);
   return Type.Object({
     action: stringEnum(actions),
     ...props,
@@ -599,6 +602,26 @@ export function createMessageTool(options?: MessageToolOptions): AnyAgentTool {
       const action = readStringParam(params, "action", {
         required: true,
       }) as ChannelMessageActionName;
+
+      if (action === "send") {
+        const pollOnlyKeys = [
+          "pollQuestion",
+          "pollOption",
+          "pollOptionId",
+          "pollOptionIds",
+          "pollOptionIndex",
+          "pollOptionIndexes",
+          "pollDurationHours",
+          "pollDurationSeconds",
+          "pollAnonymous",
+          "pollMulti",
+          "pollPublic",
+          "pollId",
+        ] as const;
+        for (const key of pollOnlyKeys) {
+          delete params[key];
+        }
+      }
       const requireExplicitTarget = options?.requireExplicitTarget === true;
       if (requireExplicitTarget && actionNeedsExplicitTarget(action)) {
         const explicitTarget =
