@@ -19,6 +19,7 @@ import { fetchWithSsrFGuard } from "../infra/net/fetch-guard.js";
 import { SsrFBlockedError } from "../infra/net/ssrf.js";
 import { enqueueSystemEvent } from "../infra/system-events.js";
 import { getChildLogger } from "../logging.js";
+import { guardedRunIsolatedAgentJob } from "../orchestrator/agent_job_guard.js";
 import { normalizeAgentId, toAgentStoreSessionKey } from "../routing/session-key.js";
 import { defaultRuntime } from "../runtime.js";
 
@@ -187,15 +188,24 @@ export function buildGatewayCronService(params: {
     },
     runIsolatedAgentJob: async ({ job, message }) => {
       const { agentId, cfg: runtimeConfig } = resolveCronAgent(job.agentId);
-      return await runCronIsolatedAgentTurn({
-        cfg: runtimeConfig,
-        deps: params.deps,
-        job,
-        message,
-        agentId,
-        sessionKey: `cron:${job.id}`,
-        lane: "cron",
+      const guarded = await guardedRunIsolatedAgentJob({
+        cronJobId: job.id,
+        cronJobName: job.name ?? job.id,
+        run: () =>
+          runCronIsolatedAgentTurn({
+            cfg: runtimeConfig,
+            deps: params.deps,
+            job,
+            message,
+            agentId,
+            sessionKey: `cron:${job.id}`,
+            lane: "cron",
+          }),
       });
+      if (guarded.status === "dead_letter") {
+        return { status: "error", error: guarded.error ?? "dead_letter: max retries exceeded" };
+      }
+      return guarded.result!;
     },
     log: getChildLogger({ module: "cron", storePath }),
     onEvent: (evt) => {
