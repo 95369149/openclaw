@@ -1,32 +1,43 @@
 // ═══════════════════════════════════════════════════════════════════════
 // example_video_pipeline.ts
-// Example: video content pipeline using WorkflowOrchestrator
+// 真实视频流水线：脚本生成 → Nano Banana 出图 → ffmpeg 合成视频
 //
-// How to use from a cron agentTurn job:
+// 调用方式：
 //   import { runVideoPipeline } from './example_video_pipeline.js';
 //   const jobId = await runVideoPipeline({ productName: 'XC-3000', keywords: ['激光切割'] });
-//
-// Or enqueue and forget (fire-and-forget pattern):
-//   runVideoPipeline({ ... }).then(jobId => console.log('Enqueued:', jobId));
 // ═══════════════════════════════════════════════════════════════════════
 
+import { spawnSync } from "child_process";
 import * as fs from "fs";
 import * as os from "os";
 import * as path from "path";
 import { enqueueOpenClawJob, waitForJob, summarizeJob } from "./openclaw_integration.js";
 import { StepDefinition, StepContext, CompensateContext } from "./types.js";
 
-// ── Output directory ─────────────────────────────────────────────────
+// ── 路径配置 ─────────────────────────────────────────────────────────
 
-const OUTPUT_DIR = path.join(os.homedir(), ".openclaw", "workspace", "output", "video_pipeline");
+const WORKSPACE = path.join(os.homedir(), ".openclaw", "workspace");
+const OUTPUT_DIR = path.join(WORKSPACE, "output", "video_pipeline");
+const NANO_SCRIPT = path.join(
+  WORKSPACE,
+  "skills",
+  "nano-banana-pro",
+  "scripts",
+  "generate_image.py",
+);
 
 function ensureOutputDir(): void {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 }
 
-// ── Step: Generate script ────────────────────────────────────────────
+// ── Step 1: 生成营销脚本 ──────────────────────────────────────────────
 
-const stepGenerateScript: StepDefinition<{ script: string; scriptPath: string }> = {
+const stepGenerateScript: StepDefinition<{
+  script: string;
+  scriptPath: string;
+  imagePrompts: string[];
+  videoPrompt: string;
+}> = {
   id: "video_pipeline__generate_script",
   name: "生成营销脚本",
   retryPolicy: {
@@ -39,31 +50,40 @@ const stepGenerateScript: StepDefinition<{ script: string; scriptPath: string }>
   async fn(ctx: StepContext) {
     ensureOutputDir();
     const input = ctx.workflowInput as { productName: string; keywords: string[] };
-    ctx.log(`Generating script for: ${input.productName}`);
+    ctx.log(`生成脚本：${input.productName}`);
 
-    // TODO: Replace with real LLM call (e.g. via OpenClaw agent or direct API)
-    await new Promise<void>((r) => setTimeout(r, 500));
+    // 生成3个关键帧图片提示词（英文，Nano Banana 用）
+    const imagePrompts = [
+      `A ${input.productName} CNC cutting machine in action, sparks flying in slow motion, dramatic side lighting from factory windows, wide angle shot, industrial documentary style, 4K ultra sharp, warm orange tones contrasting with cool blue steel`,
+      `Close-up of precision cutting head slicing through material, shallow depth of field, volumetric light beams through dust particles, cinematic style, high detail, 4K`,
+      `Full production line overview with ${input.keywords[0] ?? "automated cutting"} equipment, aerial perspective, clean industrial environment, editorial photography style, 4K sharp focus`,
+    ];
+
+    // 视频合成提示词（用于 ffmpeg 字幕）
+    const videoPrompt = `${input.productName} — ${input.keywords.join("、")}`;
 
     const script = [
       `产品：${input.productName}`,
       `关键词：${input.keywords.join("、")}`,
       `脚本：高精度数控切割，适合中小制造企业，30秒抖音版。`,
+      `前3秒：切割火花特写（视觉冲击）`,
+      `中段：设备全景+精度展示`,
+      `结尾：品牌+联系方式`,
     ].join("\n");
 
     const scriptPath = path.join(OUTPUT_DIR, `${ctx.jobId}_script.txt`);
     fs.writeFileSync(scriptPath, script, "utf-8");
-    ctx.log(`Script saved: ${scriptPath}`);
+    ctx.log(`脚本已保存：${scriptPath}`);
 
-    return { script, scriptPath };
+    return { script, scriptPath, imagePrompts, videoPrompt };
   },
-  // No compensate needed: text file is cheap to discard
 };
 
-// ── Step: Generate images ────────────────────────────────────────────
+// ── Step 2: Nano Banana 生成关键帧图片 ───────────────────────────────
 
 const stepGenerateImages: StepDefinition<{ imagePaths: string[] }> = {
   id: "video_pipeline__generate_images",
-  name: "生成产品图片",
+  name: "生成产品图片（Nano Banana）",
   retryPolicy: {
     maxAttempts: 2,
     initialBackoffMs: 5_000,
@@ -73,21 +93,38 @@ const stepGenerateImages: StepDefinition<{ imagePaths: string[] }> = {
 
   async fn(ctx: StepContext) {
     ensureOutputDir();
-    const { script } = ctx.previousOutputs["video_pipeline__generate_script"] as {
-      script: string;
+    const { imagePrompts } = ctx.previousOutputs["video_pipeline__generate_script"] as {
+      imagePrompts: string[];
     };
-    ctx.log("Generating images...");
 
-    // TODO: Replace with real image generation (e.g. Nano Banana Pro / Gemini Imagen)
-    await new Promise<void>((r) => setTimeout(r, 800));
+    const imagePaths: string[] = [];
+    const ts = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
 
-    const imagePaths = Array.from({ length: 3 }, (_, i) => {
-      const p = path.join(OUTPUT_DIR, `${ctx.jobId}_img_${i}.png`);
-      fs.writeFileSync(p, `placeholder image ${i} for: ${script.slice(0, 30)}`);
-      return p;
-    });
+    for (let i = 0; i < imagePrompts.length; i++) {
+      const prompt = imagePrompts[i];
+      const filename = `${ts}-${ctx.jobId}-img${i}.png`;
+      const outPath = path.join(OUTPUT_DIR, filename);
 
-    ctx.log(`${imagePaths.length} images created`);
+      ctx.log(`生成图片 ${i + 1}/${imagePrompts.length}...`);
+
+      const result = spawnSync(
+        "uv",
+        ["run", NANO_SCRIPT, "--prompt", prompt, "--filename", outPath, "--resolution", "1K"],
+        { encoding: "utf-8", timeout: 120_000 },
+      );
+
+      if (result.status !== 0) {
+        throw new Error(`Nano Banana 失败（图片${i + 1}）: ${result.stderr?.slice(0, 300)}`);
+      }
+
+      if (!fs.existsSync(outPath)) {
+        throw new Error(`图片文件未生成：${outPath}`);
+      }
+
+      ctx.log(`图片 ${i + 1} 已生成：${outPath}`);
+      imagePaths.push(outPath);
+    }
+
     return { imagePaths };
   },
 
@@ -99,7 +136,7 @@ const stepGenerateImages: StepDefinition<{ imagePaths: string[] }> = {
       try {
         if (fs.existsSync(p)) {
           fs.unlinkSync(p);
-          ctx.log(`Deleted: ${p}`);
+          ctx.log(`已删除：${p}`);
         }
       } catch {
         /* best effort */
@@ -108,50 +145,115 @@ const stepGenerateImages: StepDefinition<{ imagePaths: string[] }> = {
   },
 };
 
-// ── Step: Synthesize video (requires human review) ───────────────────
+// ── Step 3: ffmpeg 合成视频（需人工审核） ────────────────────────────
 
-const stepSynthesizeVideo: StepDefinition<{ videoPath: string }> = {
+const stepSynthesizeVideo: StepDefinition<{ videoPath: string; verticalPath: string }> = {
   id: "video_pipeline__synthesize_video",
-  name: "合成视频",
+  name: "合成视频（ffmpeg）",
   retryPolicy: {
     maxAttempts: 2,
-    initialBackoffMs: 10_000,
-    maxBackoffMs: 60_000,
+    initialBackoffMs: 5_000,
+    maxBackoffMs: 30_000,
     backoffMultiplier: 2,
   },
-  requiresHumanReview: true, // ⭐ job suspends here until human approves
+  requiresHumanReview: true, // 合成后暂停，人工确认质量再继续
 
   async fn(ctx: StepContext) {
     ensureOutputDir();
-    const { script } = ctx.previousOutputs["video_pipeline__generate_script"] as { script: string };
     const { imagePaths } = ctx.previousOutputs["video_pipeline__generate_images"] as {
       imagePaths: string[];
     };
-    ctx.log(`Synthesizing video from ${imagePaths.length} images...`);
+    const { videoPrompt } = ctx.previousOutputs["video_pipeline__generate_script"] as {
+      videoPrompt: string;
+    };
 
-    // TODO: Replace with real video synthesis (e.g. Veo / ffmpeg)
-    await new Promise<void>((r) => setTimeout(r, 1_500));
+    const ts = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
+    const videoPath = path.join(OUTPUT_DIR, `${ts}-${ctx.jobId}-draft.mp4`);
+    const verticalPath = path.join(OUTPUT_DIR, `${ts}-${ctx.jobId}-vertical.mp4`);
 
-    const videoPath = path.join(OUTPUT_DIR, `${ctx.jobId}_draft.mp4`);
-    fs.writeFileSync(videoPath, `placeholder video: ${script.slice(0, 40)}`);
-    ctx.log(`Video draft saved: ${videoPath}`);
+    // 生成图片列表文件（ffmpeg concat 格式）
+    const listPath = path.join(OUTPUT_DIR, `${ctx.jobId}_imglist.txt`);
+    const listContent = imagePaths.map((p) => `file '${p}'\nduration 3`).join("\n");
+    fs.writeFileSync(listPath, listContent, "utf-8");
 
-    return { videoPath };
+    ctx.log(`合成横屏视频（${imagePaths.length} 张图，每张3秒）...`);
+
+    // 横屏版：图片序列 → MP4，加字幕
+    const ffmpegResult = spawnSync(
+      "ffmpeg",
+      [
+        "-y",
+        "-f",
+        "concat",
+        "-safe",
+        "0",
+        "-i",
+        listPath,
+        "-vf",
+        `scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,drawtext=text='${videoPrompt}':fontsize=48:fontcolor=white:x=(w-text_w)/2:y=h-80:shadowcolor=black:shadowx=2:shadowy=2`,
+        "-c:v",
+        "libx264",
+        "-pix_fmt",
+        "yuv420p",
+        "-r",
+        "30",
+        videoPath,
+      ],
+      { encoding: "utf-8", timeout: 120_000 },
+    );
+
+    if (ffmpegResult.status !== 0) {
+      throw new Error(`ffmpeg 横屏合成失败: ${ffmpegResult.stderr?.slice(0, 300)}`);
+    }
+
+    ctx.log(`横屏视频已生成：${videoPath}`);
+
+    // 竖屏版（抖音 9:16）
+    const ffmpegVertical = spawnSync(
+      "ffmpeg",
+      [
+        "-y",
+        "-i",
+        videoPath,
+        "-vf",
+        "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2",
+        "-c:a",
+        "copy",
+        verticalPath,
+      ],
+      { encoding: "utf-8", timeout: 60_000 },
+    );
+
+    if (ffmpegVertical.status !== 0) {
+      ctx.log(`竖屏转换失败（非致命）: ${ffmpegVertical.stderr?.slice(0, 200)}`);
+    } else {
+      ctx.log(`竖屏视频已生成：${verticalPath}`);
+    }
+
+    // 清理临时文件
+    try {
+      fs.unlinkSync(listPath);
+    } catch {
+      /* ignore */
+    }
+
+    return { videoPath, verticalPath };
   },
 
   async compensate(ctx: CompensateContext) {
     const out = ctx.previousOutputs["video_pipeline__synthesize_video"] as
-      | { videoPath?: string }
+      | { videoPath?: string; verticalPath?: string }
       | undefined;
-    const p = out?.videoPath;
-    if (p && fs.existsSync(p)) {
-      fs.unlinkSync(p);
-      ctx.log(`Deleted draft: ${p}`);
+    for (const p of [out?.videoPath, out?.verticalPath]) {
+      if (p && fs.existsSync(p)) {
+        fs.unlinkSync(p);
+        ctx.log(`已删除草稿：${p}`);
+      }
     }
   },
 };
 
-// ── All steps for this pipeline ──────────────────────────────────────
+// ── 导出 ─────────────────────────────────────────────────────────────
 
 export const VIDEO_PIPELINE_STEPS: StepDefinition[] = [
   stepGenerateScript,
@@ -159,41 +261,26 @@ export const VIDEO_PIPELINE_STEPS: StepDefinition[] = [
   stepSynthesizeVideo,
 ];
 
-// ── Public API ───────────────────────────────────────────────────────
-
 export interface VideoPipelineInput {
   productName: string;
   keywords: string[];
-  /** Optional: prevents duplicate jobs for the same product run */
   idempotencyKey?: string;
 }
 
-/**
- * Enqueue a video pipeline job and return the jobId immediately.
- * The job runs in the background via the singleton orchestrator.
- *
- * Use this from cron agentTurn jobs or agent tool handlers.
- */
+/** 入队后立即返回 jobId，后台异步执行 */
 export async function runVideoPipeline(input: VideoPipelineInput): Promise<string> {
-  const jobId = await enqueueOpenClawJob({
+  return enqueueOpenClawJob({
     workflowId: "video_pipeline",
     input,
     steps: VIDEO_PIPELINE_STEPS,
     idempotencyKey: input.idempotencyKey,
   });
-  return jobId;
 }
 
-/**
- * Enqueue and wait for the pipeline to reach a terminal or human-review state.
- * Returns a human-readable summary.
- *
- * Use this for short pipelines or when you need the result inline.
- * For long pipelines (video synthesis), prefer runVideoPipeline() + poll later.
- */
+/** 入队并等待结果（适合短流水线或调试用） */
 export async function runVideoPipelineAndWait(
   input: VideoPipelineInput,
-  timeoutMs = 120_000,
+  timeoutMs = 300_000,
 ): Promise<string> {
   const jobId = await runVideoPipeline(input);
   const job = await waitForJob(jobId, { timeoutMs });
