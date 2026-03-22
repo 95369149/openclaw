@@ -17,6 +17,8 @@ import {
   type SessionDeliveryTarget,
 } from "./targets.js";
 
+const TARGET_CHANNEL_PREFIX_RE = /^([a-z0-9_-]+):/i;
+
 export type AgentDeliveryPlan = {
   baseDelivery: SessionDeliveryTarget;
   resolvedChannel: GatewayMessageChannel;
@@ -39,7 +41,7 @@ export function resolveAgentDeliveryPlan(params: {
   const normalizedRequested = requestedRaw ? normalizeMessageChannel(requestedRaw) : undefined;
   const requestedChannel = normalizedRequested || "last";
 
-  const explicitTo =
+  const rawExplicitTo =
     typeof params.explicitTo === "string" && params.explicitTo.trim()
       ? params.explicitTo.trim()
       : undefined;
@@ -47,7 +49,7 @@ export function resolveAgentDeliveryPlan(params: {
   const baseDelivery = resolveSessionDeliveryTarget({
     entry: params.sessionEntry,
     requestedChannel: requestedChannel === INTERNAL_MESSAGE_CHANNEL ? "last" : requestedChannel,
-    explicitTo,
+    explicitTo: rawExplicitTo,
     explicitThreadId: params.explicitThreadId,
   });
 
@@ -70,6 +72,25 @@ export function resolveAgentDeliveryPlan(params: {
       return baseDelivery.channel;
     }
     return params.wantsDelivery ? DEFAULT_CHAT_CHANNEL : INTERNAL_MESSAGE_CHANNEL;
+  })();
+
+  const explicitTo = (() => {
+    if (!rawExplicitTo) {
+      return undefined;
+    }
+    const matchedPrefix = rawExplicitTo.match(TARGET_CHANNEL_PREFIX_RE)?.[1];
+    if (!matchedPrefix) {
+      return rawExplicitTo;
+    }
+    const normalizedPrefix = normalizeMessageChannel(matchedPrefix);
+    if (
+      normalizedPrefix &&
+      isDeliverableMessageChannel(resolvedChannel) &&
+      normalizedPrefix !== resolvedChannel
+    ) {
+      return undefined;
+    }
+    return rawExplicitTo;
   })();
 
   const deliveryTargetMode = explicitTo
