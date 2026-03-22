@@ -15,6 +15,8 @@ const SessionsSpawnToolSchema = Type.Object({
   // Back-compat: older callers used timeoutSeconds for this tool.
   timeoutSeconds: Type.Optional(Type.Number({ minimum: 0 })),
   cleanup: optionalStringEnum(["delete", "keep"] as const),
+  /** Auto-retry on failure/timeout. 0 = disabled (default). Max 3. */
+  maxRetryAttempts: Type.Optional(Type.Number({ minimum: 0, maximum: 3 })),
 });
 
 export function createSessionsSpawnTool(opts?: {
@@ -57,6 +59,11 @@ export function createSessionsSpawnTool(opts?: {
           ? Math.max(0, Math.floor(timeoutSecondsCandidate))
           : undefined;
 
+      const maxRetryAttempts =
+        typeof params.maxRetryAttempts === "number"
+          ? Math.min(Math.max(0, Math.floor(params.maxRetryAttempts)), 3)
+          : undefined;
+
       const result = await spawnSubagentDirect(
         {
           task,
@@ -67,6 +74,7 @@ export function createSessionsSpawnTool(opts?: {
           runTimeoutSeconds,
           cleanup,
           expectsCompletionMessage: true,
+          maxRetryAttempts,
         },
         {
           agentSessionKey: opts?.agentSessionKey,

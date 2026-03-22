@@ -26,6 +26,8 @@ export type SpawnSubagentParams = {
   runTimeoutSeconds?: number;
   cleanup?: "delete" | "keep";
   expectsCompletionMessage?: boolean;
+  /** Auto-retry on failure/timeout. 0 = disabled (default). Max 3. */
+  maxRetryAttempts?: number;
 };
 
 export type SpawnSubagentContext = {
@@ -293,6 +295,7 @@ export async function spawnSubagentDirect(
     model: resolvedModel,
     runTimeoutSeconds,
     expectsCompletionMessage: params.expectsCompletionMessage === true,
+    maxRetryAttempts: params.maxRetryAttempts,
   });
 
   return {

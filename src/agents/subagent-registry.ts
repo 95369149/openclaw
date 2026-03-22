@@ -35,6 +35,12 @@ export type SubagentRunRecord = {
   announceRetryCount?: number;
   /** Timestamp of the last announce retry attempt (for backoff). */
   lastAnnounceRetryAt?: number;
+  /** Auto-retry on failure: max attempts (0 = disabled). */
+  maxRetryAttempts?: number;
+  /** Number of times this run has been retried after failure/timeout. */
+  retryCount?: number;
+  /** Parent runId that spawned this retry (links retry chain). */
+  retryParentRunId?: string;
 };
 
 const subagentRuns = new Map<string, SubagentRunRecord>();
@@ -307,6 +313,24 @@ function ensureListener() {
     }
     persistSubagentRuns();
 
+    // Auto-retry on failure or timeout if budget remains.
+    if (
+      entry.outcome.status !== "ok" &&
+      typeof entry.maxRetryAttempts === "number" &&
+      entry.maxRetryAttempts > 0 &&
+      (entry.retryCount ?? 0) < entry.maxRetryAttempts
+    ) {
+      const nextRetry = (entry.retryCount ?? 0) + 1;
+      const backoffMs = Math.min(3_000 * Math.pow(2, nextRetry - 1), 30_000);
+      console.log(
+        `[SubagentRegistry] Auto-retry ${nextRetry}/${entry.maxRetryAttempts} for "${entry.label ?? entry.task.slice(0, 40)}" in ${backoffMs}ms`,
+      );
+      setTimeout(() => {
+        void scheduleSubagentRetry(evt.runId, entry, nextRetry);
+      }, backoffMs).unref?.();
+      return; // skip announce — retry will announce on final outcome
+    }
+
     if (suppressAnnounceForSteerRestart(entry)) {
       return;
     }
@@ -315,6 +339,68 @@ function ensureListener() {
       return;
     }
   });
+}
+
+async function scheduleSubagentRetry(
+  parentRunId: string,
+  entry: SubagentRunRecord,
+  retryCount: number,
+): Promise<void> {
+  try {
+    const crypto = await import("node:crypto");
+    const newRunId = crypto.randomUUID();
+    const newSessionKey = `${entry.childSessionKey}__retry${retryCount}`;
+
+    const response = await callGateway<{ runId: string }>({
+      method: "agent",
+      params: {
+        message: entry.task,
+        sessionKey: newSessionKey,
+        channel: entry.requesterOrigin?.channel,
+        to: entry.requesterOrigin?.to ?? undefined,
+        accountId: entry.requesterOrigin?.accountId ?? undefined,
+        threadId:
+          entry.requesterOrigin?.threadId != null
+            ? String(entry.requesterOrigin.threadId)
+            : undefined,
+        idempotencyKey: newRunId,
+        deliver: false,
+        lane: AGENT_LANE_SUBAGENT,
+        spawnedBy: entry.requesterSessionKey,
+      },
+      timeoutMs: 10_000,
+    });
+
+    const childRunId =
+      typeof response?.runId === "string" && response.runId ? response.runId : newRunId;
+
+    registerSubagentRun({
+      runId: childRunId,
+      childSessionKey: newSessionKey,
+      requesterSessionKey: entry.requesterSessionKey,
+      requesterOrigin: entry.requesterOrigin,
+      requesterDisplayKey: entry.requesterDisplayKey,
+      task: entry.task,
+      cleanup: entry.cleanup,
+      label: entry.label,
+      model: entry.model,
+      runTimeoutSeconds: entry.runTimeoutSeconds,
+      expectsCompletionMessage: entry.expectsCompletionMessage,
+      maxRetryAttempts: entry.maxRetryAttempts,
+      retryCount,
+      retryParentRunId: parentRunId,
+    });
+  } catch (err) {
+    console.error(
+      `[SubagentRegistry] Auto-retry spawn failed for ${parentRunId}:`,
+      err instanceof Error ? err.message : err,
+    );
+    // Fall back to announcing the original failure
+    const original = subagentRuns.get(parentRunId);
+    if (original && !original.cleanupHandled) {
+      startSubagentAnnounceCleanupFlow(parentRunId, original);
+    }
+  }
 }
 
 function finalizeSubagentCleanup(runId: string, cleanup: "delete" | "keep", didAnnounce: boolean) {
@@ -516,6 +602,11 @@ export function registerSubagentRun(params: {
   model?: string;
   runTimeoutSeconds?: number;
   expectsCompletionMessage?: boolean;
+  /** Auto-retry on failure/timeout. 0 = disabled (default). Max 3. */
+  maxRetryAttempts?: number;
+  /** Internal: retry chain tracking. */
+  retryCount?: number;
+  retryParentRunId?: string;
 }) {
   const now = Date.now();
   const cfg = loadConfig();
@@ -540,6 +631,9 @@ export function registerSubagentRun(params: {
     startedAt: now,
     archiveAtMs,
     cleanupHandled: false,
+    maxRetryAttempts: Math.min(params.maxRetryAttempts ?? 0, 3),
+    retryCount: params.retryCount ?? 0,
+    retryParentRunId: params.retryParentRunId,
   });
   ensureListener();
   persistSubagentRuns();
