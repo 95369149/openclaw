@@ -943,6 +943,41 @@ export function getSubagentRunById(runId: string): SubagentRunRecord | undefined
   return entry ? { ...entry } : undefined;
 }
 
+export function getSubagentRetryChain(rootRunId: string): SubagentRunRecord[] {
+  const root = rootRunId.trim();
+  if (!root) {
+    return [];
+  }
+  const runs = [...subagentRuns.values()];
+  const byParent = new Map<string, SubagentRunRecord[]>();
+  for (const entry of runs) {
+    const parent = entry.retryParentRunId?.trim();
+    if (!parent) {
+      continue;
+    }
+    const list = byParent.get(parent) ?? [];
+    list.push({ ...entry });
+    byParent.set(parent, list);
+  }
+  const out: SubagentRunRecord[] = [];
+  const queue = [root];
+  const seen = new Set<string>();
+  while (queue.length > 0) {
+    const current = queue.shift();
+    if (!current || seen.has(current)) {
+      continue;
+    }
+    seen.add(current);
+    const children = byParent.get(current) ?? [];
+    children.sort((a, b) => (a.retryCount ?? 0) - (b.retryCount ?? 0));
+    for (const child of children) {
+      out.push(child);
+      queue.push(child.runId);
+    }
+  }
+  return out;
+}
+
 export function initSubagentRegistry() {
   restoreSubagentRunsOnce();
 }
