@@ -908,15 +908,16 @@ export async function runSubagentAnnounceFlow(params: {
       startedAt: params.startedAt,
       endedAt: params.endedAt,
     });
+    const validatedFindings = findings.trim() ? findings : "(no output)";
     completionMessage = buildCompletionDeliveryMessage({
-      findings,
+      findings: validatedFindings,
       subagentName,
     });
     const internalSummaryMessage = [
       `[System Message] [sessionId: ${announceSessionId}] A ${announceType} "${taskLabel}" just ${statusLabel}.`,
       "",
       "Result:",
-      findings,
+      validatedFindings,
       "",
       statsLine,
     ].join("\n");
