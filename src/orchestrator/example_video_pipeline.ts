@@ -7,12 +7,12 @@
 //   const jobId = await runVideoPipeline({ productName: 'XC-3000', keywords: ['激光切割'] });
 // ═══════════════════════════════════════════════════════════════════════
 
-import { spawnSync } from "child_process";
 import * as fs from "fs";
 import * as os from "os";
 import * as path from "path";
 import { enqueueOpenClawJob, waitForJob, summarizeJob } from "./openclaw_integration.js";
 import { StepDefinition, StepContext, CompensateContext } from "./types.js";
+import { spawnWithTimeout } from "./utils.js";
 
 // ── 路径配置 ─────────────────────────────────────────────────────────
 
@@ -107,15 +107,11 @@ const stepGenerateImages: StepDefinition<{ imagePaths: string[] }> = {
 
       ctx.log(`生成图片 ${i + 1}/${imagePrompts.length}...`);
 
-      const result = spawnSync(
+      spawnWithTimeout(
         "uv",
         ["run", NANO_SCRIPT, "--prompt", prompt, "--filename", outPath, "--resolution", "1K"],
-        { encoding: "utf-8", timeout: 120_000 },
+        { timeoutMs: 120_000, label: `Nano Banana 图片${i + 1}` },
       );
-
-      if (result.status !== 0) {
-        throw new Error(`Nano Banana 失败（图片${i + 1}）: ${result.stderr?.slice(0, 300)}`);
-      }
 
       if (!fs.existsSync(outPath)) {
         throw new Error(`图片文件未生成：${outPath}`);
@@ -178,8 +174,7 @@ const stepSynthesizeVideo: StepDefinition<{ videoPath: string; verticalPath: str
 
     ctx.log(`合成横屏视频（${imagePaths.length} 张图，每张3秒）...`);
 
-    // 横屏版：图片序列 → MP4，加字幕
-    const ffmpegResult = spawnSync(
+    spawnWithTimeout(
       "ffmpeg",
       [
         "-y",
@@ -199,35 +194,30 @@ const stepSynthesizeVideo: StepDefinition<{ videoPath: string; verticalPath: str
         "30",
         videoPath,
       ],
-      { encoding: "utf-8", timeout: 120_000 },
+      { timeoutMs: 120_000, label: "ffmpeg 横屏合成" },
     );
-
-    if (ffmpegResult.status !== 0) {
-      throw new Error(`ffmpeg 横屏合成失败: ${ffmpegResult.stderr?.slice(0, 300)}`);
-    }
 
     ctx.log(`横屏视频已生成：${videoPath}`);
 
     // 竖屏版（抖音 9:16）
-    const ffmpegVertical = spawnSync(
-      "ffmpeg",
-      [
-        "-y",
-        "-i",
-        videoPath,
-        "-vf",
-        "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2",
-        "-c:a",
-        "copy",
-        verticalPath,
-      ],
-      { encoding: "utf-8", timeout: 60_000 },
-    );
-
-    if (ffmpegVertical.status !== 0) {
-      ctx.log(`竖屏转换失败（非致命）: ${ffmpegVertical.stderr?.slice(0, 200)}`);
-    } else {
+    try {
+      spawnWithTimeout(
+        "ffmpeg",
+        [
+          "-y",
+          "-i",
+          videoPath,
+          "-vf",
+          "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2",
+          "-c:a",
+          "copy",
+          verticalPath,
+        ],
+        { timeoutMs: 60_000, label: "ffmpeg 竖屏转换" },
+      );
       ctx.log(`竖屏视频已生成：${verticalPath}`);
+    } catch (e) {
+      ctx.log(`竖屏转换失败（非致命）: ${e instanceof Error ? e.message : String(e)}`);
     }
 
     // 清理临时文件
