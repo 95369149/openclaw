@@ -943,6 +943,34 @@ export function getSubagentRunById(runId: string): SubagentRunRecord | undefined
   return entry ? { ...entry } : undefined;
 }
 
+export function getSubagentRunSummary(runId: string):
+  | {
+      runId: string;
+      childSessionKey: string;
+      outcomeStatus?: SubagentRunOutcome["status"];
+      retryCount: number;
+      maxRetryAttempts?: number;
+      retryParentRunId?: string;
+      ended: boolean;
+      hasOutputMarker: boolean;
+    }
+  | undefined {
+  const entry = subagentRuns.get(runId);
+  if (!entry) {
+    return undefined;
+  }
+  return {
+    runId: entry.runId,
+    childSessionKey: entry.childSessionKey,
+    outcomeStatus: entry.outcome?.status,
+    retryCount: entry.retryCount ?? 0,
+    maxRetryAttempts: entry.maxRetryAttempts,
+    retryParentRunId: entry.retryParentRunId,
+    ended: typeof entry.endedAt === "number",
+    hasOutputMarker: typeof entry.outcome?.status === "string",
+  };
+}
+
 export function getSubagentRetryChain(rootRunId: string): SubagentRunRecord[] {
   const root = rootRunId.trim();
   if (!root) {
