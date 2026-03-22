@@ -908,6 +908,22 @@ export async function runSubagentAnnounceFlow(params: {
       startedAt: params.startedAt,
       endedAt: params.endedAt,
     });
+    let retryLine = "";
+    try {
+      const { getSubagentRunById } = await import("./subagent-registry.js");
+      const runEntry = getSubagentRunById(params.childRunId);
+      if (runEntry && typeof runEntry.retryCount === "number" && runEntry.retryCount > 0) {
+        const maxAttempts =
+          typeof runEntry.maxRetryAttempts === "number" && runEntry.maxRetryAttempts > 0
+            ? runEntry.maxRetryAttempts
+            : undefined;
+        retryLine = maxAttempts
+          ? `Retry: ${runEntry.retryCount}/${maxAttempts}`
+          : `Retry: ${runEntry.retryCount}`;
+      }
+    } catch {
+      // Best-effort only.
+    }
     const validatedFindings = findings.trim() ? findings : "(no output)";
     completionMessage = buildCompletionDeliveryMessage({
       findings: validatedFindings,
@@ -916,6 +932,7 @@ export async function runSubagentAnnounceFlow(params: {
     const internalSummaryMessage = [
       `[System Message] [sessionId: ${announceSessionId}] A ${announceType} "${taskLabel}" just ${statusLabel}.`,
       "",
+      ...(retryLine ? [retryLine, ""] : []),
       "Result:",
       validatedFindings,
       "",
