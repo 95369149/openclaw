@@ -843,6 +843,11 @@ export function listDescendantRunsForRequester(rootSessionKey: string): Subagent
   return descendants;
 }
 
+export function getSubagentRunById(runId: string): SubagentRunRecord | undefined {
+  const entry = subagentRuns.get(runId);
+  return entry ? { ...entry } : undefined;
+}
+
 export function initSubagentRegistry() {
   restoreSubagentRunsOnce();
 }
