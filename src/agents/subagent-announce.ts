@@ -48,13 +48,15 @@ type SubagentAnnounceDeliveryResult = {
 function buildCompletionDeliveryMessage(params: {
   findings: string;
   subagentName: string;
+  retryLine?: string;
 }): string {
   const findingsText = params.findings.trim();
   const hasFindings = findingsText.length > 0 && findingsText !== "(no output)";
+  const retryBlock = params.retryLine?.trim() ? `${params.retryLine.trim()}\n\n` : "";
   if (!hasFindings) {
-    return `⚠️ Subagent ${params.subagentName} finished with empty output`;
+    return `⚠️ Subagent ${params.subagentName} finished with empty output\n\n${retryBlock}`.trim();
   }
-  return `✅ Subagent ${params.subagentName} finished\n\n${findingsText}`;
+  return `✅ Subagent ${params.subagentName} finished\n\n${retryBlock}${findingsText}`;
 }
 
 function summarizeDeliveryError(error: unknown): string {
@@ -928,6 +930,7 @@ export async function runSubagentAnnounceFlow(params: {
     completionMessage = buildCompletionDeliveryMessage({
       findings: validatedFindings,
       subagentName,
+      retryLine,
     });
     const internalSummaryMessage = [
       `[System Message] [sessionId: ${announceSessionId}] A ${announceType} "${taskLabel}" just ${statusLabel}.`,
