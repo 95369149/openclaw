@@ -1,5 +1,8 @@
 import { parseDiscordTarget } from "../../../discord/targets.js";
 
+const FOREIGN_CHANNEL_PREFIX_RE =
+  /^(telegram|whatsapp|signal|slack|discordapp|imessage|line|googlechat|irc|webchat|web):/i;
+
 export function normalizeDiscordMessagingTarget(raw: string): string | undefined {
   // Default bare IDs to channels so routing is stable across tool actions.
   const target = parseDiscordTarget(raw, { defaultKind: "channel" });
@@ -20,6 +23,14 @@ export function normalizeDiscordOutboundTarget(
       ok: false,
       error: new Error(
         'Discord recipient is required. Use "channel:<id>" for channels or "user:<id>" for DMs.',
+      ),
+    };
+  }
+  if (FOREIGN_CHANNEL_PREFIX_RE.test(trimmed)) {
+    return {
+      ok: false,
+      error: new Error(
+        `Invalid Discord recipient "${trimmed}". Discord targets must be channel:<id>, user:<id>, a Discord mention, or a bare Discord channel id.`,
       ),
     };
   }
