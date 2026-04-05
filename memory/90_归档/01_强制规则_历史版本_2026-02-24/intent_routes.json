@@ -1,0 +1,194 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "created": "2026-02-22",
+    "description": "10个意图桶路由配置，配合两段式 Triage/Plan 使用",
+    "ref": "意图桶与场景DAG.md + 多Agent协作体系v3.md"
+  },
+  "routes": [
+    {
+      "bucket": "S1",
+      "name": "线索/客户资格审查",
+      "risk": "med",
+      "needs_plan": true,
+      "dag": ["kitt:抽取线索字段", "侦察:补全公司信息+证据", "工兵:ABC分级+跟进脚本", "质检:ICP规则+证据支撑"],
+      "dispatch": {
+        "侦察": { "model": "perplexity", "fallback": ["web_search", "gemini"] },
+        "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "qwen-32b"] },
+        "质检": { "model": "flash", "fallback": ["qwen-32b", "ds-sf"] }
+      },
+      "deliverable": "表格",
+      "deadline": "30min",
+      "needs_evidence": true,
+      "acceptance": "每个分级判断必须指向证据URL或客户原话",
+      "human_gate": false
+    },
+    {
+      "bucket": "S2",
+      "name": "商机研究与话术",
+      "risk": "med",
+      "needs_plan": true,
+      "dag": ["kitt:锁定目标公司+需求", "侦察:公司背景+竞品对比", "工兵:沟通草案+话术卡", "质检:事实准确性+话术可用性"],
+      "dispatch": {
+        "侦察": { "model": "perplexity", "fallback": ["web_search", "gemini"] },
+        "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "ds"] },
+        "质检": { "model": "flash", "fallback": ["qwen-32b", "ds-sf"] }
+      },
+      "deliverable": "话术卡+背景摘要",
+      "deadline": "45min",
+      "needs_evidence": true,
+      "acceptance": "竞品对比数据必须有来源，话术不得含未验证承诺",
+      "human_gate": false
+    },
+    {
+      "bucket": "SC1",
+      "name": "供应链风险监控",
+      "risk": "high",
+      "needs_plan": true,
+      "dag": ["kitt:维护watchlist", "侦察:抓取风险信号→事件卡", "工兵:影响评估+建议动作", "质检:误报/夸大拦截"],
+      "dispatch": {
+        "侦察": { "model": "perplexity", "fallback": ["web_search", "gemini"] },
+        "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "flash"] },
+        "质检": { "model": "flash", "fallback": ["qwen-32b", "ds-sf"] }
+      },
+      "deliverable": "告警卡",
+      "deadline": "15min",
+      "needs_evidence": true,
+      "acceptance": "告警必须包含影响范围、中断时长假设、建议动作与负责人",
+      "human_gate": true,
+      "human_gate_reason": "供应中断预警需厂长确认后才可外发"
+    },
+    {
+      "bucket": "SC2",
+      "name": "供应商评估/替代",
+      "risk": "high",
+      "needs_plan": true,
+      "dag": ["kitt:明确评估维度", "侦察:资质+交期+口碑调查", "工兵:评估矩阵+替代清单", "质检:数据完整性+偏见检查"],
+      "dispatch": {
+        "侦察": { "model": "perplexity", "fallback": ["web_search", "gemini"] },
+        "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "flash"] },
+        "质检": { "model": "flash", "fallback": ["qwen-32b", "ds-sf"] }
+      },
+      "deliverable": "评估矩阵+替代方案",
+      "deadline": "60min",
+      "needs_evidence": true,
+      "acceptance": "每个供应商评分必须有数据支撑，替代方案需含切换成本估算",
+      "human_gate": true,
+      "human_gate_reason": "供应商决策涉及采购，需厂长审批"
+    },
+    {
+      "bucket": "IM1",
+      "name": "内部制度/流程",
+      "risk": "low",
+      "needs_plan": false,
+      "dag": ["kitt:问清痛点+边界", "工兵:输出SOP", "质检:可执行性检查", "kitt:拆审批流+写入"],
+      "dispatch": {
+        "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "qwen-32b"] },
+        "质检": { "model": "flash", "fallback": ["qwen-32b", "ds-sf"] }
+      },
+      "deliverable": "SOP文档",
+      "deadline": "30min",
+      "needs_evidence": false,
+      "acceptance": "每一步落到一个角色+一个动作+一个时限",
+      "human_gate": false
+    },
+    {
+      "bucket": "IM2",
+      "name": "经营分析/汇报",
+      "risk": "med",
+      "needs_plan": true,
+      "dag": ["kitt:明确指标+时间范围", "侦察:拉取数据源", "工兵:分析+可视化+归因", "质检:数据一致性+结论合理性"],
+      "dispatch": {
+        "侦察": { "model": "web_search", "fallback": ["perplexity"] },
+        "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "flash"] },
+        "质检": { "model": "flash", "fallback": ["qwen-32b", "ds-sf"] }
+      },
+      "deliverable": "分析报告",
+      "deadline": "45min",
+      "needs_evidence": true,
+      "acceptance": "数据必须可追溯到源表，异常归因需排除至少一个替代假设",
+      "human_gate": false
+    },
+    {
+      "bucket": "M1",
+      "name": "内容生产（快）",
+      "risk": "low",
+      "needs_plan": false,
+      "dag": ["kitt:明确受众+平台+调性", "工兵:出稿", "质检:品牌调性+错别字"],
+      "dispatch": {
+        "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "qwen-32b"] },
+        "质检": { "model": "flash", "fallback": ["qwen-32b", "ds-sf"] }
+      },
+      "deliverable": "文案/海报文字",
+      "deadline": "15min",
+      "needs_evidence": false,
+      "acceptance": "符合平台调性，无错别字，CTA明确",
+      "human_gate": false
+    },
+    {
+      "bucket": "M2",
+      "name": "内容生产（严）",
+      "risk": "high",
+      "needs_plan": true,
+      "dag": ["kitt:锁定受众+主张+禁语", "侦察:找可引用事实", "工兵:出3版本+主张清单", "质检:品牌/合规/事实过闸", "kitt:生成发布包"],
+      "dispatch": {
+        "侦察": { "model": "perplexity", "fallback": ["web_search", "gemini"] },
+        "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "flash"] },
+        "质检": { "model": "flash", "fallback": ["qwen-32b", "ds-sf"] }
+      },
+      "deliverable": "发布包（3版本+事实清单）",
+      "deadline": "90min",
+      "needs_evidence": true,
+      "acceptance": "数据型主张必须带来源；敏感措辞必须能解释为什么可说",
+      "human_gate": true,
+      "human_gate_reason": "对外PR/白皮书需厂长审批后发布"
+    },
+    {
+      "bucket": "X1",
+      "name": "抓取/舆情",
+      "risk": "low",
+      "needs_plan": false,
+      "dag": ["kitt:明确关键词+平台+时间范围", "侦察:抓取+结构化摘录", "质检:去重+相关性过滤"],
+      "dispatch": {
+        "侦察": { "model": "grok", "fallback": ["x-reader", "web_fetch"] },
+        "质检": { "model": "flash", "fallback": ["qwen-32b"] }
+      },
+      "deliverable": "摘录表（片段+链接+时间戳）",
+      "deadline": "20min",
+      "needs_evidence": true,
+      "acceptance": "每条摘录必须含原文片段、来源URL、发布时间",
+      "human_gate": false
+    },
+    {
+      "bucket": "DEV1",
+      "name": "英文技术/代码",
+      "risk": "med",
+      "needs_plan": true,
+      "dag": ["kitt:明确需求+技术栈+约束", "工兵:编码+测试", "质检:代码审查+安全检查"],
+      "dispatch": {
+        "工兵": { "model": "llama-70b", "fallback": ["ds-sf", "flash"] },
+        "质检": { "model": "flash", "fallback": ["llama-70b", "ds-sf"] }
+      },
+      "deliverable": "代码+测试+说明",
+      "deadline": "60min",
+      "needs_evidence": false,
+      "acceptance": "代码可运行，有基本测试覆盖，无明显安全漏洞",
+      "human_gate": false
+    }
+  ],
+  "triage_template": {
+    "_comment": "Triage 阶段输出模板，<1秒完成分类",
+    "intent_bucket": "<S1|S2|SC1|SC2|IM1|IM2|M1|M2|X1|DEV1>",
+    "risk_level": "<low|med|high>",
+    "needs_evidence": "<bool>",
+    "deadline": "<Xmin>",
+    "deliverable_type": "<类型>",
+    "human_gate": "<bool>"
+  },
+  "dispatch_rules": {
+    "cost_priority": "免费/低价模型优先，付费模型仅用于 high risk 或质检仲裁(L2)",
+    "bandit_explore": "新模型先10%流量试跑，ELO达标后提升",
+    "fallback_chain": "主力模型失败→备选1→备选2→报告Kitt",
+    "elo_penalty": "连续2次<6分，ELO -30，降级到备选池"
+  }
+}

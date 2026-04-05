@@ -1,0 +1,3 @@
+{"ts": "2026-03-31T07:15:59.573972+08:00", "task": "T-147", "agent": "jimmy", "outcome": "success", "lesson": "路由器v1关键词匹配无权重，升级v2加权重+成本感知+复杂度判断", "tag": "routing", "context": ""}
+{"ts": "2026-03-31T07:16:07.316022+08:00", "task": "T-147", "agent": "jimmy", "outcome": "success", "lesson": "执行-审查分离从文档约定升级为可执行脚本review_gate.py，强制审核条件机械化执行不靠自觉", "tag": "security", "context": ""}
+{"ts": "2026-03-31T07:16:07.462755+08:00", "task": "T-147", "agent": "jimmy", "outcome": "success", "lesson": "经验沉淀从手动写memory改为log_lesson.py自动追加lessons.jsonl，结构化可检索", "tag": "process", "context": ""}
