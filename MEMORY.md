@@ -145,3 +145,6 @@
 - [2026-04-06_daily_lead_collect] 每日线索自动采集日报：- 时间: 2026-04-06 08:31:32
 
 - [2026-04-06_learning_ingest] 2026-04-06 Learning Ingest：时间：2026-04-06 11:00（Asia/Shanghai）
+
+### 2026-04-07 (Dream 自动整合)
+- [2026-04-07_learning_ingest] 2026-04-07 Learning Ingest：生成时间：2026-04-07 11:00 Asia/Shanghai
