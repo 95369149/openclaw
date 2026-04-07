@@ -1,7 +1,7 @@
 # 心跳检查清单
 
 > **原则：** 心跳做轻量检查 + 轻量自动修复。重大操作告警厂长。禁止在心跳周期内派发占用超过 1 分钟的重度任务，防止阻塞主线流程。
-> **最后更新:** 2026-04-07 v4.0
+> **最后更新:** 2026-04-07 v4.1
 
 ---
 
@@ -15,7 +15,8 @@
 
 ### 2. 检查运行中任务（v4.0 升级：改用 openclaw tasks）
 
-- 运行 `openclaw tasks list` 查看运行中任务
+- 优先运行 `openclaw tasks list` 查看运行中任务
+- 若 `openclaw tasks list` 在当前执行环境中频繁 `SIGKILL` / 无法返回，则降级为直接读取 `~/.openclaw/tasks/runs.sqlite` 的 `task_runs` 表，按 `created_at` / `last_event_at` / `status` 判断任务状态
 - 有任务运行超过 30 分钟 → 查 `subagents list` 确认状态：
   - 子 agent 已完成 → **自动修复**：`openclaw tasks cancel <id>`，同步更新 task-board.json readyTasks 状态
   - 子 agent 失败 → **自动修复**：取消任务，告警厂长
@@ -36,7 +37,8 @@
 
 ### 4. Gateway 状态
 
-- `openclaw gateway status`
+- 优先运行 `openclaw gateway status`
+- 若命令在当前执行环境中不稳定，可降级检查最近 `gateway_watchdog` / `watchdog_heartbeat_*` 任务是否连续成功
 - 异常时告警
 
 ---
