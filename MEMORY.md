@@ -156,3 +156,6 @@
 - [2026-04-08_daily_lead_collect] 每日线索采集报告 2026-04-08：**执行时间**: 2026-04-08 08:31 (Asia/Shanghai)
 
 - [2026-04-08_learning_ingest] Learning Ingest — 2026-04-08：时间：2026-04-08 11:00 Asia/Shanghai
+
+### 2026-04-09 (Dream 自动整合)
+- [2026-04-08_中文图纸风格规范_Kitt_Blueprint_Spec_v1.0] 中文图纸风格规范（Kitt Blueprint Spec v1.0）：> 目的：统一我们后续所有“技术图 / 架构图 / 流程图 / 生产标准图 / 运营闭环图”的视觉表达，避免 AI 默认生成营销风、花哨 UI 风、SaaS 落地页风。
