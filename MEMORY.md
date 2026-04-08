@@ -154,3 +154,5 @@
 - [2026-04-08_x_digest] X 情报日报 2026-04-08：抓取账号：11 个 | 通过过滤：33 条
 
 - [2026-04-08_daily_lead_collect] 每日线索采集报告 2026-04-08：**执行时间**: 2026-04-08 08:31 (Asia/Shanghai)
+
+- [2026-04-08_learning_ingest] Learning Ingest — 2026-04-08：时间：2026-04-08 11:00 Asia/Shanghai
