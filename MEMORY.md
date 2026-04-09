@@ -159,3 +159,10 @@
 
 ### 2026-04-09 (Dream 自动整合)
 - [2026-04-08_中文图纸风格规范_Kitt_Blueprint_Spec_v1.0] 中文图纸风格规范（Kitt Blueprint Spec v1.0）：> 目的：统一我们后续所有“技术图 / 架构图 / 流程图 / 生产标准图 / 运营闭环图”的视觉表达，避免 AI 默认生成营销风、花哨 UI 风、SaaS 落地页风。
+
+- [2026-04-09_cron降噪与ingest升级落地记录] 2026-04-09 cron 降噪与 ingest 升级落地记录：时间：2026-04-09 07:52 CST
+- [2026-04-09_deep_X推文摘要] 2026-04-09 X 推文摘要：今天新进 `ideas.md` 的内容里，真正值得保留的主线有 4 条：
+- [2026-04-09_learning_ingest_batch_升级设计稿_v1] learning_ingest_batch 升级设计稿 v1：时间：2026-04-09 07:12 CST
+- [2026-04-09_learning_ingest与Dream通知入口排查] learning_ingest_batch 与 Dream 通知入口排查记录：时间：2026-04-09 07:31 CST
+- [2026-04-09_skills_sh_吸收与替换清单_v1] skills.sh 吸收与替换清单 v1：时间：2026-04-09 07:08 CST
+- [2026-04-09_x_digest] X 情报日报 2026-04-09：抓取账号：11 个 | 通过过滤：24 条
