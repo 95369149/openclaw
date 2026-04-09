@@ -166,3 +166,5 @@
 - [2026-04-09_learning_ingest与Dream通知入口排查] learning_ingest_batch 与 Dream 通知入口排查记录：时间：2026-04-09 07:31 CST
 - [2026-04-09_skills_sh_吸收与替换清单_v1] skills.sh 吸收与替换清单 v1：时间：2026-04-09 07:08 CST
 - [2026-04-09_x_digest] X 情报日报 2026-04-09：抓取账号：11 个 | 通过过滤：24 条
+
+- [2026-04-09_daily_lead_collect] Daily Lead Collect Report - 2026-04-09：- Generated at: 2026-04-09T08:32:14.832835+08:00
