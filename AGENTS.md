@@ -79,10 +79,25 @@ Repo: https://github.com/openclaw/openclaw
 - Never send streaming/partial replies to external messaging — only final replies
 - Before modifying `~/.openclaw/openclaw.json` or other startup-critical files, create a timestamped backup first, explain risk + rollback plan, and after changes run `openclaw gateway status`
 - Any startup/config change must leave the user with a one-line rollback command, typically: `cp <backup> ~/.openclaw/openclaw.json && openclaw gateway restart`
+- **配置变更绝不能导致系统卡死或失联（2026-04-09 教训，厂长第一要求）**：
+  - 改配置前必须 `python3 -c "import json; json.load(open(...))"` 验证 JSON 可解析
+  - 改完后必须确认 gateway 启动成功（读日志或 `openclaw gateway status`）
+  - 绝不用 `nohup` 拉 gateway，只用 `openclaw gateway restart` 或 `launchctl kickstart`
+  - 如果 gateway 启动后 3 分钟内日志无正常输出，立即回滚
+  - 回滚命令必须在改配置的同一条消息里给出
 
 ## Version Locations
 
 `package.json` (CLI), `apps/android/app/build.gradle.kts`, `apps/ios/Sources/Info.plist` + `apps/ios/Tests/Info.plist`, `apps/macos/Sources/OpenClaw/Resources/Info.plist`, `docs/install/updating.md`, `docs/platforms/mac/release.md`, Peekaboo Xcode Info.plists. "Bump everywhere" excludes `appcast.xml` (only for Sparkle releases)
+
+## 可复用工作铁律（Garry Tan 法则，2026-04-10）
+
+> 一次构建，永久运行，系统不断复利增长。
+
+1. **禁止一次性工作**：如果某件事以后可能重复，必须：第1次手动做3-10个样本 → 给厂长看结果 → 批准后写成 `SKILL.md` 放入 `workspace/skills/` → 周期性任务用 `openclaw cron add` 加定时任务
+2. **MECE 原则**：每类工作只有一个 Skill 负责，不重叠不遗漏。创建新 Skill 前先检查现有 Skill，能扩展就扩展
+3. **失败判定**：同一件事厂长问第二次 = 失败。第一次是发现需求，第二次说明早该变成 Skill
+4. **标准流程**：Concept → Prototype → Evaluate → Codify（SKILL.md）→ Cron → Monitor
 
 ## Agent Notes
 
@@ -177,11 +192,13 @@ Repo: https://github.com/openclaw/openclaw
 子 agent 写文件成功率低（实测 <30%），必须有兜底流程。
 
 **派发规则：**
+
 1. 任务描述第一句就写"⚠️ 第一步：创建文件 memory/shared/xxx.md 并写入标题"
 2. 输出要求控制在 1000 字以内（减少 token 耗尽风险）
 3. 复杂任务拆成 2-3 个子任务分别派发
 
 **验收流程（子 agent 完成后 jimmy 必须执行）：**
+
 ```
 1. ls memory/shared/ | grep "<预期文件名>"
 2. 文件存在 → 读取验收质量
@@ -191,6 +208,7 @@ Repo: https://github.com/openclaw/openclaw
 ```
 
 **派发模板（v2.0 强制读记忆版）：**
+
 ```
 sessions_spawn(agentId="<agent>", task="
 ⚠️ 强制前置步骤（不执行则任务无效）：
@@ -211,12 +229,14 @@ sessions_spawn(agentId="<agent>", task="
 借鉴 `agency-agents` 最佳实践，系统引入**现实检查器（Reality Checker）**机制来防止幻觉和质量下降：
 
 **核心原则**：
+
 - **执行与审核分离**：干活的 Agent 不能自己审核自己。
 - **Kitt 负责终审**：涉及架构设计、复杂代码、长文报告、对外发布的内容，Jimmy/Deep 完成初稿后，必须提交给 Kitt 审查。
 - **只审结果，不接管任务**：Kitt 的职责是挑刺、找漏洞、查文档一致性，而不是替 Deep 写代码。
 - **一键回炉**：Kitt 发现问题后，输出修正要求，由原 Agent 重做。
 
 **典型流程**：
+
 1. Jimmy 派发编写代码任务给 Deep
 2. Deep 完成并输出到 `memory/tmp/`
 3. Jimmy 触发 Kitt 审核："请作为 Reality Checker 审查该输出，重点看红线安全和架构规范"
