@@ -28,3 +28,5 @@
 ## media
 
 - `media/redsun-ai-content-strategy.md` — 红太阳 AI 内容战略
+
+- `projects/gbrain-bootstrap-status.md` — gbrain 本地接入状态
