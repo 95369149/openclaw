@@ -32,3 +32,9 @@
 - `projects/gbrain-bootstrap-status.md` — gbrain 本地接入状态
 
 - `projects/local-brain-rollout-plan.md` — 无 Supabase 条件下的本地化落地计划
+
+- `org/after-sales-operations.md` — 红太阳售后运营
+
+- `sources/2026-04-04_2026-04-10_after-sales-call-data.md` — 4.4-4.10 售后电话来源摘要
+
+- `concepts/brain-first-operating-protocol.md` — Brain-First 工作协议
