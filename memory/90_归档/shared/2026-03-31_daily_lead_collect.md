@@ -7,12 +7,12 @@
 
 ## 采集汇总
 
-| # | 平台 | 关键词 | 状态 | 采集 | 入库 | 跳过 |
-|---|------|--------|------|------|------|------|
-| 18 | ImportYeti | oscillating knife cutter | ✅ done | 10 | 10 | 0 |
-| 19 | ImportYeti | vibrating blade cutting machine | ✅ done | 10 | 10 | 0 |
-| 20 | Apollo | CNC cutting machine | ❌ 403 | 0 | 0 | 0 |
-| 21 | Apollo | composite material cutting | ❌ 403 | 0 | 0 | 0 |
+| #   | 平台       | 关键词                          | 状态    | 采集 | 入库 | 跳过 |
+| --- | ---------- | ------------------------------- | ------- | ---- | ---- | ---- |
+| 18  | ImportYeti | oscillating knife cutter        | ✅ done | 10   | 10   | 0    |
+| 19  | ImportYeti | vibrating blade cutting machine | ✅ done | 10   | 10   | 0    |
+| 20  | Apollo     | CNC cutting machine             | ❌ 403  | 0    | 0    | 0    |
+| 21  | Apollo     | composite material cutting      | ❌ 403  | 0    | 0    | 0    |
 
 **今日新增线索**: 20 条（全部来自 ImportYeti，batch: ImportYeti_20260331_0831）
 

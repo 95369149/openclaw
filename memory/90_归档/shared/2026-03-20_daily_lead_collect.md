@@ -5,12 +5,12 @@
 
 ## 采集结果
 
-| 平台 | 关键词 | 状态 | 导入 | 跳过 | 备注 |
-|------|--------|------|------|------|------|
-| ImportYeti | oscillating knife cutter | ✅ 成功 | 10 | 0 | batch: ImportYeti_20260320_0830 |
-| ImportYeti | vibrating blade cutting machine | ✅ 成功 | 10 | 0 | batch: ImportYeti_20260320_0830 |
-| Apollo | CNC cutting machine | ❌ 失败 | 0 | 0 | 403 Forbidden - API Key 权限问题 |
-| Apollo | composite material cutting | ❌ 失败 | 0 | 0 | 403 Forbidden - API Key 权限问题 |
+| 平台       | 关键词                          | 状态    | 导入 | 跳过 | 备注                             |
+| ---------- | ------------------------------- | ------- | ---- | ---- | -------------------------------- |
+| ImportYeti | oscillating knife cutter        | ✅ 成功 | 10   | 0    | batch: ImportYeti_20260320_0830  |
+| ImportYeti | vibrating blade cutting machine | ✅ 成功 | 10   | 0    | batch: ImportYeti_20260320_0830  |
+| Apollo     | CNC cutting machine             | ❌ 失败 | 0    | 0    | 403 Forbidden - API Key 权限问题 |
+| Apollo     | composite material cutting      | ❌ 失败 | 0    | 0    | 403 Forbidden - API Key 权限问题 |
 
 ## 汇总
 

@@ -1,14 +1,17 @@
 # 2026-02-18 本地 Issue Driven 开发 (@YuLin807)
 
 ## 来源
+
 - Author: @YuLin807 (Qingyue)
 - Date: 2026-02-18
 - Link: https://x.com/yulin807/status/2023941489198592111
 
 ## 核心理念：结构化主动性
+
 通过建立本地化的 Issue 追踪系统，让低端模型 (Minimax) 通过流程获得类似高端模型 (Opus) 的主动性。
 
 ### 架构设计
+
 1. **角色分工**：
    - **大龙虾 (Manager)**：负责巡查、发现问题、创建 Issue。
    - **小弟 (Workers)**：认领 Issue、执行任务、反馈结果。
@@ -20,6 +23,7 @@
    - **低成本**：用流程弥补模型智商，用 cheap model 跑 worker。
 
 ## Kitt 思考
+
 - **现有缺陷**：目前我们的任务管理主要依赖 `active-context.md` 的文本列表，缺乏状态管理和并发执行能力。
 - **落地计划**：
   1. 在 workspace 建立 `issues/` 目录。

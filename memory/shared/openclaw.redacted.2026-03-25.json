@@ -50,9 +50,7 @@
             "name": "Claude Opus 4.6",
             "api": "anthropic-messages",
             "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0.3,
               "output": 1.5,
@@ -67,10 +65,7 @@
             "name": "Claude Sonnet 4.6",
             "api": "anthropic-messages",
             "reasoning": false,
-            "input": [
-              "text",
-              "image"
-            ],
+            "input": ["text", "image"],
             "cost": {
               "input": 0.18,
               "output": 0.9,
@@ -85,9 +80,7 @@
             "name": "Claude Sonnet 4.6 Thinking",
             "api": "anthropic-messages",
             "reasoning": true,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 3.6,
               "output": 18,
@@ -102,9 +95,7 @@
             "name": "Claude Opus 4.6 Thinking",
             "api": "anthropic-messages",
             "reasoning": true,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 1.5,
               "output": 7.5,
@@ -129,10 +120,7 @@
             "id": "gemini-2.5-flash",
             "name": "Gemini 2.5 Flash",
             "reasoning": false,
-            "input": [
-              "text",
-              "image"
-            ],
+            "input": ["text", "image"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -146,10 +134,7 @@
             "id": "gemini-2.5-pro",
             "name": "Gemini 2.5 Pro",
             "reasoning": true,
-            "input": [
-              "text",
-              "image"
-            ],
+            "input": ["text", "image"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -163,10 +148,7 @@
             "id": "gemini-2.5-flash-lite",
             "name": "Gemini 2.5 Flash Lite",
             "reasoning": false,
-            "input": [
-              "text",
-              "image"
-            ],
+            "input": ["text", "image"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -191,9 +173,7 @@
             "id": "gemini-3.1-pro-high",
             "name": "Gemini 3.1 Pro High",
             "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -218,9 +198,7 @@
             "id": "MiniMax-M2.7-highspeed",
             "name": "MiniMax M2.7 Highspeed",
             "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -245,9 +223,7 @@
             "id": "llama-3.1-8b-instant",
             "name": "Llama 3.1 8B (Groq)",
             "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0.05,
               "output": 0.08,
@@ -261,9 +237,7 @@
             "id": "llama-3.3-70b-versatile",
             "name": "Llama 3.3 70B (Groq)",
             "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0.59,
               "output": 0.79,
@@ -277,9 +251,7 @@
             "id": "qwen/qwen3-32b",
             "name": "Qwen3 32B (Groq)",
             "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0.29,
               "output": 0.59,
@@ -304,10 +276,7 @@
             "id": "doubao-seed-2-0-pro-***",
             "name": "Doubao 2.0 Pro",
             "reasoning": true,
-            "input": [
-              "text",
-              "image"
-            ],
+            "input": ["text", "image"],
             "cost": {
               "input": 3.2,
               "output": 16
@@ -319,10 +288,7 @@
             "id": "doubao-seed-2-0-lite-***",
             "name": "Doubao 2.0 Lite",
             "reasoning": false,
-            "input": [
-              "text",
-              "image"
-            ],
+            "input": ["text", "image"],
             "cost": {
               "input": 0.4,
               "output": 2
@@ -345,9 +311,7 @@
             "id": "doubao",
             "name": "豆包 Web (免费)",
             "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -372,9 +336,7 @@
             "id": "gpt-5-2025-08-07",
             "name": "GPT-5 (nanashiwang)",
             "reasoning": true,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -401,10 +363,7 @@
             "id": "gpt-5.2-codex",
             "name": "GPT-5.2-Codex",
             "reasoning": true,
-            "input": [
-              "text",
-              "image"
-            ],
+            "input": ["text", "image"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -430,9 +389,7 @@
             "name": "GPT-5.3 Codex",
             "api": "openai-completions",
             "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0.105,
               "output": 0.84,
@@ -447,9 +404,7 @@
             "name": "GPT-5.4",
             "api": "openai-completions",
             "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -475,9 +430,7 @@
             "name": "Kimi K2.5",
             "api": "openai-completions",
             "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -504,10 +457,7 @@
       },
       "imageModel": {
         "primary": "google-gemini/gemini-2.5-flash",
-        "fallbacks": [
-          "google-gemini/gemini-2.5-flash-lite",
-          "doubao/doubao-seed-2-0-lite-***"
-        ]
+        "fallbacks": ["google-gemini/gemini-2.5-flash-lite", "doubao/doubao-seed-2-0-lite-***"]
       },
       "models": {
         "mynewapi/claude-opus-4-6": {
@@ -598,25 +548,14 @@
         "default": true,
         "model": "mynewapi/claude-sonnet-4-6",
         "subagents": {
-          "allowAgents": [
-            "main",
-            "deep",
-            "kitt",
-            "sino",
-            "scout",
-            "guard"
-          ]
+          "allowAgents": ["main", "deep", "kitt", "sino", "scout", "guard"]
         }
       },
       {
         "id": "main",
         "model": "google-gemini-cli/gemini-3-pro-preview",
         "subagents": {
-          "allowAgents": [
-            "deep",
-            "kitt",
-            "sino"
-          ]
+          "allowAgents": ["deep", "kitt", "sino"]
         }
       },
       {
@@ -633,13 +572,7 @@
           "fallbacks": []
         },
         "subagents": {
-          "allowAgents": [
-            "deep",
-            "main",
-            "sino",
-            "scout",
-            "guard"
-          ]
+          "allowAgents": ["deep", "main", "sino", "scout", "guard"]
         }
       },
       {
@@ -728,9 +661,7 @@
       "enabled": false,
       "dmPolicy": "allowlist",
       "selfChatMode": true,
-      "allowFrom": [
-        "***"
-      ],
+      "allowFrom": ["***"],
       "groupPolicy": "allowlist",
       "debounceMs": 0,
       "mediaMaxMb": 50
@@ -739,9 +670,7 @@
       "enabled": true,
       "dmPolicy": "pairing",
       "botToken": "***",
-      "allowFrom": [
-        "***"
-      ],
+      "allowFrom": ["***"],
       "groupPolicy": "allowlist",
       "streaming": "partial",
       "healthMonitor": {
@@ -754,15 +683,11 @@
       "groupPolicy": "allowlist",
       "streaming": "off",
       "dmPolicy": "open",
-      "allowFrom": [
-        "***"
-      ],
+      "allowFrom": ["***"],
       "guilds": {
         "***": {
           "requireMention": true,
-          "users": [
-            "***"
-          ]
+          "users": ["***"]
         }
       },
       "healthMonitor": {
@@ -785,12 +710,7 @@
   },
   "skills": {},
   "plugins": {
-    "allow": [
-      "telegram",
-      "discord",
-      "openclaw-weixin",
-      "google"
-    ],
+    "allow": ["telegram", "discord", "openclaw-weixin", "google"],
     "entries": {
       "whatsapp": {
         "enabled": false

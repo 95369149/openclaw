@@ -7,9 +7,11 @@
 ## 三大核心开源项目
 
 ### 1. LeadBrowser (Geolavor/leads-generator-app)
+
 **定位**：自托管AI潜在客户发现工具，替代Hunter.io/Snov.io
 
 #### 核心特性
+
 - **实时搜索**：类似浏览器，实时全网搜索潜在客户
 - **LinkedIn集成**：无插件抓取LinkedIn员工数据
 - **AI分类**：AI自动分类网站，更好匹配潜在客户
@@ -18,23 +20,28 @@
 - **技术栈识别**：从网站抓取技术信息
 
 #### 技术架构
+
 - **后端**：Apache/Nginx + PHP 7.4+ + MySQL/MariaDB
 - **前端**：Node.js 8.11.3+ + Composer
 - **AI集成**：ChatGPT API
 - **特色功能**：DNS信息、邮件验证、Web Archive集成
 
 #### 价值主张
+
 > "如果你在用Snov.io或Hunter.io，LeadBrowser让你在自己的服务器上免费获得更好数据！"
 
 ### 2. BrightData AI Lead Generator
+
 **定位**：下一代AI获客工具，结合Bright Data抓取和OpenAI筛选
 
 #### 工作流架构
+
 ```
 Bright Data抓取 → OpenAI筛选 → Streamlit UI展示
 ```
 
 #### 核心功能
+
 - **自动化网页抓取**：通过Bright Data API从LinkedIn等来源抓取
 - **AI智能筛选**：使用OpenAI分析、评分、丰富潜在客户
 - **自然语言输入**：描述理想客户，系统自动提取结构化筛选条件
@@ -42,14 +49,17 @@ Bright Data抓取 → OpenAI筛选 → Streamlit UI展示
 - **交互式UI**：Streamlit仪表板管理
 
 #### 技术栈
+
 - **语言**：Python 3.9+
 - **核心依赖**：Bright Data API + OpenAI API + Streamlit
 - **部署**：虚拟环境 + .env配置文件
 
 ### 3. 完整B2B获客系统（开源组合）
+
 **架构模式**：多个开源工具组合的完整获客流水线
 
 #### 技术组合
+
 - **数据源**：Apollo.io + Google搜索 + LinkedIn抓取
 - **AI筛选**：Google Gemini等AI模型
 - **自动化**：n8n工作流引擎
@@ -57,6 +67,7 @@ Bright Data抓取 → OpenAI筛选 → Streamlit UI展示
 - **目标**：自动生成、丰富、评分数千潜在客户
 
 #### 开源工具生态
+
 - **自动化**：joshiayush/inb（LinkedIn自动化）
 - **数据抓取**：LeadGenPy（Google Maps抓取 + ChatGPT个性化消息）
 - **AI集成**：IsaacBell/leads-db（AI驱动B2B获客系统）
@@ -64,16 +75,19 @@ Bright Data抓取 → OpenAI筛选 → Streamlit UI展示
 ## 技术趋势分析
 
 ### 架构演进
+
 1. **从静态数据库到实时搜索**：传统工具依赖预建数据库，新工具实时全网搜索
 2. **从手动筛选到AI自动化**：AI模型自动分析、评分、丰富潜在客户
 3. **从单一平台到多源集成**：结合LinkedIn、Google、专业平台等多渠道
 
 ### AI应用层次
+
 - **初级筛选**：基于关键词和规则的简单匹配
 - **中级分析**：AI分析公司规模、行业、技术栈等
 - **高级预测**：AI评估合作可能性、风险、个性化互动策略
 
 ### 开源优势
+
 - **数据隐私**：自部署保证数据安全
 - **成本控制**：替代昂贵的SaaS服务
 - **定制化**：根据特定需求调整算法
@@ -82,16 +96,19 @@ Bright Data抓取 → OpenAI筛选 → Streamlit UI展示
 ## 对HTYCNC的启示
 
 ### 直接应用场景
+
 1. **国际客户发现**：实时搜索全球数控设备需求企业
 2. **行业分析**：识别新兴市场和技术趋势
 3. **个性化营销**：AI生成针对不同客户的营销内容
 
 ### 技术整合建议
+
 1. **短期**：试用LeadBrowser的LinkedIn搜索功能
 2. **中期**：部署BrightData AI Lead Generator进行系统化获客
 3. **长期**：构建基于开源工具的完整B2B获客流水线
 
 ### 风险与挑战
+
 - **数据合规**：确保抓取行为符合GDPR等法规
 - **账号安全**：避免LinkedIn等平台的账号限制
 - **AI准确性**：需要持续优化AI筛选算法

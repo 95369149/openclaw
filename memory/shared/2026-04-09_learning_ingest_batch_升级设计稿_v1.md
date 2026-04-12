@@ -62,23 +62,28 @@ shared digest（只保留完成摘要与交付）
 ## 三、目标分层（四层收口）
 
 ### 1. 原料层 Raw
+
 存放未整理输入，不作为长期知识成品。
 
 建议目录：
+
 - `memory/inbox/`
 - `memory/80_收藏/`
 - 外部抓取缓存 / 原始 markdown / URL 清单
 
 **规则**：
+
 - 原料保留来源、时间、URL、抓取方式
 - 不直接视为“知识已沉淀”
 
 ---
 
 ### 2. 编译知识层 Compiled Wiki
+
 由 `memory-wiki` 负责。
 
 建议落点：
+
 - 官方 vault：`memory/wiki-vault/`（或实际生成落点）
 - 产物包括：
   - claims
@@ -88,18 +93,22 @@ shared digest（只保留完成摘要与交付）
   - compiled pages
 
 **规则**：
+
 - 长期知识尽量不再直接堆进 `shared/`
 - 以 topic / entity / project / workflow 为组织维度
 
 ---
 
 ### 3. 成果层 Durable Results
+
 只保留可复用输出和阶段性交付。
 
 建议目录：
+
 - `memory/shared/`
 
 **保留内容**：
+
 - 正式清单
 - 最终方案
 - 模板
@@ -108,6 +117,7 @@ shared digest（只保留完成摘要与交付）
 - 执行摘要
 
 **不再鼓励放入**：
+
 - 纯原料摘抄
 - 零散学习片段
 - 临时中间态摘要
@@ -115,15 +125,18 @@ shared digest（只保留完成摘要与交付）
 ---
 
 ### 4. 系统记忆层 System Memory
+
 继续由现有 active memory 承担。
 
 包括：
+
 - `memory/.abstract`
 - `MEMORY.md`
 - 日志 `memory/2026-04-09.md`
 - dreaming / daily notes / task-board
 
 **作用**：
+
 - 保留行为规则、长期教训、运行状态、任务上下文
 - 不替代 wiki compiled knowledge
 
@@ -132,24 +145,30 @@ shared digest（只保留完成摘要与交付）
 ## 四、新版 ingest 流程设计
 
 ### Step 1：扫描原料
+
 扫描范围：
+
 - `memory/inbox/`
 - `memory/80_收藏/`
 - 指定 source feed / 链接清单
 - 需要时接外部 search/extract
 
 输出：
+
 - 本轮新增源列表
 - 去重后的候选条目清单
 
 **要求**：
+
 - 空目录 / 无新增时默认静默
 - 正常完成不通知厂长
 
 ---
 
 ### Step 2：提取与标准化
+
 对每条源做最小必要处理：
+
 - 标题
 - 时间
 - 来源 URL / 文件路径
@@ -160,9 +179,11 @@ shared digest（只保留完成摘要与交付）
 - 是否与现有主题重复/冲突
 
 输出：
+
 - normalized item 列表
 
 **这里建议吸收 `ai-rag-pipeline` 的结构**：
+
 - retrieval
 - extraction
 - context cleanup
@@ -171,23 +192,28 @@ shared digest（只保留完成摘要与交付）
 ---
 
 ### Step 3：构建 claim / evidence / contradiction
+
 每条内容不再只做“摘要”，而要转为知识对象：
 
 #### Claim
+
 - 这条内容声称了什么
 - 是否是动作建议、事实判断、趋势判断、策略判断
 
 #### Evidence
+
 - 证据来源是什么
 - 原始出处 / 引文 / 文件路径 / URL
 - 是否一手/二手来源
 
 #### Contradiction
+
 - 是否与已有结论冲突
 - 冲突点是什么
 - 是否需要人工审核
 
 #### Metadata
+
 - topic
 - tags
 - importance
@@ -196,12 +222,15 @@ shared digest（只保留完成摘要与交付）
 - owner（若属于具体项目）
 
 输出：
+
 - 准备进入 wiki 的结构化条目
 
 ---
 
 ### Step 4：触发 wiki 编译
+
 目标动作：
+
 - bridge import
 - compile
 - lint
@@ -218,6 +247,7 @@ normalized items
 ```
 
 **注意**：
+
 - 当前环境 `openclaw wiki` CLI 仍存在 `SIGKILL` 风险
 - 因此短期必须采用：
   - 单步命令
@@ -225,6 +255,7 @@ normalized items
   - 不以一条长命令定成败
 
 **验收物优先级**：
+
 1. `wiki-vault` 是否生成
 2. `claims/evidence` 相关产物是否生成
 3. `reports/` / dashboards / digest 是否更新
@@ -233,13 +264,16 @@ normalized items
 ---
 
 ### Step 5：写 shared digest
+
 shared 只写：
+
 - 本轮 ingest 处理了什么
 - 沉淀到哪些 wiki topic / claim / dashboard
 - 哪些内容值得厂长看
 - 哪些内容需要人工判断
 
 **shared digest 模板建议**：
+
 1. 本轮新增来源数
 2. 进入 wiki 的主题数
 3. 关键 claim 3-5 条
@@ -252,29 +286,37 @@ shared 只写：
 ## 五、Dream / ingest / shared 的重新分工
 
 ### ingest
+
 负责：
+
 - 原料摄取
 - 结构化整理
 - 推入 wiki
 - 产出简洁 digest
 
 ### dreaming
+
 负责：
+
 - 后台巩固
 - 聚类
 - 低频整合
 - 长周期模式发现
 
 **不再负责**：
+
 - 给厂长发“Dream完成”
 - 充当日报广播器
 
 ### shared
+
 负责：
+
 - 成果与交付
 - SOP / 模板 / 正式总结
 
 **不再负责**：
+
 - 充当长期知识大杂烩
 
 ---
@@ -303,16 +345,22 @@ shared 只写：
 ## 七、建议的第一版落地任务拆解
 
 ### P0-A：先把新版流程定稿
+
 输出：
+
 - 本文档（已完成）
 
 ### P0-B：梳理当前 `learning_ingest_batch` 实际脚本/配置入口
+
 目标：
+
 - 找到当前 cron / script / prompt / session 入口点
 - 搞清楚现在到底谁在扫描、谁在写摘要、谁在通知
 
 ### P0-C：补一份字段规范
+
 至少定义：
+
 - source
 - title
 - summary
@@ -326,6 +374,7 @@ shared 只写：
 - status
 
 ### P0-D：把 shared digest 模板收窄
+
 只保留成果摘要，不再兼任知识仓库
 
 ### P1：等 wiki CLI 稳定后，把 bridge/import/compile/lint 串起来
@@ -347,6 +396,7 @@ active memory / dreaming（规则、状态、长期反思、运行闭环）
 ```
 
 最终效果：
+
 - raw 不等于知识
 - shared 不等于知识库
 - dreaming 不等于日报器
@@ -358,6 +408,7 @@ active memory / dreaming（规则、状态、长期反思、运行闭环）
 ## 九、下一步
 
 下一轮直接做：
+
 1. 找出当前 `learning_ingest_batch` 的真实脚本/配置入口
 2. 查 Dream 正常完成通知到底从哪发出来
 3. 设计 claim/evidence 字段规范 v1

@@ -12,14 +12,7 @@
     "routing": {
       "secondary_router": {
         "mode": "rules_first",
-        "features": [
-          "sub_intent",
-          "op_type",
-          "risk",
-          "complexity",
-          "data_freshness",
-          "confidence"
-        ]
+        "features": ["sub_intent", "op_type", "risk", "complexity", "data_freshness", "confidence"]
       }
     },
     "execution": {
@@ -93,12 +86,7 @@
       "enabled": false,
       "approver_role": null,
       "gate_on_ops": [],
-      "tool_allowlist_pre_gate": [
-        "retrieval",
-        "search_web",
-        "company_lookup",
-        "doc_read"
-      ],
+      "tool_allowlist_pre_gate": ["retrieval", "search_web", "company_lookup", "doc_read"],
       "tool_allowlist_post_gate": []
     }
   },
@@ -122,12 +110,7 @@
             "accuracy": 0.5,
             "format": 0.15
           },
-          "checklist": [
-            "给出公司主体信息",
-            "给出风险信号",
-            "输出跟进建议",
-            "证据引用不为空"
-          ]
+          "checklist": ["给出公司主体信息", "给出风险信号", "输出跟进建议", "证据引用不为空"]
         }
       },
       "tool_policy": {
@@ -140,10 +123,7 @@
           "doc_read",
           "table_ops"
         ],
-        "deny": [
-          "crm_write",
-          "erp_write"
-        ]
+        "deny": ["crm_write", "erp_write"]
       },
       "secondary_router": {
         "routes": [
@@ -214,11 +194,7 @@
             "accuracy": 0.25,
             "format": 0.3
           },
-          "checklist": [
-            "话术按场景拆分",
-            "竞品对比避免编造",
-            "输出可直接复用"
-          ]
+          "checklist": ["话术按场景拆分", "竞品对比避免编造", "输出可直接复用"]
         }
       },
       "tool_policy": {
@@ -231,10 +207,7 @@
           "competitor_kb",
           "table_ops"
         ],
-        "deny": [
-          "crm_write",
-          "erp_write"
-        ]
+        "deny": ["crm_write", "erp_write"]
       },
       "secondary_router": {
         "routes": [
@@ -313,17 +286,8 @@
         }
       },
       "tool_policy": {
-        "allow": [
-          "doc_read",
-          "retrieval",
-          "policy_kb",
-          "table_ops"
-        ],
-        "deny": [
-          "write_ops",
-          "erp_write",
-          "code_exec"
-        ]
+        "allow": ["doc_read", "retrieval", "policy_kb", "table_ops"],
+        "deny": ["write_ops", "erp_write", "code_exec"]
       },
       "secondary_router": {
         "routes": [
@@ -411,11 +375,7 @@
           "calculator",
           "table_ops"
         ],
-        "deny": [
-          "erp_write",
-          "payments",
-          "code_exec"
-        ]
+        "deny": ["erp_write", "payments", "code_exec"]
       },
       "secondary_router": {
         "routes": [
@@ -486,23 +446,12 @@
             "accuracy": 0.1,
             "format": 0.7
           },
-          "checklist": [
-            "符合平台调性",
-            "字数在限制内",
-            "含CTA或互动引导"
-          ]
+          "checklist": ["符合平台调性", "字数在限制内", "含CTA或互动引导"]
         }
       },
       "tool_policy": {
-        "allow": [
-          "retrieval",
-          "doc_read",
-          "product_kb"
-        ],
-        "deny": [
-          "social_post",
-          "code_exec"
-        ]
+        "allow": ["retrieval", "doc_read", "product_kb"],
+        "deny": ["social_post", "code_exec"]
       },
       "secondary_router": {
         "routes": [
@@ -568,9 +517,7 @@
       "human_gate": {
         "enabled": true,
         "approver_role": "厂长",
-        "gate_on_ops": [
-          "decision"
-        ]
+        "gate_on_ops": ["decision"]
       },
       "qc": {
         "min_score": 0.88,
@@ -580,25 +527,12 @@
             "accuracy": 0.45,
             "format": 0.15
           },
-          "checklist": [
-            "论点有数据/案例支撑",
-            "结构完整(引言/正文/结论)",
-            "无编造数据"
-          ]
+          "checklist": ["论点有数据/案例支撑", "结构完整(引言/正文/结论)", "无编造数据"]
         }
       },
       "tool_policy": {
-        "allow": [
-          "search_web",
-          "retrieval",
-          "doc_read",
-          "product_kb",
-          "table_ops"
-        ],
-        "deny": [
-          "social_post",
-          "code_exec"
-        ]
+        "allow": ["search_web", "retrieval", "doc_read", "product_kb", "table_ops"],
+        "deny": ["social_post", "code_exec"]
       },
       "secondary_router": {
         "routes": [
@@ -669,24 +603,12 @@
             "accuracy": 0.35,
             "format": 0.15
           },
-          "checklist": [
-            "覆盖指定平台",
-            "去重聚类",
-            "给出趋势判断"
-          ]
+          "checklist": ["覆盖指定平台", "去重聚类", "给出趋势判断"]
         }
       },
       "tool_policy": {
-        "allow": [
-          "search_web",
-          "social_listen_tool",
-          "retrieval",
-          "table_ops"
-        ],
-        "deny": [
-          "social_post",
-          "code_exec"
-        ]
+        "allow": ["search_web", "social_listen_tool", "retrieval", "table_ops"],
+        "deny": ["social_post", "code_exec"]
       },
       "secondary_router": {
         "routes": [
@@ -766,19 +688,8 @@
         }
       },
       "tool_policy": {
-        "allow": [
-          "repo_read",
-          "doc_read",
-          "retrieval",
-          "search_web",
-          "table_ops"
-        ],
-        "deny": [
-          "repo_write",
-          "prod_deploy",
-          "payments",
-          "erp_write"
-        ],
+        "allow": ["repo_read", "doc_read", "retrieval", "search_web", "table_ops"],
+        "deny": ["repo_write", "prod_deploy", "payments", "erp_write"],
         "sandbox": {
           "code_exec": false
         }
@@ -847,10 +758,7 @@
       "human_gate": {
         "enabled": true,
         "approver_role": "厂长",
-        "gate_on_ops": [
-          "mutation",
-          "decision"
-        ],
+        "gate_on_ops": ["mutation", "decision"],
         "tool_allowlist_pre_gate": [
           "retrieval",
           "search_web",
@@ -859,10 +767,7 @@
           "risk_scoring_tool",
           "table_ops"
         ],
-        "tool_allowlist_post_gate": [
-          "erp_write_scoped",
-          "supplier_risk_flag_write"
-        ]
+        "tool_allowlist_post_gate": ["erp_write_scoped", "supplier_risk_flag_write"]
       },
       "qc": {
         "min_score": 0.9,
@@ -888,10 +793,7 @@
           "risk_scoring_tool",
           "table_ops"
         ],
-        "deny": [
-          "erp_write",
-          "supplier_switch_execute"
-        ]
+        "deny": ["erp_write", "supplier_switch_execute"]
       },
       "secondary_router": {
         "routes": [
@@ -957,10 +859,7 @@
       "human_gate": {
         "enabled": true,
         "approver_role": "厂长",
-        "gate_on_ops": [
-          "mutation",
-          "decision"
-        ],
+        "gate_on_ops": ["mutation", "decision"],
         "tool_allowlist_pre_gate": [
           "supplier_kb",
           "erp_read",
@@ -969,10 +868,7 @@
           "risk_scoring_tool",
           "table_ops"
         ],
-        "tool_allowlist_post_gate": [
-          "supplier_switch_execute_scoped",
-          "erp_write_scoped"
-        ]
+        "tool_allowlist_post_gate": ["supplier_switch_execute_scoped", "erp_write_scoped"]
       },
       "qc": {
         "min_score": 0.93,
@@ -982,11 +878,7 @@
             "accuracy": 0.6,
             "format": 0.05
           },
-          "checklist": [
-            "输出替代方案对比表",
-            "给出迁移计划与回退策略",
-            "执行动作必须经human_gate"
-          ]
+          "checklist": ["输出替代方案对比表", "给出迁移计划与回退策略", "执行动作必须经human_gate"]
         }
       },
       "tool_policy": {
@@ -998,10 +890,7 @@
           "risk_scoring_tool",
           "table_ops"
         ],
-        "deny": [
-          "supplier_switch_execute",
-          "erp_write"
-        ]
+        "deny": ["supplier_switch_execute", "erp_write"]
       },
       "secondary_router": {
         "routes": [
@@ -1057,22 +946,14 @@
   "dag_templates_registry": {
     "react_basic": {
       "pattern": "graph",
-      "nodes": [
-        "solver",
-        "judge"
-      ],
+      "nodes": ["solver", "judge"],
       "loops": {
         "enabled": false
       }
     },
     "rewoo_strict": {
       "pattern": "workflow",
-      "nodes": [
-        "planner",
-        "worker",
-        "solver",
-        "judge"
-      ],
+      "nodes": ["planner", "worker", "solver", "judge"],
       "worker": {
         "evidence_ledger": true,
         "tool_policy": "plan_authorized_only"
@@ -1083,12 +964,7 @@
     },
     "rewoo_parallel_research": {
       "pattern": "workflow",
-      "nodes": [
-        "planner",
-        "research_swarm",
-        "solver",
-        "judge"
-      ],
+      "nodes": ["planner", "research_swarm", "solver", "judge"],
       "research_swarm": {
         "max_subagents": 5,
         "merge_strategy": "map_reduce_conflict_aware"
@@ -1096,22 +972,14 @@
     },
     "rewoo_data_analysis": {
       "pattern": "workflow",
-      "nodes": [
-        "planner",
-        "data_worker",
-        "analyst",
-        "judge"
-      ],
+      "nodes": ["planner", "data_worker", "analyst", "judge"],
       "data_worker": {
         "tool_policy": "data_read_only"
       }
     },
     "reflexion_bounded": {
       "pattern": "graph",
-      "nodes": [
-        "solver",
-        "judge"
-      ],
+      "nodes": ["solver", "judge"],
       "loops": {
         "enabled": true,
         "max_iterations": 3,
@@ -1120,12 +988,7 @@
     },
     "hybrid_rewoo_reflexion": {
       "pattern": "workflow",
-      "nodes": [
-        "planner",
-        "worker",
-        "solver",
-        "judge"
-      ],
+      "nodes": ["planner", "worker", "solver", "judge"],
       "loops": {
         "enabled": true,
         "max_iterations": 2,
@@ -1137,13 +1000,7 @@
     },
     "rewoo_guided_react_human_gate": {
       "pattern": "workflow",
-      "nodes": [
-        "planner",
-        "worker",
-        "human_gate",
-        "solver",
-        "judge"
-      ],
+      "nodes": ["planner", "worker", "human_gate", "solver", "judge"],
       "human_gate": {
         "position": "before_solver"
       },
@@ -1157,13 +1014,7 @@
     },
     "fast_copywriter_parallel": {
       "pattern": "swarm",
-      "nodes": [
-        "copy_variant_1",
-        "copy_variant_2",
-        "copy_variant_3",
-        "judge",
-        "solver"
-      ],
+      "nodes": ["copy_variant_1", "copy_variant_2", "copy_variant_3", "judge", "solver"],
       "swarm": {
         "max_subagents": 3,
         "merge_strategy": "best_of_n"
@@ -1171,36 +1022,21 @@
     },
     "workflow_kpi_snapshot": {
       "pattern": "workflow",
-      "nodes": [
-        "data_fetch",
-        "metric_compute",
-        "table_render",
-        "judge"
-      ],
+      "nodes": ["data_fetch", "metric_compute", "table_render", "judge"],
       "loops": {
         "enabled": false
       }
     },
     "workflow_social_scan": {
       "pattern": "workflow",
-      "nodes": [
-        "social_fetch",
-        "dedup_cluster",
-        "summary",
-        "judge"
-      ],
+      "nodes": ["social_fetch", "dedup_cluster", "summary", "judge"],
       "loops": {
         "enabled": false
       }
     },
     "dev_hybrid_repro_patch_test": {
       "pattern": "workflow",
-      "nodes": [
-        "repro",
-        "patch",
-        "tests",
-        "judge"
-      ],
+      "nodes": ["repro", "patch", "tests", "judge"],
       "tests": {
         "tool_policy": "no_exec_by_default"
       }
@@ -1217,11 +1053,7 @@
       "confidence"
     ],
     "enums": {
-      "op_type": [
-        "read",
-        "decision",
-        "mutation"
-      ],
+      "op_type": ["read", "decision", "mutation"],
       "sub_intent_examples": [
         "triage",
         "due_diligence",

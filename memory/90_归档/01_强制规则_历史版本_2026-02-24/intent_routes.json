@@ -11,7 +11,12 @@
       "name": "线索/客户资格审查",
       "risk": "med",
       "needs_plan": true,
-      "dag": ["kitt:抽取线索字段", "侦察:补全公司信息+证据", "工兵:ABC分级+跟进脚本", "质检:ICP规则+证据支撑"],
+      "dag": [
+        "kitt:抽取线索字段",
+        "侦察:补全公司信息+证据",
+        "工兵:ABC分级+跟进脚本",
+        "质检:ICP规则+证据支撑"
+      ],
       "dispatch": {
         "侦察": { "model": "perplexity", "fallback": ["web_search", "gemini"] },
         "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "qwen-32b"] },
@@ -28,7 +33,12 @@
       "name": "商机研究与话术",
       "risk": "med",
       "needs_plan": true,
-      "dag": ["kitt:锁定目标公司+需求", "侦察:公司背景+竞品对比", "工兵:沟通草案+话术卡", "质检:事实准确性+话术可用性"],
+      "dag": [
+        "kitt:锁定目标公司+需求",
+        "侦察:公司背景+竞品对比",
+        "工兵:沟通草案+话术卡",
+        "质检:事实准确性+话术可用性"
+      ],
       "dispatch": {
         "侦察": { "model": "perplexity", "fallback": ["web_search", "gemini"] },
         "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "ds"] },
@@ -45,7 +55,12 @@
       "name": "供应链风险监控",
       "risk": "high",
       "needs_plan": true,
-      "dag": ["kitt:维护watchlist", "侦察:抓取风险信号→事件卡", "工兵:影响评估+建议动作", "质检:误报/夸大拦截"],
+      "dag": [
+        "kitt:维护watchlist",
+        "侦察:抓取风险信号→事件卡",
+        "工兵:影响评估+建议动作",
+        "质检:误报/夸大拦截"
+      ],
       "dispatch": {
         "侦察": { "model": "perplexity", "fallback": ["web_search", "gemini"] },
         "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "flash"] },
@@ -63,7 +78,12 @@
       "name": "供应商评估/替代",
       "risk": "high",
       "needs_plan": true,
-      "dag": ["kitt:明确评估维度", "侦察:资质+交期+口碑调查", "工兵:评估矩阵+替代清单", "质检:数据完整性+偏见检查"],
+      "dag": [
+        "kitt:明确评估维度",
+        "侦察:资质+交期+口碑调查",
+        "工兵:评估矩阵+替代清单",
+        "质检:数据完整性+偏见检查"
+      ],
       "dispatch": {
         "侦察": { "model": "perplexity", "fallback": ["web_search", "gemini"] },
         "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "flash"] },
@@ -97,7 +117,12 @@
       "name": "经营分析/汇报",
       "risk": "med",
       "needs_plan": true,
-      "dag": ["kitt:明确指标+时间范围", "侦察:拉取数据源", "工兵:分析+可视化+归因", "质检:数据一致性+结论合理性"],
+      "dag": [
+        "kitt:明确指标+时间范围",
+        "侦察:拉取数据源",
+        "工兵:分析+可视化+归因",
+        "质检:数据一致性+结论合理性"
+      ],
       "dispatch": {
         "侦察": { "model": "web_search", "fallback": ["perplexity"] },
         "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "flash"] },
@@ -130,7 +155,13 @@
       "name": "内容生产（严）",
       "risk": "high",
       "needs_plan": true,
-      "dag": ["kitt:锁定受众+主张+禁语", "侦察:找可引用事实", "工兵:出3版本+主张清单", "质检:品牌/合规/事实过闸", "kitt:生成发布包"],
+      "dag": [
+        "kitt:锁定受众+主张+禁语",
+        "侦察:找可引用事实",
+        "工兵:出3版本+主张清单",
+        "质检:品牌/合规/事实过闸",
+        "kitt:生成发布包"
+      ],
       "dispatch": {
         "侦察": { "model": "perplexity", "fallback": ["web_search", "gemini"] },
         "工兵": { "model": "ds-sf", "fallback": ["qwen-32b-groq", "flash"] },

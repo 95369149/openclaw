@@ -1,6 +1,7 @@
 # 语义记忆：OpenClaw 社区玩法参考
 
 ## Command Centre 概念 (2026-02-17)
+
 - 来源: @woocassh (Lukasz) 推文
 - 概念: "The OpenClaw Command Centre To Rule Them All"
 - 本质: 将 OpenClaw 的多个功能面板整合为统一的监控/控制中心

@@ -10,6 +10,7 @@
 ### 外部搜索（3 个方向）
 
 #### 1. OpenClaw 高级技巧
+
 - **搜索词**：OpenClaw advanced tips 2026
 - **时效性**：过去 1 周
 - **发现**：
@@ -18,6 +19,7 @@
   - Valletta 企业指南：架构、安全检查清单
 
 #### 2. AI Agent 记忆架构
+
 - **搜索词**：AI agent memory architecture 2026
 - **时效性**：过去 1 周
 - **发现**：
@@ -28,6 +30,7 @@
   - arXiv 论文：多 Agent 记忆的计算机架构视角
 
 #### 3. 上下文工程最佳实践
+
 - **搜索词**：context engineering best practices 2026
 - **时效性**：过去 1 周
 - **发现**：
@@ -40,9 +43,11 @@
 ## 📄 深度阅读（3 篇全文）
 
 ### 1. InfoQ：AGENTS.md 文件价值重估
+
 **URL**：https://www.infoq.com/news/2026/03/agents-context-file-value-review/
 
 **核心观点**：
+
 - ETH Zurich 团队构建 AGENTbench（138 个真实 Python 任务）
 - 测试 4 个 Agent（Claude 3.5 Sonnet、GPT-5.2、GPT-5.1 mini、Qwen Code）
 - 结果：
@@ -52,31 +57,38 @@
 - 建议：**只保留高度特定的工具链、自定义构建命令、领域知识**
 
 **对我们的影响**：
+
 - 当前 AGENTS.md 2800+ 行，可能存在大量"模型能推断"的冗余
 - 需要审计：哪些是必须明说的（Surge 配置、红太阳业务规则），哪些是多余的（通用 Git 操作）
 
 ### 2. Let's Data Science：AI Agent 记忆架构
+
 **URL**：https://www.letsdatascience.com/blog/ai-agent-memory-architecture（429 限流，未获取全文）
 
 **从搜索摘要提取**：
+
 - 向量数据库使用 HNSW 索引处理十亿级向量
 - 分层记忆架构：短期（会话）→ 中期（任务）→ 长期（知识库）
 - 2026 年 3 月，专用向量数据库已成熟
 
 **对我们的影响**：
+
 - 当前用 QMD 文本搜索，未用向量检索
 - 记忆 <1000 条时够用，但扩展性存疑
 
 ### 3. Medium：21 条 OpenClaw 高级自动化
+
 **URL**：https://medium.com/@rentierdigital/21-openclaw-automations-nobody-talks-about...
 
 **从部分内容提取**：
+
 - 作者在 VPS 上跑 OpenClaw + Convex + Clerk + Supabase + n8n
 - 强调"无聊的自动化最省时间"（非炫技类）
 - 文章按"每周节省时间"排序，而非"酷炫程度"
 - 全文被截断，无法获取完整 21 条
 
 **对我们的影响**：
+
 - 我们的 Cron 任务（心跳、周报、健康检查）属于"无聊但有效"类
 - 社区已有大量实践，值得学习
 

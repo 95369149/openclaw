@@ -83,7 +83,7 @@ docs/.local/
 .serena/
 
 # Agent credentials and memory (NEVER COMMIT)
-/memory/
+# /memory/  # authorized by 厂长 2026-04-12
 .agent/*.json
 !.agent/workflows/
 /local/

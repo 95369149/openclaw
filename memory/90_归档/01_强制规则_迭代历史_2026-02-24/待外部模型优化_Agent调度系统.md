@@ -7,18 +7,21 @@
 ## 当前成果
 
 ### 1. Triage 分类系统
+
 - 模型: GLM 4.5 Air (¥0.5/0.5)
 - 准确率: 100% (10/10)
 - 响应时间: <1s
 - 10 个意图桶: S1/S2/SC1/SC2/IM1/IM2/M1/M2/X1/DEV1
 
 ### 2. Agent 调度器 v1.0
+
 - 流程: Triage → 查路由 → 执行 DAG → 质检 → 交付
 - 测试通过: M1 内容生产（快）
 - 成本: ¥0.001/次（vs 单 Agent ¥0.05/次）
 - 质检评分: 10/10
 
 ### 3. 已实现功能
+
 - ✅ 意图分类（100% 准确）
 - ✅ 路由配置查询
 - ✅ DAG 串行执行
@@ -26,6 +29,7 @@
 - ✅ 质检结构化输出（score/passed/issues/summary）
 
 ### 4. 已知限制
+
 - ❌ 串行执行（未并行）
 - ❌ 无 fallback（模型失败不切换）
 - ❌ 无重试（质检不通过不打回）
@@ -39,6 +43,7 @@
 ### 任务 1: 代码审查与优化建议
 
 审查 `agent_dispatcher.py`（附后），给出：
+
 1. **架构问题**：有没有明显的设计缺陷？
 2. **性能瓶颈**：哪里可以优化？
 3. **可靠性风险**：哪些地方容易出错？
@@ -47,6 +52,7 @@
 ### 任务 2: v2.0 功能优先级排序
 
 以下 7 个功能，按「价值/成本比」排序，给出理由：
+
 1. 并行 subagent（侦察任务并行）
 2. Fallback 链（模型失败自动切换）
 3. 质检重试（<6 分打回重做）
@@ -58,6 +64,7 @@
 ### 任务 3: 并行 subagent 设计
 
 参考 Anthropic 的 multi-agent research system，设计并行 subagent 架构：
+
 1. **触发条件**：哪些意图桶需要并行？（S1/S2/SC1？）
 2. **并行策略**：如何拆分任务？（按关键词？按数据源？）
 3. **汇总逻辑**：Lead agent 如何合并 subagent 结果？
@@ -67,6 +74,7 @@
 ### 任务 4: Fallback 链实现方案
 
 设计模型 fallback 机制：
+
 1. **触发条件**：什么算「失败」？（API 错误？输出格式错误？质检 <3 分？）
 2. **Fallback 顺序**：从 `intent_routes.json` 的 dispatch 配置读取
 3. **重试次数**：最多几次？
@@ -76,6 +84,7 @@
 ### 任务 5: 两周冲刺计划
 
 假设厂长给你两周时间，规划 Sprint 1 + Sprint 2：
+
 - **Week 1 目标**：最小可用版本（MVP）
 - **Week 2 目标**：生产就绪（Production-ready）
 - 每周 3-5 个任务，按天拆解
@@ -85,7 +94,7 @@
 
 ### agent_dispatcher.py（当前版本）
 
-```python
+````python
 #!/usr/bin/env python3
 """
 Agent 调度器 v1.0
@@ -116,7 +125,7 @@ def triage(user_input):
     """Triage 分类"""
     system_prompt = triage_cfg['system_prompt']
     user_prompt = triage_cfg['user_prompt_template'].replace('{user_input}', user_input)
-    
+
     result = subprocess.run([
         'curl', '-s', 'https://api.siliconflow.cn/v1/chat/completions',
         '-H', 'Authorization: Bearer sk-walotbgwymtqjrfocfulfiyaqiptpyrpedvpoexvviplttzd',
@@ -131,12 +140,12 @@ def triage(user_input):
             'max_tokens': 50
         })
     ], capture_output=True, text=True)
-    
+
     resp = json.loads(result.stdout)
     answer = resp['choices'][0]['message']['content'].strip()
     if '```' in answer:
         answer = answer.split('```')[1].replace('json', '').strip()
-    
+
     return json.loads(answer)
 
 def get_route(bucket):
@@ -149,15 +158,15 @@ def get_route(bucket):
 def call_model(model_alias, prompt, max_tokens=500):
     """调用模型（支持 SiliconFlow + Gemini）"""
     model_id = MODEL_MAP.get(model_alias, model_alias)
-    
+
     # Gemini Flash 走 Google API
     if model_alias == 'flash' or 'gemini' in model_alias:
         # 暂时用 SiliconFlow 的 GLM 4.6 代替
         model_id = 'zai-org/GLM-4.6'
-    
+
     if model_id.startswith('siliconflow/'):
         model_id = model_id.replace('siliconflow/', '')
-    
+
     result = subprocess.run([
         'curl', '-s', 'https://api.siliconflow.cn/v1/chat/completions',
         '-H', 'Authorization: Bearer sk-walotbgwymtqjrfocfulfiyaqiptpyrpedvpoexvviplttzd',
@@ -169,7 +178,7 @@ def call_model(model_alias, prompt, max_tokens=500):
             'max_tokens': max_tokens
         })
     ], capture_output=True, text=True)
-    
+
     resp = json.loads(result.stdout)
     if 'choices' not in resp:
         print(f"  ⚠️ API 错误: {resp.get('error', resp)}")
@@ -180,14 +189,14 @@ def execute_dag(user_input, route):
     """执行 DAG 流程"""
     print(f"\n=== 执行 DAG: {route['name']} ===")
     print(f"DAG: {' → '.join(route['dag'])}\n")
-    
+
     results = {}
     context = {"user_input": user_input}  # 上下文传递
-    
+
     for step in route['dag']:
         role, task = step.split(':', 1)
         print(f"[{role}] {task}")
-        
+
         if role == 'kitt':
             # Kitt 自己处理
             print(f"  → Kitt 处理中...")
@@ -197,7 +206,7 @@ def execute_dag(user_input, route):
             # 质检需要拿到工兵的输出
             upstream_output = context.get('工兵', '[无上游输出]')
             model_alias = route['dispatch'].get(role, {}).get('model', 'ds-sf')
-            
+
             prompt = f"""你是质检 Agent，任务：{task}
 
 用户需求：{user_input}
@@ -217,7 +226,7 @@ def execute_dag(user_input, route):
   "summary": "一句话总结"
 }}
 """
-            
+
             print(f"  → 调用模型: {model_alias}")
             output = call_model(model_alias, prompt, max_tokens=300)
             results[role] = output
@@ -227,24 +236,24 @@ def execute_dag(user_input, route):
             # 其他 Agent（侦察/工兵）
             model_alias = route['dispatch'].get(role, {}).get('model', 'ds-sf')
             prompt = f"你是{role}，任务：{task}\n\n用户需求：{user_input}\n\n请输出结果："
-            
+
             print(f"  → 调用模型: {model_alias}")
             output = call_model(model_alias, prompt, max_tokens=300)
             results[role] = output[:200] + '...' if len(output) > 200 else output
             context[role] = output  # 保存完整输出到上下文
             print(f"  ✅ 完成")
-        
+
         time.sleep(0.3)
-    
+
     return results
 
 def quality_check(results, route):
     """质检（解析质检 Agent 的输出）"""
     print(f"\n=== 质检 ===")
     print(f"验收标准: {route['acceptance']}")
-    
+
     qc_output = results.get('质检', '{}')
-    
+
     # 尝试解析 JSON
     try:
         if '```' in qc_output:
@@ -254,13 +263,13 @@ def quality_check(results, route):
         passed = qc_data.get('passed', False)
         issues = qc_data.get('issues', [])
         summary = qc_data.get('summary', '')
-        
+
         print(f"  评分: {score}/10")
         print(f"  状态: {'✅ 通过' if passed else '❌ 不通过'}")
         if issues:
             print(f"  问题: {', '.join(issues)}")
         print(f"  总结: {summary}")
-        
+
         return passed, score
     except:
         print(f"  ⚠️ 质检输出解析失败，默认通过")
@@ -304,7 +313,7 @@ for role, output in dag_results.items():
 
 print(f"\n质检评分: {score}/10")
 print(f"状态: {'✅ 通过' if passed else '❌ 不通过'}")
-```
+````
 
 ### intent_routes.json（路由配置，节选）
 

@@ -11,10 +11,13 @@
 ## 解决方案
 
 ### 第一步：修正 env.vars 自引用
+
 从 `openclaw.json.bak.4`（上午 09:37 稳定版）恢复 `env.vars` 明文值，保持 providers/gateway/channels 的 `${VAR}` 引用不动。
 
 ### 第二步：升级到正式 SecretRef 对象格式
+
 将所有 `${VAR_NAME}` 字符串改为 OpenClaw 官方 SecretRef 对象：
+
 ```json
 {
   "source": "env",
@@ -24,6 +27,7 @@
 ```
 
 ### 第三步：明文物理分离
+
 - 将 13 个敏感密钥从 `openclaw.json` 的 `env.vars` 抽出
 - 写入 `~/.openclaw/.env` 文件（权限 600）
 - `openclaw.json` 只保留 4 个非敏感配置（代理、项目ID）
@@ -31,11 +35,13 @@
 ## 当前架构
 
 ### 密钥管理
+
 - **格式**: SecretRef 对象 `{"source":"env","provider":"default","id":"VAR_NAME"}`
 - **明文存放**: `~/.openclaw/.env` (权限 600)
 - **配置文件**: `openclaw.json` 零敏感信息，可随意分享
 
 ### 分离的密钥（13个）
+
 ```
 BRAVE_API_KEY, MYNEWAPI_API_KEY, GOOGLE_GEMINI_API_KEY,
 GROQ_API_KEY, DOUBAO_API_KEY, DOUBAO_WEB_API_KEY,
@@ -45,11 +51,13 @@ OPENCLAW_GATEWAY_TOKEN
 ```
 
 ### 保留在 openclaw.json 的非敏感配置
+
 ```
 HTTPS_PROXY, HTTP_PROXY, GOOGLE_CLOUD_PROJECT, NO_PROXY
 ```
 
 ## 验证结果
+
 - Gateway: running (pid 12234)
 - RPC probe: ok
 - API 测试: HTTP 200
@@ -58,6 +66,7 @@ HTTPS_PROXY, HTTP_PROXY, GOOGLE_CLOUD_PROJECT, NO_PROXY
 ## 回滚路径
 
 ### 回滚到分离前（SecretRef对象 + env.vars明文）
+
 ```bash
 cp ~/.openclaw/openclaw.json.bak-envsplit-20260316-134520 ~/.openclaw/openclaw.json
 rm ~/.openclaw/.env
@@ -65,6 +74,7 @@ openclaw gateway restart
 ```
 
 ### 回滚到上午稳定版（${VAR}字符串 + env.vars明文）
+
 ```bash
 cp ~/.openclaw/openclaw.json.bak.4 ~/.openclaw/openclaw.json
 rm ~/.openclaw/.env
@@ -72,6 +82,7 @@ openclaw gateway restart
 ```
 
 ## 关键备份文件
+
 - `.bak-envsplit-20260316-134520` - 分离前最后稳定版（SecretRef对象格式）
 - `.bak.4` - 上午 09:37 稳定版（${VAR}字符串格式）
 - `~/.openclaw/.env` - 当前明文密钥文件

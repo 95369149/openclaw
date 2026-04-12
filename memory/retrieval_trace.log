@@ -1,0 +1,16 @@
+# Memory Retrieval Trace Log
+# 可视化检索轨迹（借鉴 OpenViking 的可观测性）
+
+每次 `memory_search` 调用都会在这里记录检索路径，方便 debug。
+
+格式：
+```
+[时间] query="<查询>" → 命中文件：<path> (score=<分数>) → 返回行数：<N>
+```
+
+---
+
+## 2026-03-13
+
+[10:35] query="Lyra 提示词迭代" → 命中：shared/2026-03-10_jimmy_提示词体系统一迭代稿v2.md (score=0.85) → 返回 50 行
+[10:36] query="排兵布阵 Agent 编制" → 命中：01_强制规则/排兵布阵.md (score=0.92) → 返回 80 行

@@ -1,0 +1,107 @@
+# Memory Index (L0)
+> 每次启动只读这个文件 + task-board.json + 今日日志。需要详情再读 L1/L2。
+> Last Updated: 2026-03-25 11:53
+
+## 目录结构
+| 目录 | 内容 | 优先级 |
+|------|------|--------|
+| 00_*.md | 大脑中枢 v5.6、数字分身 v3.2 | P0 核心 |
+| 01_强制规则/ | 安全红线、路由规则(排兵布阵v1.1)、碰撞规则、审批队列 | P0 永不删 |
+| 02_知识库/ | 提示词系统、行业知识、技术文档 | P1 |
+| 03_语义记忆/ | 学习笔记、分析报告、项目追踪 | P1 |
+| 04_情景记忆/ | 对话记录、场景复盘 | P2 |
+| 05_日常日志/ | 每日工作日志（30天后归档）| P1 |
+| 06_工具配置/ | Perplexity 模型配置、工具设置 | P1 |
+| 07_版本控制/ | 进化提案、版本日志 | P1 |
+| 08_内容素材/ | 朋友圈、文案素材 | P2 |
+| 10_项目/ | 进行中项目 | P1 |
+| 20_领域/ | 领域知识（女儿教育等）| P1 |
+| 80_收藏/ | X 解读、外部工具摘要 | P2 |
+| 90_归档/ | 历史归档（只读）| P3 |
+| scripts/ | 同步/监控/代理脚本 | P0 |
+| shared/ | Agent 共享记忆（多 agent 通信）| P0 |
+| ops/ | 运维状态（cron 写入，心跳读取）| P0 |
+| templates/ | 模板文件 | P1 |
+
+## Agent 编制（4员）
+
+> ⚠️ 唯一权威源：`01_强制规则/排兵布阵.md` v1.1
+> 最后校准：2026-03-20 20:42（与 openclaw.json 完全一致）
+
+| Agent | 模型 | 层级 | 定位 | 成本 |
+|-------|------|------|------|------|
+| jimmy | mynewapi/claude-sonnet-4-6 | L0 | 调度中枢 + 浏览器 + 碰撞（省钱）| 💰 |
+| deep | mygptapi/gpt-5.4 | L1 | 中文/代码/批量（主力）| ~0 |
+| main | google-gemini-cli/gemini-3-pro-preview | L1 | 多模态/长文档 | 🆓 |
+| kitt | mynewapi/claude-opus-4-6 | L2 | 深度推理+架构决策（慎用）| 💰 |
+
+## 模型配置（2026-03-20 更新）
+
+### 新增模型
+- `google-gemini-high/gemini-3.1-pro-high`（alias: `g31`）
+- 代理：`https://api.penguinsaichat.dpdns.org/v1beta`（与 opus 同代理）
+- 参数：maxTokens 65536，cacheRetention long
+
+### 主路由 Fallback 顺序
+1. `mynewapi/claude-sonnet-4-6`（primary）
+2. `mygptapi/gpt-5.4`
+3. `google-gemini-high/gemini-3.1-pro-high`（新增）
+4. `google-gemini-cli/gemini-3-pro-preview`
+5. `mynewapi/claude-opus-4-6`
+
+### Kitt Fallback
+- primary: `mynewapi/claude-opus-4-6`
+- fallback: `google-gemini-high/gemini-3.1-pro-high`
+
+### Agent 超时时间
+- 从 45 秒改为 300 秒（2026-03-20）
+
+## 快速路由
+- 厂长指令 → jimmy 判断意图桶（11桶）→ 派发对应 agent
+- 路由主依据：**模型/Agent 特质 × 擅长领域 × 当前稳定性**
+- 简单任务可由 jimmy 直出；复杂任务必须主动切到更合适的 Agent/模型
+- 需要推理>2步、不可逆决策、架构审查 → kitt
+- 中文/代码/批量 → deep
+- 多模态/长文档/视觉 → main
+- 需要外部信息 → jimmy 自己碰撞（web_search/Perplexity/browser）
+- 允许主动调用更强模型，只要更匹配任务且链路稳定
+- 成本是次级约束，**稳定性与结果质量优先**
+- agent 失败 → 换 agent 重试一次，再失败报告厂长
+
+## Provider 状态（2026-03-20 更新）
+| Provider | 状态 |
+|----------|------|
+| mynewapi | ✅ 正常（opus-4-6 / sonnet-4-6 / thinking 系列） |
+| mygptapi | ✅ 正常，已进入默认轮换 |
+| google-gemini-high | ✅ 新增（gemini-3.1-pro-high，走 opus 同代理）|
+| google-gemini-cli | ✅ 正常 |
+| google-gemini | ✅ 正常（flash/pro/flash-lite） |
+| groq | ⚠️ 非主链，保留定义 |
+| doubao | ⚠️ 非主链，保留定义 |
+
+## 公共记忆
+- `shared/` — agent 完成任务后必须写记录
+- `task-board.json` — jimmy 写入，所有 agent 可读
+- `ops/state.json` — cron 写入，心跳读取
+- **workspace 共享**：所有 agent 共享同一 workspace
+
+## 记忆系统
+- **QMD 三路混合搜索**：BM25 + 向量 + Reranking（memory.backend = qmd）
+- **softThresholdTokens = 40000**：提前触发记忆刷新
+- **sessionMemory = true**：历史会话可搜索
+
+## 工具链
+- **agent-browser**：AI Agent 专用浏览器自动化 CLI，Token 节省 95%+
+- **Perplexity 外链浏览器**：通过 OpenClaw browser 工具操作 Perplexity 进行外部碰撞
+- **apply_manifest.py**：确定性 manifest 落地执行器（/workspace/bin/），子 agent 返回 JSON → 脚本原子写入文件
+- **next_section.py**：长文档续写指针（待部署）
+
+## 当前状态
+- 活跃任务: 见 task-board.json
+- 今日日志: 2026-03-25.md
+- 排兵布阵: 01_强制规则/排兵布阵.md v1.1（唯一权威源）
+- 碰撞规则: 01_强制规则/外部碰撞规则.md
+- 模型路由表: 01_强制规则/模型能力路由表.md
+- QMD: 稳定路径 `/Users/apple/.npm-global/bin/qmd`
+- Heartbeat: 已关闭，改为 cron 方案接管
+- WhatsApp: 已关闭

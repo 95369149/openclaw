@@ -57,15 +57,15 @@
 
 ## 三、产出清单
 
-| 产出 | 说明 |
-|------|------|
-| v2.2 英文标准 | 15 章完整规范 |
-| v2.2 中文正式稿 | 可直接回写 memory 的权威版 |
-| openclaw.json 增量配置 | 6 大新增 key：taskClassification/routing/guardRules/realityChecker/fallbackPolicy/loggingPolicy |
-| jimmy system prompt v2.2 | 含 task_meta 打标 + 路由选择 + 派单 + 收口全流程 |
-| jimmy 内部工具调用约定 | manifest 格式、错误分类、日志友好格式 |
-| kitt Reality Checker prompt v2.2 | 6 轴审核 + 3 层输出 + 风险深度分级 |
-| kitt 输出模板 ×3 | 代码改造、配置变更、对外长文 三种典型 case |
+| 产出                             | 说明                                                                                            |
+| -------------------------------- | ----------------------------------------------------------------------------------------------- |
+| v2.2 英文标准                    | 15 章完整规范                                                                                   |
+| v2.2 中文正式稿                  | 可直接回写 memory 的权威版                                                                      |
+| openclaw.json 增量配置           | 6 大新增 key：taskClassification/routing/guardRules/realityChecker/fallbackPolicy/loggingPolicy |
+| jimmy system prompt v2.2         | 含 task_meta 打标 + 路由选择 + 派单 + 收口全流程                                                |
+| jimmy 内部工具调用约定           | manifest 格式、错误分类、日志友好格式                                                           |
+| kitt Reality Checker prompt v2.2 | 6 轴审核 + 3 层输出 + 风险深度分级                                                              |
+| kitt 输出模板 ×3                 | 代码改造、配置变更、对外长文 三种典型 case                                                      |
 
 ---
 

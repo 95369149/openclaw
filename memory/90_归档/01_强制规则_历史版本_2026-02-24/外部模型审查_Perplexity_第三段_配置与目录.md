@@ -1,6 +1,7 @@
 # Perplexity (GPT-5.2) 第三段：v3.0 配置与目录结构
 
 ## 来源
+
 - 平台：Perplexity Pro (GPT-5.2)
 - 时间：2026-02-23 00:00
 
@@ -9,6 +10,7 @@
 ## 1) intent_routes.json v3.0 Schema
 
 ### 核心变化
+
 - 顶层桶 + 二级子路由
 - Triage 产出：bucket_id + sub_intent + op_type + risk/complexity
 - 路由配置决定：DAG 模板、是否并行、是否 human_gate、工具白名单
@@ -96,27 +98,27 @@
 
 ## 2) 每桶 DAG 模板选择
 
-| 模板 | 适用场景 | 桶 |
-|------|----------|-----|
-| ReWOO | 高风险/强治理/工具链长 | SC1, SC2, IM1 |
-| Reflexion | 多约束权衡/方案比较 | X1(舆情), S2(商机), M2(内容严) |
-| Hybrid | 高风险+参数绑定复杂 | SC1/SC2 的评估→变更 |
-| ReAct-basic | 低风险/简单问答 | M1(内容快), DEV1(代码), IM2(分析) |
+| 模板        | 适用场景               | 桶                                |
+| ----------- | ---------------------- | --------------------------------- |
+| ReWOO       | 高风险/强治理/工具链长 | SC1, SC2, IM1                     |
+| Reflexion   | 多约束权衡/方案比较    | X1(舆情), S2(商机), M2(内容严)    |
+| Hybrid      | 高风险+参数绑定复杂    | SC1/SC2 的评估→变更               |
+| ReAct-basic | 低风险/简单问答        | M1(内容快), DEV1(代码), IM2(分析) |
 
 ### 10 桶完整映射
 
-| 桶 | 模板 | 风险 | 并行 | human_gate |
-|----|------|------|------|------------|
-| S1 线索审查 | rewoo_strict | 0.5 | ✅ | ❌ |
-| S2 商机话术 | reflexion_bounded | 0.4 | ❌ | ❌ |
-| SC1 风险监控 | rewoo_guided_react_human_gate | 0.9 | ✅ | ✅ |
-| SC2 供应商评估 | hybrid_rewoo_reflexion | 0.95 | ✅ | ✅ |
-| IM1 制度流程 | rewoo_strict | 0.3 | ❌ | ❌ |
-| IM2 经营分析 | react_basic | 0.3 | ✅ | ❌ |
-| M1 内容快 | react_basic | 0.1 | ❌ | ❌ |
-| M2 内容严 | reflexion_bounded | 0.5 | ❌ | ✅ |
-| X1 舆情 | reflexion_bounded | 0.4 | ✅ | ❌ |
-| DEV1 代码 | react_basic + reflexion | 0.3 | ❌ | ❌ |
+| 桶             | 模板                          | 风险 | 并行 | human_gate |
+| -------------- | ----------------------------- | ---- | ---- | ---------- |
+| S1 线索审查    | rewoo_strict                  | 0.5  | ✅   | ❌         |
+| S2 商机话术    | reflexion_bounded             | 0.4  | ❌   | ❌         |
+| SC1 风险监控   | rewoo_guided_react_human_gate | 0.9  | ✅   | ✅         |
+| SC2 供应商评估 | hybrid_rewoo_reflexion        | 0.95 | ✅   | ✅         |
+| IM1 制度流程   | rewoo_strict                  | 0.3  | ❌   | ❌         |
+| IM2 经营分析   | react_basic                   | 0.3  | ✅   | ❌         |
+| M1 内容快      | react_basic                   | 0.1  | ❌   | ❌         |
+| M2 内容严      | reflexion_bounded             | 0.5  | ❌   | ✅         |
+| X1 舆情        | reflexion_bounded             | 0.4  | ✅   | ❌         |
+| DEV1 代码      | react_basic + reflexion       | 0.3  | ❌   | ❌         |
 
 ---
 
@@ -145,6 +147,7 @@
 ```
 
 ### K-factor 策略
+
 - games < 30 → K=40（快速定级）
 - games 30-100 → K=20（稳定期）
 - games > 100 → K=12（成熟期）
@@ -222,6 +225,7 @@ agent_system/
 ```
 
 ### 落地要点
+
 1. `configs/intent_routes.v3.json` 做强校验（启动时 + CI）
 2. `data/artifacts/` 是降级交付的根：planner/worker 产物必须持久化
 3. `configs/human_gate/policies.yaml` 让 SC1/SC2 的 gate 变成可审计配置

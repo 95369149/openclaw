@@ -26,15 +26,16 @@ Hook registry initialized with 0 hook entries
 **核心思想:** 将串行、复杂的单一任务，拆解为多个可以并行处理的、更简单的子任务，最后由一个“聚合器”Agent将结果汇总，从而大幅缩短总响应时间。
 
 **哪些任务适合并行？**
+
 - **信息综合类:** 当一个请求需要从不同来源或维度收集信息时。例如：“对比上季度A产品和B产品的销售数据，并总结市场舆情反馈。”
-    - Sub-agent 1: 从销售数据库中拉取并分析A、B产品的销售数据。
-    - Sub-agent 2: 在社交媒体和新闻网站上搜索并分析A、B产品的舆情。
+  - Sub-agent 1: 从销售数据库中拉取并分析A、B产品的销售数据。
+  - Sub-agent 2: 在社交媒体和新闻网站上搜索并分析A、B产品的舆情。
 - **内容生成类:** 当需要生成相互独立但最终要组合在一起的内容时。例如：“为我们即将发布的新功能‘智能报表’写一篇介绍文章和一份技术实现文档。”
-    - Sub-agent 1: 撰写面向市场的介绍文章。
-    - Sub-agent 2: 撰写面向开发者的技术实现文档。
+  - Sub-agent 1: 撰写面向市场的介绍文章。
+  - Sub-agent 2: 撰写面向开发者的技术实现文档。
 - **代码相关类:** "为`user_service.py`中的`create_user`函数增加日志记录功能，并为其编写单元测试。"
-    - Sub-agent 1: 修改`user_service.py`，增加日志功能。
-    - Sub-agent 2: 在`tests/test_user_service.py`中编写对应的单元测试。
+  - Sub-agent 1: 修改`user_service.py`，增加日志功能。
+  - Sub-agent 2: 在`tests/test_user_service.py`中编写对应的单元测试。
 
 **如何拆分与合并？**
 
@@ -149,6 +150,7 @@ execute_parallel_dag(decomposition_plan)
 您的评分（IM1: 6/10, DEV1: 3/10）非常关键，说明了问题的核心。需要为不同类型的“工兵”设计高度定制化的“专家级”Prompt。
 
 **通用优化原则：R.O.L.E.S**
+
 - **R (Role):** 赋予Agent一个极其具体的专家角色。
 - **O (Objective):** 清晰、无歧义的任务目标。
 - **L (Limitations):** 明确的约束和禁止项（比如，不能使用某个库，不能杜撰数据）。
@@ -158,9 +160,11 @@ execute_parallel_dag(decomposition_plan)
 **针对 IM1 (制度流程) Prompt 优化 (从6/10到9/10):**
 
 **旧Prompt可能的样子:**
+
 > "根据公司报销政策，审核这份报销单。"
 
 **新Prompt (应用ROLES原则):**
+
 ```text
 # ROLE
 你是一名拥有10年经验的资深财务审计专家，对企业成本控制极度敏感，细致入微。
@@ -214,10 +218,12 @@ execute_parallel_dag(decomposition_plan)
 代码任务的难点在于理解上下文和遵循规范。
 
 **旧Prompt可能的样子:**
+
 > "写一个函数，用来获取用户信息。"
 
 **新Prompt (应用ROLES+代码上下文):**
-```text
+
+````text
 # ROLE
 You are a Senior Python Developer specializing in building robust and scalable backend services using FastAPI. You write clean, idiomatic, and testable code.
 
@@ -239,9 +245,10 @@ def create_user(db: Session, user_data: UserSchema):
 # vvvvvvvvvvvvvvvvvvv
 
 # ^^^^^^^^^^^^^^^^^^^
-```
+````
 
 Database Model (`models.py`):
+
 ```python
 class User(Base):
     __tablename__ = "users"
@@ -251,6 +258,7 @@ class User(Base):
 ```
 
 # REQUIREMENTS
+
 1. The function should take `db: Session` and `user_id: int` as arguments.
 2. It should query the `User` model to find the user with the given `user_id`.
 3. If the user is found, return the user object.
@@ -259,13 +267,16 @@ class User(Base):
 6. Include a docstring explaining what the function does, its parameters, and what it returns.
 
 # LIMITATIONS
+
 - Do not use raw SQL queries. Use the SQLAlchemy ORM.
 - Do not handle database connection/disconnection; assume the `db: Session` is valid.
 - Do not modify any other part of the file.
 
 # OUTPUT FORMAT
+
 Provide only the complete Python code for the `get_user_by_id` function, including its docstring and signature. Do not add any explanatory text before or after the code block.
-```
+
+````
 
 #### 3. ELO评分系统设计
 
@@ -330,16 +341,16 @@ class EloRatingSystem:
         # 在实际应用中，评分应该是和任务类型相关的
         # self.ratings 可以是这样的结构: { "task_type": { "model_name": elo_score } }
         # 这里简化为全局评分
-        
+
         best_model = None
         highest_rating = -1
-        
+
         for model in available_models:
             rating = self._get_rating(model)
             if rating > highest_rating:
                 highest_rating = rating
                 best_model = model
-                
+
         return best_model
 
 # --- 使用示例 ---
@@ -357,7 +368,7 @@ print(f"Updated Ratings: {elo_system.ratings}")
 available = ["deepseek-v3.2", "glm-4.5-flash", "qwen3-32b"]
 best_model = elo_system.get_best_model_for_task("content_creation", available)
 print(f"Best model for the task is: {best_model}")
-```
+````
 
 ---
 
@@ -367,14 +378,13 @@ print(f"Best model for the task is: {best_model}")
 
 1.  **ELO驱动的性能-成本动态路由:**
     这是最核心的优化。Triage层不再是简单地“优先用免费模型”，而是“**优先用在该任务类型上ELO分数足够高的、最便宜的模型**”。
-
     - **设置性能门槛:** 为每个任务类型定义一个可接受的最低ELO分数（`ELO_THRESHOLD`）。
     - **动态选择:**
-        1.  Triage接到任务后，识别任务类型（如 `code_generation`）。
-        2.  从模型池中筛选出所有可用模型，按**成本从低到高**排序。
-        3.  遍历排序后的模型列表，检查其在该任务类型下的ELO分数。
-        4.  选择**第一个**ELO分数超过 `ELO_THRESHOLD` 的模型。
-        5.  如果所有免费/廉价模型的ELO都不达标，才启用昂贵的付费模型（如GPT-4o）。
+      1.  Triage接到任务后，识别任务类型（如 `code_generation`）。
+      2.  从模型池中筛选出所有可用模型，按**成本从低到高**排序。
+      3.  遍历排序后的模型列表，检查其在该任务类型下的ELO分数。
+      4.  选择**第一个**ELO分数超过 `ELO_THRESHOLD` 的模型。
+      5.  如果所有免费/廉价模型的ELO都不达标，才启用昂贵的付费模型（如GPT-4o）。
 
 2.  **预测性重试 (Predictive Retry):**
     如果一个低成本模型（如DeepSeek）执行任务失败（质检不通过），不要立即用昂贵模型（如GPT-4）重试。而是先用一个**中等成本且ELO分数较高**的模型（如GLM-4）重试。只有当中等模型也失败时，才升级到最高成本的模型。这在保持高成功率的同时，最大化地节约了成本。

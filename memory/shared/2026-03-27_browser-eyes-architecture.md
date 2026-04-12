@@ -6,15 +6,15 @@
 
 ## 1. 为什么选 agent-browser 做主刀
 
-| 维度 | agent-browser | browser-use | PinchTab | OpenClaw 内置 browser |
-|------|---------------|-------------|----------|----------------------|
-| Token 消耗 | **~200 tokens/页**（快照只返回可交互元素语义树） | ~2000-5000（完整 DOM） | ~800（text 模式） | ~8000+（完整 snapshot） |
-| 速度 | **<0.5s**（Rust CLI） | 1-3s（Python + Playwright） | 0.5-1s | 1-2s |
-| CLI 适配 | ✅ 原生 CLI，exec 一条命令 | ❌ Python 库，需包装 | ✅ CLI | ❌ 需 browser tool JSON 调用 |
-| 元素引用 | `@e1` `@e2` 语义 ref | CSS 选择器 | `ref=1` 数字引用 | role-based ref |
-| 持久化登录 | ✅ Kernel 云浏览器 | ✅ 内置 | ❌ 无 | ❌ 无 |
-| 反爬绕过 | ✅ Kernel stealth | ✅ 内置 | ❌ 无 | ❌ 无 |
-| 安装状态 | ✅ 已装 0.15.2 | ❌ 未装 | ✅ 已装（服务不稳定） | ✅ 内置 |
+| 维度       | agent-browser                                    | browser-use                 | PinchTab              | OpenClaw 内置 browser        |
+| ---------- | ------------------------------------------------ | --------------------------- | --------------------- | ---------------------------- |
+| Token 消耗 | **~200 tokens/页**（快照只返回可交互元素语义树） | ~2000-5000（完整 DOM）      | ~800（text 模式）     | ~8000+（完整 snapshot）      |
+| 速度       | **<0.5s**（Rust CLI）                            | 1-3s（Python + Playwright） | 0.5-1s                | 1-2s                         |
+| CLI 适配   | ✅ 原生 CLI，exec 一条命令                       | ❌ Python 库，需包装        | ✅ CLI                | ❌ 需 browser tool JSON 调用 |
+| 元素引用   | `@e1` `@e2` 语义 ref                             | CSS 选择器                  | `ref=1` 数字引用      | role-based ref               |
+| 持久化登录 | ✅ Kernel 云浏览器                               | ✅ 内置                     | ❌ 无                 | ❌ 无                        |
+| 反爬绕过   | ✅ Kernel stealth                                | ✅ 内置                     | ❌ 无                 | ❌ 无                        |
+| 安装状态   | ✅ 已装 0.15.2                                   | ❌ 未装                     | ✅ 已装（服务不稳定） | ✅ 内置                      |
 
 **结论**：agent-browser 在 token 效率和 CLI 适配性上碾压其他方案。AI Agent 场景下，token 就是钱，省 95% 就是省 95% 的成本。
 
@@ -136,11 +136,11 @@ agent-browser eval "document.querySelector('img.generated').src"
 
 ### 登录态复用策略
 
-| 站点 | 登录方式 | 复用策略 |
-|------|---------|---------|
-| Gemini | Google 账号 | 本地 Chromium，首次手动登录，后续自动复用 |
-| 豆包 | 字节账号 | 同上 |
-| Midjourney | Discord | Kernel 云浏览器（需持久化 Discord 登录） |
+| 站点       | 登录方式    | 复用策略                                  |
+| ---------- | ----------- | ----------------------------------------- |
+| Gemini     | Google 账号 | 本地 Chromium，首次手动登录，后续自动复用 |
+| 豆包       | 字节账号    | 同上                                      |
+| Midjourney | Discord     | Kernel 云浏览器（需持久化 Discord 登录）  |
 
 ### 失败降级路径
 

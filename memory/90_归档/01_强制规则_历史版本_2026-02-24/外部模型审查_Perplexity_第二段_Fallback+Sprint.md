@@ -1,6 +1,7 @@
 # Perplexity (GPT-5.2) 第二段：Fallback 链 + 两周冲刺
 
 ## 来源
+
 - 平台：Perplexity Pro (GPT-5.2)
 - 时间：2026-02-22 23:55
 - 引用：16 个来源
@@ -11,17 +12,18 @@
 
 ### 4.1 失败类型与触发条件（5 类分层处理）
 
-| 类型 | 触发条件 | 策略 |
-|------|----------|------|
-| A. 基础设施失败 | API 5xx、连接失败、429 限流 | 同模型退避重试 1-2 次 → 同桶次优模型 |
-| B. 超时/预算耗尽 | 超 timeout_s、token 超预算 | 换更快模型 + "压缩模式" |
-| C. Schema 错误 | JSON 解析失败、缺字段 | 同模型 repair pass → 换格式更强模型 |
-| D. 质量失败 | judge <0.3、pass=False | 定向重试 blame_node → 逐级升级 |
-| E. 不可恢复 | 缺参数、权限禁止 | 部分结果交付 + 转人工 |
+| 类型             | 触发条件                    | 策略                                 |
+| ---------------- | --------------------------- | ------------------------------------ |
+| A. 基础设施失败  | API 5xx、连接失败、429 限流 | 同模型退避重试 1-2 次 → 同桶次优模型 |
+| B. 超时/预算耗尽 | 超 timeout_s、token 超预算  | 换更快模型 + "压缩模式"              |
+| C. Schema 错误   | JSON 解析失败、缺字段       | 同模型 repair pass → 换格式更强模型  |
+| D. 质量失败      | judge <0.3、pass=False      | 定向重试 blame_node → 逐级升级       |
+| E. 不可恢复      | 缺参数、权限禁止            | 部分结果交付 + 转人工                |
 
 ### 4.2 预测性重试：低→中→高逐级升级
 
 关键规则：
+
 - SchemaError：repair（同模型低 token）→ 换格式更强模型
 - Timeout：reduce-effort → 换更快模型 → 再升级
 - QualityFail：定向重跑 blame_node → 换同价位 ELO 更高 → 再升价位
@@ -168,38 +170,38 @@ def smart_fallback(task_ctx, bucket, risk, model_pool, elo_table, health, policy
 
 目标：智能 fallback + 失败分类 + 工件复用 + 最小 ELO 采集
 
-| Day | 任务 | 依赖 |
-|-----|------|------|
-| Day1 | 定义数据契约（AttemptResult、FailType、artifacts schema、trace_id） | 无 |
-| Day2 | 实现 schema_validate() + classify_failure() + repair pass | Day1 |
-| Day3 | 实现 smart_fallback() 骨架（逐级升级 + infra 重试 + timeout 降 effort） | Day2 |
-| Day4 | 质检统一为 judge（score 0-1 + pass/fail + blame_node + fix_instructions） | Day1 |
-| Day5 | 最小评测闭环：20 条样本，v2.0 vs v3.0-MVP 对比 | Day3+4 |
-| Day6 | 灰度发布（1-5% 流量）+ 告警 | Day5 |
-| Day7 | 修复灰度问题 + 固化阈值 + 文档 | Day6 |
+| Day  | 任务                                                                      | 依赖   |
+| ---- | ------------------------------------------------------------------------- | ------ |
+| Day1 | 定义数据契约（AttemptResult、FailType、artifacts schema、trace_id）       | 无     |
+| Day2 | 实现 schema_validate() + classify_failure() + repair pass                 | Day1   |
+| Day3 | 实现 smart_fallback() 骨架（逐级升级 + infra 重试 + timeout 降 effort）   | Day2   |
+| Day4 | 质检统一为 judge（score 0-1 + pass/fail + blame_node + fix_instructions） | Day1   |
+| Day5 | 最小评测闭环：20 条样本，v2.0 vs v3.0-MVP 对比                            | Day3+4 |
+| Day6 | 灰度发布（1-5% 流量）+ 告警                                               | Day5   |
+| Day7 | 修复灰度问题 + 固化阈值 + 文档                                            | Day6   |
 
 ### Week 2：生产就绪
 
 目标：ELO 数据驱动 + 并行 subagent + 缓存 + 可观测性
 
-| Day | 任务 | 依赖 |
-|-----|------|------|
-| Day8 | ELO 计算 job + judge 分数映射 | Week1 |
-| Day9 | ELO 接入 elo_sorted_models() + 冷启动 + K-factor 衰减 | Day8 |
-| Day10 | 2 个高价值桶引入并行 subagent（3-5 个） | Day9 |
+| Day   | 任务                                                   | 依赖  |
+| ----- | ------------------------------------------------------ | ----- |
+| Day8  | ELO 计算 job + judge 分数映射                          | Week1 |
+| Day9  | ELO 接入 elo_sorted_models() + 冷启动 + K-factor 衰减  | Day8  |
+| Day10 | 2 个高价值桶引入并行 subagent（3-5 个）                | Day9  |
 | Day11 | 缓存：工具结果幂等缓存 + 检索缓存 + artifacts 引用复用 | Day10 |
-| Day12 | 可观测性：trace 串联 + 超时/错误率报警 | Day11 |
-| Day13 | 压测与故障演练（注入 429、工具挂掉、慢查询） | Day12 |
-| Day14 | 全量发布准备 + SLO 签字 + 回滚策略 | Day13 |
+| Day12 | 可观测性：trace 串联 + 超时/错误率报警                 | Day11 |
+| Day13 | 压测与故障演练（注入 429、工具挂掉、慢查询）           | Day12 |
+| Day14 | 全量发布准备 + SLO 签字 + 回滚策略                     | Day13 |
 
 ### 风险点与缓解
 
-| 风险 | 缓解 |
-|------|------|
-| judge 误判导致无谓升级 | judge 输出含 reasons + blame_node，高风险桶加人工抽检 |
-| 并行 subagent token 失控 | 限定桶 + 限 subagent 数 + 工具调用上限 |
-| 超时/工具不稳定级联失败 | 工具层统一超时/熔断/隔离 |
-| 部署中断运行中长任务 | 版本化 DAG + 灰度切流 + 可回滚 |
+| 风险                     | 缓解                                                  |
+| ------------------------ | ----------------------------------------------------- |
+| judge 误判导致无谓升级   | judge 输出含 reasons + blame_node，高风险桶加人工抽检 |
+| 并行 subagent token 失控 | 限定桶 + 限 subagent 数 + 工具调用上限                |
+| 超时/工具不稳定级联失败  | 工具层统一超时/熔断/隔离                              |
+| 部署中断运行中长任务     | 版本化 DAG + 灰度切流 + 可回滚                        |
 
 ---
 

@@ -8,11 +8,13 @@
 ## 核心洞察（2026 年共识）
 
 ### 1. 从 Prompt Engineering 到 Context Engineering
+
 - **Karpathy 定义**：LLM = CPU，Context Window = RAM，你是 OS
 - **失败根因**：不是 prompt 写得不好，而是 context 装配错了
 - **LangChain 四策略**：write（持久化）/ select（RAG 检索）/ compress（压缩）/ isolate（隔离）
 
 ### 2. 提示词分裂成 4 个不同技能
+
 - Chat prompting（对话）
 - Specification engineering（规格说明）
 - Intent framework building（意图框架）
@@ -20,6 +22,7 @@
 - **35 分钟墙**：自主 agent 运行超过 35 分钟后，传统 prompting 假设全部崩溃
 
 ### 3. 反直觉的新规则
+
 - ❌ "Think step by step" 对推理模型有害（GPT-5/Claude Extended Thinking 内部已做）
 - ❌ 长提示词降低性能（3000 tokens 后推理开始退化，最佳 150-300 词）
 - ❌ ALL-CAPS/YOU MUST 等激进格式破坏输出质量
@@ -27,18 +30,21 @@
 - ⚠️ Lost in the middle：关键信息放开头或结尾，不要放中间（准确率差 30%）
 
 ### 4. 结构化输出稳定性三步法
+
 - **Step 1**: 系统提示词建立理解（详细规则 + 完整示例）
 - **Step 2**: 用户提示词提供上下文
 - **Step 3**: 输出前最后一刻再次提醒格式（利用 Recency Effect）
 - **字段顺序优化**：短字段在前，长数组在后（防止截断）
 
 ### 5. 模型特异性策略
+
 - **Claude**: XML 标签 + 字面指令（不会"超额完成"）
 - **GPT**: 对话式 + 避免显式 CoT（推理模型）
 - **Gemini**: schema 深度敏感，保持扁平
 - **提示词是代码**：版本控制 + 回归测试 + 缓存优化
 
 ### 6. 提示词优化工具链
+
 - **DSPy**：程序化提示词优化
 - **PromptFoo**：A/B 测试框架
 - **Meta-prompting**：让模型写提示词

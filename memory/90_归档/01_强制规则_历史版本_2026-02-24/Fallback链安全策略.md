@@ -1,11 +1,13 @@
 # 强制规则：Fallback 链安全策略
 
 ## 历史教训
+
 - 2026-02-18 14:28：Claude/DeepSeek/Gemini 同时不可用，Kitt 失联 65 分钟
 - 2026-02-18 18:15：恢复旧黄金备份导致 Groq/SiliconFlow 被清除，失联 3 小时
 - 2026-02-18 23:11：SiliconFlow 免费版限流，整条链堵塞
 
 ## 当前 Fallback 链 (2026-02-19 更新)
+
 ```
 主力: siliconflow/deepseek-ai/DeepSeek-V3.2 (免费，日常前台)
 备用1: siliconflow/Pro/deepseek-ai/DeepSeek-V3.2 (付费，免费版限流时秒切)
@@ -19,6 +21,7 @@
 ```
 
 ## 规则
+
 1. 免费模型排前面，付费模型排后面
 2. 同平台免费+付费配对（SiliconFlow 免费→Pro）
 3. 跨平台交替排列（SiliconFlow→Groq→mynewapi→Google）
@@ -27,6 +30,7 @@
 6. 黄金备份必须包含所有 provider，更新后立即同步
 
 ## 禁止事项
+
 - 禁止把所有免费模型放在同一个平台（单点故障）
 - 禁止恢复旧黄金备份而不检查 provider 完整性
 - 禁止在 google-gemini API 模式下配 Preview 模型（会崩溃）

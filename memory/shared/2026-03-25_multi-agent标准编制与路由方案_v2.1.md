@@ -208,15 +208,15 @@
 
 ## 五、v2.1 推荐正式编制
 
-| Agent | 模型 | 层级 | 正式定位 |
-|------|------|------|---------|
-| `jimmy` | `mynewapi/claude-sonnet-4-6` | L0 | 调度中枢 + 对外统一出口 + Project Shepherd |
-| `deep` | `mygptapi/gpt-5.4` | L1 | 代码/脚本/自动化/长文执行主力 |
-| `main` | `google-gemini-cli/gemini-3-pro-preview` | L1 | 多模态输入处理 + 长文档消化 |
-| `kitt` | `mynewapi/claude-opus-4-6` | L2 | Reality Checker + 架构裁判 + 终审 |
-| `sino` | `kimi/kimi-for-coding` | L1 | 中文专家 + 本地化表达 |
-| `scout` | `google-gemini-cli/gemini-3-pro-preview` | L1 | 侦察岗 + GitHub / 外链 / 情报收集 |
-| `guard` | `mynewapi/claude-sonnet-4-6` | L1 | 配置守门 + 风险审计 + 回滚核对 |
+| Agent   | 模型                                     | 层级 | 正式定位                                   |
+| ------- | ---------------------------------------- | ---- | ------------------------------------------ |
+| `jimmy` | `mynewapi/claude-sonnet-4-6`             | L0   | 调度中枢 + 对外统一出口 + Project Shepherd |
+| `deep`  | `mygptapi/gpt-5.4`                       | L1   | 代码/脚本/自动化/长文执行主力              |
+| `main`  | `google-gemini-cli/gemini-3-pro-preview` | L1   | 多模态输入处理 + 长文档消化                |
+| `kitt`  | `mynewapi/claude-opus-4-6`               | L2   | Reality Checker + 架构裁判 + 终审          |
+| `sino`  | `kimi/kimi-for-coding`                   | L1   | 中文专家 + 本地化表达                      |
+| `scout` | `google-gemini-cli/gemini-3-pro-preview` | L1   | 侦察岗 + GitHub / 外链 / 情报收集          |
+| `guard` | `mynewapi/claude-sonnet-4-6`             | L1   | 配置守门 + 风险审计 + 回滚核对             |
 
 ---
 

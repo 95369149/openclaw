@@ -1,0 +1,152 @@
+{
+  "date": "2026-03-12",
+  "sources": {
+    "github_trending": {
+      "status": "ok",
+      "items": [
+        {
+          "repo": "msitarzewski/agency-agents",
+          "desc": "Complete AI agency - specialized agents with personality & processes",
+          "stars": "30,196",
+          "today": "6,167",
+          "url": "https://github.com/msitarzewski/agency-agents"
+        },
+        {
+          "repo": "666ghj/MiroFish",
+          "desc": "Simple Universal Swarm Intelligence Engine - 群体智能引擎，预测万物",
+          "stars": "16,840",
+          "today": "2,907",
+          "url": "https://github.com/666ghj/MiroFish"
+        },
+        {
+          "repo": "promptfoo/promptfoo",
+          "desc": "Test prompts/agents/RAGs, red teaming for AI",
+          "stars": "12,578",
+          "today": "718",
+          "url": "https://github.com/promptfoo/promptfoo"
+        },
+        {
+          "repo": "obra/superpowers",
+          "desc": "Agentic skills framework that works",
+          "stars": "78,102",
+          "today": "1,483",
+          "url": "https://github.com/obra/superpowers"
+        },
+        {
+          "repo": "alibaba/page-agent",
+          "desc": "JavaScript in-page GUI agent - control web with natural language",
+          "stars": "4,790",
+          "today": "1,215",
+          "url": "https://github.com/alibaba/page-agent"
+        },
+        {
+          "repo": "NousResearch/hermes-agent",
+          "desc": "The agent that grows with you",
+          "stars": "5,279",
+          "today": "1,234",
+          "url": "https://github.com/NousResearch/hermes-agent"
+        }
+      ]
+    },
+    "ai_news": {
+      "status": "ok",
+      "items": [
+        {
+          "title": "OpenClaw成中国两会热点",
+          "desc": "\"养龙虾\"在AI社区引发热议，OpenClaw开源AI agent成两会话题",
+          "url": "https://www.bastillepost.com/global/article/5679975-ai-agent-openclaw-becomes-hot-topic-at-chinas-two-sessions",
+          "published": "11 hours ago"
+        },
+        {
+          "title": "密歇根大学AI秒读脑部MRI",
+          "desc": "新AI系统数秒内解读脑部MRI，准确识别神经疾病并判断紧急程度",
+          "url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/",
+          "published": "14 hours ago"
+        },
+        {
+          "title": "Anthropic $30B融资 + Claude Sonnet 4.6发布",
+          "desc": "Agents Hour播客：Anthropic获300亿美元融资，Claude Sonnet 4.6正式发布",
+          "url": "https://podcasts.apple.com/us/podcast/agents-hour/id1829809570",
+          "published": "20 hours ago"
+        },
+        {
+          "title": "Peter Steinberger加入OpenAI",
+          "desc": "OpenClaw创始人Peter Steinberger加入OpenAI团队",
+          "url": "https://podcasts.apple.com/us/podcast/agents-hour/id1829809570",
+          "published": "20 hours ago"
+        },
+        {
+          "title": "Nvidia计划推出开源AI Agent平台",
+          "desc": "Nvidia正在规划开源AI agent平台，与OpenAI/Anthropic竞争",
+          "url": "https://www.wired.com/story/nvidia-planning-ai-agent-platform-launch-open-source/",
+          "published": "2 days ago"
+        }
+      ]
+    },
+    "ai_community": {
+      "status": "ok",
+      "items": [
+        {
+          "title": "Chrome 146原生Agent支持",
+          "desc": "WebMCP集成到Chrome 146，浏览器原生支持AI agent",
+          "source": "Agents Hour podcast"
+        },
+        {
+          "title": "DeepSeek v4传闻：推理成本降10-40倍",
+          "desc": "DeepSeek v4即将发布，推理成本大幅下降",
+          "source": "Agents Hour podcast"
+        },
+        {
+          "title": "Kimi Claw发布",
+          "desc": "Kimi推出类OpenClaw产品",
+          "source": "Agents Hour podcast"
+        }
+      ]
+    },
+    "openviking": {
+      "status": "failed",
+      "error": "404 Not Found - repo may be private/renamed/deleted"
+    },
+    "tiktok_cnc": {
+      "status": "ok",
+      "items": [
+        {
+          "title": "Matsuura UK进军TikTok",
+          "desc": "日本CNC厂商Matsuura英国分公司开设TikTok账号展示先进加工技术",
+          "url": "https://mtdcnc.com/news/matsuura-machinery-ltd/matsuura-uk-enters-tiktok-to-showcase-cnc-innovation/",
+          "published": "1 week ago"
+        },
+        {
+          "title": "CNC镗削视频爆火",
+          "desc": "Instagram用户cnc_feifei的镗削视频在TikTok获639赞",
+          "url": "https://www.tiktok.com/@interestingengineering/video/7488289517091228935"
+        },
+        {
+          "title": "5轴CNC加工热度持续",
+          "desc": "5轴CNC珠宝雕刻、复杂设计加工视频持续走红",
+          "url": "https://www.tiktok.com/discover/5-axis-cnc-machining"
+        }
+      ]
+    }
+  },
+  "new_urls": [
+    "https://github.com/msitarzewski/agency-agents",
+    "https://github.com/666ghj/MiroFish",
+    "https://github.com/promptfoo/promptfoo",
+    "https://github.com/obra/superpowers",
+    "https://github.com/alibaba/page-agent",
+    "https://github.com/NousResearch/hermes-agent",
+    "https://www.bastillepost.com/global/article/5679975-ai-agent-openclaw-becomes-hot-topic-at-chinas-two-sessions",
+    "https://www.ibm.com/think/topics/ai-agents",
+    "https://podcasts.apple.com/us/podcast/agents-hour/id1829809570",
+    "https://www.wired.com/story/nvidia-planning-ai-agent-platform-launch-open-source/",
+    "https://llm-stats.com/ai-news",
+    "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/",
+    "https://opentools.ai/news",
+    "https://www.stocktitan.net/news/ai.html",
+    "https://www.tiktok.com/discover/cnc-machining",
+    "https://mtdcnc.com/news/matsuura-machinery-ltd/matsuura-uk-enters-tiktok-to-showcase-cnc-innovation/",
+    "https://www.tiktok.com/@interestingengineering/video/7488289517091228935",
+    "https://www.tiktok.com/discover/cnc-machining-memes"
+  ]
+}
