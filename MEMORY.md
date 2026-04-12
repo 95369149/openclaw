@@ -82,3 +82,5 @@
 - [2026-04-12_jimmy_早间推送] 2026-04-12 早间推送（草稿留痕）：📜 观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。——《般若波罗蜜多心经》
 - [2026-04-12_markdown_viewer_skills_intake] markdown-viewer skills 接入记录：来源仓库：`https://github.com/markdown-viewer/skills`
 - [2026-04-12_x_digest] X 情报日报 2026-04-12：抓取账号：11 个 | 通过过滤：21 条
+
+- [2026-04-12_learning_ingest] 2026-04-12 learning_ingest 摘要：- 本轮处理文件数：2（每日巡逻_2026-04-11.md、每日巡逻_2026-04-12.md）
