@@ -90,3 +90,5 @@
 - [2026-04-13_deep_X推文摘要] 2026-04-13 X 推文摘要：今天的 X 信息流里，真正有价值的不是泛 AI 鸡血，而是三类明确信号：
 - [2026-04-13_gbrain_daily_check] gbrain daily check — 2026-04-13：- Repo exists: `/Users/apple/.openclaw/workspace/gbrain`
 - [2026-04-13_x_digest] X 情报日报 2026-04-13：抓取账号：11 个 | 通过过滤：20 条
+
+- [2026-04-13_learning_ingest] 2026-04-13 learning_ingest 摘要：- 本轮处理文件数：2（每日巡逻_2026-04-12.md、每日巡逻_2026-04-13.md）
