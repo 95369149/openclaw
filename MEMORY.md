@@ -92,3 +92,10 @@
 - [2026-04-13_x_digest] X 情报日报 2026-04-13：抓取账号：11 个 | 通过过滤：20 条
 
 - [2026-04-13_learning_ingest] 2026-04-13 learning_ingest 摘要：- 本轮处理文件数：2（每日巡逻_2026-04-12.md、每日巡逻_2026-04-13.md）
+
+### 2026-04-16 (Dream 自动整合)
+- [2026-04-16_daily_lead_collect] 2026-04-16 Daily Lead Collect：- 时间: 2026-04-16 18:43 Asia/Shanghai
+- [2026-04-16_deep_X推文摘要] 2026-04-16 X 推文摘要：今天值得保留的信号，核心就 4 条：
+- [2026-04-16_gbrain_daily_check] gbrain daily check — 2026-04-16：- Repo present: `/Users/apple/.openclaw/workspace/gbrain`
+- [2026-04-16_learning_ingest] Learning Ingest Report - 2026-04-16：本日无新增原材料，跳过编译。
+- [2026-04-16_x_digest] X 情报日报 2026-04-16：抓取账号：11 个 | 通过过滤：32 条
