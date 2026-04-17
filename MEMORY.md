@@ -99,3 +99,8 @@
 - [2026-04-16_gbrain_daily_check] gbrain daily check — 2026-04-16：- Repo present: `/Users/apple/.openclaw/workspace/gbrain`
 - [2026-04-16_learning_ingest] Learning Ingest Report - 2026-04-16：本日无新增原材料，跳过编译。
 - [2026-04-16_x_digest] X 情报日报 2026-04-16：抓取账号：11 个 | 通过过滤：32 条
+
+### 2026-04-17 (Dream 自动整合)
+- [2026-04-17_deep_X推文摘要] X 推文摘要｜2026-04-17：今天最有价值的信号就两条：
+- [2026-04-17_gbrain_daily_check] gbrain daily check — 2026-04-17：- Repo: `/Users/apple/.openclaw/workspace/gbrain`
+- [2026-04-17_x_digest] X 情报日报 2026-04-17：抓取账号：11 个 | 通过过滤：26 条
