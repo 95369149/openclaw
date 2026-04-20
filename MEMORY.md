@@ -114,3 +114,8 @@
 - [2026-04-19_deep_X推文摘要] X 推文摘要｜2026-04-19：今天真正值得留的信号只有三类。
 - [2026-04-19_gbrain_daily_check] gbrain daily check — 2026-04-19：- Repo exists: `/Users/apple/.openclaw/workspace/gbrain`
 - [2026-04-19_x_digest] X 情报日报 2026-04-19：抓取账号：11 个 | 通过过滤：19 条
+
+### 2026-04-20 (Dream 自动整合)
+- [2026-04-20_deep_X推文摘要] X 推文摘要日报｜2026-04-20：今日监控脚本已执行，`memory/ideas.md` 在 `## 2026-04-20 07:44 (v2.0 已过滤)` 下新增了 11 条推文。经二次人工过滤后，可用信息集中在 5 个方向：Ag
+- [2026-04-20_gbrain_daily_check] gbrain daily check — 2026-04-20：- Repo present: `/Users/apple/.openclaw/workspace/gbrain`
+- [2026-04-20_x_digest] X 情报日报 2026-04-20：抓取账号：11 个 | 通过过滤：13 条
