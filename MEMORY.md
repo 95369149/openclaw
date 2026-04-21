@@ -127,3 +127,5 @@
 - [2026-04-21_deep_X推文摘要] 2026-04-21 X 推文摘要：生成时间：2026-04-21 07:43 Asia/Shanghai
 - [2026-04-21_gbrain_daily_check] gbrain daily check - 2026-04-21：- Status: action needed
 - [2026-04-21_x_digest] X 情报日报 2026-04-21：抓取账号：11 个 | 通过过滤：26 条
+
+- [2026-04-21_learning_ingest] 本轮处理文件数：2（每日巡逻_2026-04-20.md、每日巡逻_2026-04-21.md）：新增概念：1（外贸AI获客工作流）；更新概念：5（生产级Agent框架、OpenClaw数字员工底座、Seedance视频模板化生产、场景化振动刀方案、外贸AI执行团队）
