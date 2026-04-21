@@ -121,3 +121,9 @@
 - [2026-04-20_x_digest] X 情报日报 2026-04-20：抓取账号：11 个 | 通过过滤：13 条
 
 - [2026-04-20_learning_ingest] 2026-04-20 learning_ingest 摘要：- 本轮处理文件数：7（inbox/hermes_bridge_sync 全部）
+
+### 2026-04-21 (Dream 自动整合)
+- [2026-04-21_daily_lead_collect] 2026-04-21 每日线索自动采集：- 执行时间：2026-04-21 08:30 Asia/Shanghai
+- [2026-04-21_deep_X推文摘要] 2026-04-21 X 推文摘要：生成时间：2026-04-21 07:43 Asia/Shanghai
+- [2026-04-21_gbrain_daily_check] gbrain daily check - 2026-04-21：- Status: action needed
+- [2026-04-21_x_digest] X 情报日报 2026-04-21：抓取账号：11 个 | 通过过滤：26 条
