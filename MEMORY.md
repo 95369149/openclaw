@@ -129,3 +129,9 @@
 - [2026-04-21_x_digest] X 情报日报 2026-04-21：抓取账号：11 个 | 通过过滤：26 条
 
 - [2026-04-21_learning_ingest] 本轮处理文件数：2（每日巡逻_2026-04-20.md、每日巡逻_2026-04-21.md）：新增概念：1（外贸AI获客工作流）；更新概念：5（生产级Agent框架、OpenClaw数字员工底座、Seedance视频模板化生产、场景化振动刀方案、外贸AI执行团队）
+
+### 2026-04-22 (Dream 自动整合)
+- [2026-04-22_daily_lead_collect] Daily Lead Collect - 2026-04-22：- Time: 2026-04-22T08:32:17+08:00
+- [2026-04-22_deep_X推文摘要] 2026-04-22 X 推文摘要：今天真正有价值的信号不在泛泛而谈的投资鸡汤，而在三条主线：
+- [2026-04-22_gbrain_daily_check] gbrain daily check — 2026-04-22：- Repo exists: `/Users/apple/.openclaw/workspace/gbrain`
+- [2026-04-22_x_digest] X 情报日报 2026-04-22：抓取账号：11 个 | 通过过滤：27 条
