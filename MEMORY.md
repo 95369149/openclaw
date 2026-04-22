@@ -135,3 +135,5 @@
 - [2026-04-22_deep_X推文摘要] 2026-04-22 X 推文摘要：今天真正有价值的信号不在泛泛而谈的投资鸡汤，而在三条主线：
 - [2026-04-22_gbrain_daily_check] gbrain daily check — 2026-04-22：- Repo exists: `/Users/apple/.openclaw/workspace/gbrain`
 - [2026-04-22_x_digest] X 情报日报 2026-04-22：抓取账号：11 个 | 通过过滤：27 条
+
+- [2026-04-22_learning_ingest] 每日知识编译报告｜2026-04-22：- **处理文件数**：3
