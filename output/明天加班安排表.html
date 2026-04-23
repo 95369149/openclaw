@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>明天加班安排</title>
+<style>
+  :root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --line: #dbe2ea;
+    --head: #1d4ed8;
+    --head2: #dbeafe;
+    --accent: #dc2626;
+    --ok: #065f46;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    color: var(--text);
+  }
+  .wrap {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 28px;
+  }
+  .card {
+    background: var(--card);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    overflow: hidden;
+    border: 1px solid #e8edf3;
+  }
+  .header {
+    padding: 24px 30px 18px;
+    background: linear-gradient(135deg, #1d4ed8, #2563eb 55%, #3b82f6);
+    color: white;
+  }
+  .title {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0 0 8px;
+  }
+  .sub {
+    font-size: 18px;
+    opacity: .95;
+    margin: 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 18px;
+  }
+  thead th {
+    background: var(--head2);
+    color: var(--head);
+    font-weight: 800;
+    border-bottom: 2px solid #bfdbfe;
+    padding: 14px 12px;
+  }
+  tbody td {
+    border-bottom: 1px solid var(--line);
+    padding: 14px 12px;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  tbody tr:nth-child(even) td { background: #fbfdff; }
+  .col-type { width: 10%; text-align: center; font-weight: 700; }
+  .col-name { width: 12%; text-align: center; font-weight: 700; }
+  .col-task { width: 48%; }
+  .col-req { width: 30%; }
+  .footer {
+    padding: 20px 28px 26px;
+  }
+  .note-title {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 12px;
+  }
+  .notes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 24px;
+    font-size: 18px;
+  }
+  .notes div { line-height: 1.6; }
+  .red { color: var(--accent); font-weight: 800; }
+  .green { color: var(--ok); font-weight: 800; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="header">
+        <h1 class="title">明天加班安排表</h1>
+        <p class="sub">目标：<span class="red" style="color:#fff">展会设备优先</span>，其余设备做好<span style="font-weight:800">周一发货/走线</span>准备</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th class="col-type">工种</th>
+            <th class="col-name">人员</th>
+            <th class="col-task">任务内容</th>
+            <th class="col-req">要求</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-type">钳工</td>
+            <td class="col-name">彭殿军</td>
+            <td class="col-task">029订单 5代1650 二序钣金完成</td>
+            <td class="col-req">为周一<span class="red">走线</span>做准备</td>
+          </tr>
+          <tr>
+            <td class="col-type">钳工</td>
+            <td class="col-name">耿迎强</td>
+            <td class="col-task">035-1 皮带机钣金完成</td>
+            <td class="col-req">明天完成，确保周一发货</td>
+          </tr>
+          <tr>
+            <td class="col-type">钳工</td>
+            <td class="col-name">耿迎强</td>
+            <td class="col-task">6代2140 送料钣金走线状态跟进</td>
+            <td class="col-req">明天落实，及时反馈进度</td>
+          </tr>
+          <tr>
+            <td class="col-type">钳工</td>
+            <td class="col-name">秦新朝</td>
+            <td class="col-task">028订单 6代2225 分体加急一序完成</td>
+            <td class="col-req">明天完成，加急处理</td>
+          </tr>
+          <tr>
+            <td class="col-type">电工</td>
+            <td class="col-name">户文嘉</td>
+            <td class="col-task">碳纤维送料架完成</td>
+            <td class="col-req">明天完成，及时交接</td>
+          </tr>
+          <tr>
+            <td class="col-type">电工</td>
+            <td class="col-name">户昱博</td>
+            <td class="col-task">035-1 皮带机走线完成</td>
+            <td class="col-req">明天完成，保证后续调试</td>
+          </tr>
+          <tr>
+            <td class="col-type">调试</td>
+            <td class="col-name">马主管安排</td>
+            <td class="col-task">035-1、034、033、032、展会机器调试完成</td>
+            <td class="col-req"><span class="red">展会机器优先</span>，其余全部完成</td>
+          </tr>
+          <tr>
+            <td class="col-type">打包</td>
+            <td class="col-name">马杰</td>
+            <td class="col-task">明天下午先打包展会设备</td>
+            <td class="col-req">横梁注意<span class="red">拆下延长件</span></td>
+          </tr>
+          <tr>
+            <td class="col-type">打包</td>
+            <td class="col-name">马杰</td>
+            <td class="col-task">其它设备做好发货准备</td>
+            <td class="col-req"><span class="green">确保周一正常发货</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="footer">
+        <div class="note-title">执行要求</div>
+        <div class="notes">
+          <div>1. 所有人员围绕 <span class="red">“展会设备优先、周一正常发货/走线”</span> 开展工作。</div>
+          <div>2. 各工序完成后及时交接，不得拖延。</div>
+          <div>3. 发现异常情况第一时间反馈。</div>
+          <div>4. 关键节点完成后，负责人及时回报进度。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,9 @@
+[2026-04-05T15:59:55] class=patrol ttl=7d src=/Users/apple/.openclaw/workspace/memory/80_收藏/每日巡逻_
+[2026-04-05T15:59:55] class=patrol archived=0
+[2026-04-05T15:59:55] class=x_digest ttl=14d src=/Users/apple/.openclaw/workspace/memory/shared
+[2026-04-05T15:59:55] class=x_digest archived=0
+[2026-04-05T15:59:55] class=learning_ingest ttl=14d src=/Users/apple/.openclaw/workspace/memory/shared
+[2026-04-05T15:59:56] class=learning_ingest archived=0
+[2026-04-05T15:59:56] class=shared_general ttl=30d src=/Users/apple/.openclaw/workspace/memory/shared
+[2026-04-05T15:59:58] class=shared_general archived=0
+[2026-04-05T15:59:58] archive_memory done: total=0 files archived

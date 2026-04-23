@@ -1,0 +1,45 @@
+{
+  "guards": {
+    "normal_1774181762306": {
+      "cronJobId": "normal_1774181762306",
+      "name": "test-normal",
+      "status": "completed",
+      "attempts": 1,
+      "maxAttempts": 3,
+      "createdAt": "2026-03-22T12:16:02.306Z",
+      "updatedAt": "2026-03-22T12:16:02.317Z",
+      "completedAt": "2026-03-22T12:16:02.317Z"
+    },
+    "retry_1774181762319": {
+      "cronJobId": "retry_1774181762319",
+      "name": "test-retry",
+      "status": "completed",
+      "attempts": 2,
+      "maxAttempts": 3,
+      "createdAt": "2026-03-22T12:16:02.319Z",
+      "updatedAt": "2026-03-22T12:16:02.427Z",
+      "lastError": "模拟失败",
+      "completedAt": "2026-03-22T12:16:02.427Z"
+    },
+    "dead_1774181762428": {
+      "cronJobId": "dead_1774181762428",
+      "name": "test-dead",
+      "status": "dead_letter",
+      "attempts": 2,
+      "maxAttempts": 2,
+      "createdAt": "2026-03-22T12:16:02.428Z",
+      "updatedAt": "2026-03-22T12:16:02.538Z",
+      "lastError": "失败2"
+    },
+    "reset_1774181762541": {
+      "cronJobId": "reset_1774181762541",
+      "name": "test-reset",
+      "status": "completed",
+      "attempts": 1,
+      "maxAttempts": 1,
+      "createdAt": "2026-03-22T12:16:02.547Z",
+      "updatedAt": "2026-03-22T12:16:02.552Z",
+      "completedAt": "2026-03-22T12:16:02.552Z"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "agentId": "scout",
+    "task": "读取 https://x.com/dotey/status/2046709347682537845，提取核心观点，按 manifest 格式写入 shared/2026-04-22_scout_dotey_manifest.json",
+    "label": "scout_dotey",
+    "timeoutSeconds": 120
+  },
+  {
+    "agentId": "scout",
+    "task": "读取 https://x.com/shao__meng/status/2046758188834267480，提取核心观点，按 manifest 格式写入 shared/2026-04-22_scout_shao__meng_manifest.json",
+    "label": "scout_shao__meng",
+    "timeoutSeconds": 120
+  },
+  {
+    "agentId": "scout",
+    "task": "读取 https://x.com/_davideast/status/2046637414387536369，提取核心观点，按 manifest 格式写入 shared/2026-04-22_scout_davideast_manifest.json",
+    "label": "scout_davideast",
+    "timeoutSeconds": 120
+  }
+]

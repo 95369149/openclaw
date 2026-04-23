@@ -1,0 +1,70 @@
+wing: workspace
+rooms:
+- name: cloud_handoff_perplexity_2026_04_04
+  description: Files from cloud_handoff_perplexity_2026-04-04/
+- name: frontend
+  description: Files from ui/
+- name: scripts
+  description: Files from tools/
+- name: "\u4EFB\u52A1\u5F52\u6863"
+  description: "Files from \u4EFB\u52A1\u5F52\u6863/"
+- name: git_hooks
+  description: Files from git-hooks/
+- name: memory
+  description: Files from memory/
+- name: testing
+  description: Files from test/
+- name: bin
+  description: Files from bin/
+- name: configuration
+  description: Files from config/
+- name: patches
+  description: Files from patches/
+- name: swabble
+  description: Files from Swabble/
+- name: projects
+  description: Files from projects/
+- name: runtime
+  description: Files from runtime/
+- name: output
+  description: Files from output/
+- name: slide_deck
+  description: Files from slide-deck/
+- name: documentation
+  description: Files from docs/
+- name: state
+  description: Files from state/
+- name: extensions
+  description: Files from extensions/
+- name: logs
+  description: Files from logs/
+- name: lyra_prompt_engine
+  description: Files from lyra-prompt-engine/
+- name: mediacrawler
+  description: Files from MediaCrawler/
+- name: hooks
+  description: Files from hooks/
+- name: packages
+  description: Files from packages/
+- name: kitt_v2
+  description: Files from kitt-v2/
+- name: skills
+  description: Files from skills/
+- name: data
+  description: Files from data/
+- name: design
+  description: Files from assets/
+- name: tmp
+  description: Files from tmp/
+- name: apps
+  description: Files from apps/
+- name: vendor
+  description: Files from vendor/
+- name: gateway
+  description: Files from gateway/
+- name: src
+  description: Files from src/
+- name: backend
+  description: Files from database/
+- name: general
+  description: Files that don't fit other rooms

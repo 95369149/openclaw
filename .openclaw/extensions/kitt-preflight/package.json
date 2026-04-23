@@ -1,0 +1,7 @@
+{
+  "name": "kitt-preflight",
+  "version": "1.0.0",
+  "openclaw": {
+    "extensions": ["./index.ts"]
+  }
+}

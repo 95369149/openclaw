@@ -1,0 +1,1 @@
+[{"name": "mynewapi claude-sonnet-4-6", "ok": false, "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>"}, {"name": "xjrouter claude-opus-4-6-max", "ok": false, "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"}]

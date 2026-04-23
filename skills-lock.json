@@ -1,0 +1,340 @@
+{
+  "version": 1,
+  "skills": {
+    "Skywork Design": {
+      "source": "SkyworkAI/Skywork-Skills",
+      "sourceType": "github",
+      "computedHash": "634cb6dbdd6261335f93016e5cb9cbc892b04be61c757fc67e386bad9fd8dc09"
+    },
+    "Skywork Document": {
+      "source": "SkyworkAI/Skywork-Skills",
+      "sourceType": "github",
+      "computedHash": "04211ec8447f56b334da3f79d60f5c3d150dfa6e5ed8e5781509783cd6cb093a"
+    },
+    "Skywork Excel": {
+      "source": "SkyworkAI/Skywork-Skills",
+      "sourceType": "github",
+      "computedHash": "f40adc80d12e34082bdab698761d4432cdf96dee083761447c34311b9bdd0e39"
+    },
+    "Skywork Search": {
+      "source": "SkyworkAI/Skywork-Skills",
+      "sourceType": "github",
+      "computedHash": "4d488a8fd48a67d784f932b1908ae7d8dfdebba98ae36f7ad0f0558ec7a16373"
+    },
+    "Skywork-ppt": {
+      "source": "SkyworkAI/Skywork-Skills",
+      "sourceType": "github",
+      "computedHash": "90441ed333cc1c19d72599d0c42b8dc72afbd3bc49802ab6438718cb23da1711"
+    },
+    "aspnet-core": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "8c10311b9afeeeaf0d8db4372322d020fc7e05ccd09f85f806ec8756de9ecc09"
+    },
+    "chatgpt-apps": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "c11f43205b148e308c4122235a69c158fc826cc758ce5f9b7e4e54b7b4819a87"
+    },
+    "cloudflare-deploy": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "72e2f6fec78aecc84994c1c23e74fcd7f09328c8ab61ff12d957a956e1784179"
+    },
+    "dbs": {
+      "source": "dontbesilent2025/dbskill",
+      "sourceType": "github",
+      "computedHash": "0c2bfe112f1cb5e0d02026b58e8ef4a25fb70e520fa58a91f0f72cd6924596a3"
+    },
+    "dbs-benchmark": {
+      "source": "dontbesilent2025/dbskill",
+      "sourceType": "github",
+      "computedHash": "b58cbe915cbd32a10972b51a379993ec9f73e172efd60a59dd0fa278c91555e1"
+    },
+    "dbs-content": {
+      "source": "dontbesilent2025/dbskill",
+      "sourceType": "github",
+      "computedHash": "8aeff4db1457eb197846ed2af021bae3c79687049a78c062690173083c8988c1"
+    },
+    "dbs-deconstruct": {
+      "source": "dontbesilent2025/dbskill",
+      "sourceType": "github",
+      "computedHash": "af116df87efcc5f651fb35a86b20bef3b698d99ac37899fa6bc4e584bde18dfb"
+    },
+    "dbs-diagnosis": {
+      "source": "dontbesilent2025/dbskill",
+      "sourceType": "github",
+      "computedHash": "269fd9d3f5056ef147e3e117edd53344c4a60ead5ae9976cac4ed05ea3091fbd"
+    },
+    "dbs-unblock": {
+      "source": "dontbesilent2025/dbskill",
+      "sourceType": "github",
+      "computedHash": "e25095faca494b15451203a382d59a6fe7d1d6efa45f6181a3ca03d43f0a7e0f"
+    },
+    "deploy-to-vercel": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "computedHash": "d2b5bcc7c09fdb649129ffc7dd7b647ec1b155736974b974292675afd588cb39"
+    },
+    "develop-web-game": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "ce15d03cc8c299e062c6b6b31a1238264b06c7b23900a58861e53073e1ac9739"
+    },
+    "doc": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "7f8bfe9d1cbd6cb9a3617556387f2ac48911058a26d89345673c4565bb11717f"
+    },
+    "figma": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "b73e3dc60f2531c0fed4b086c63ace91c2b6bdd80f5c747b9309fcbe0c4905b9"
+    },
+    "figma-implement-design": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "d6f7141e613b102b1c4b0abb392b4d5b57d2a7ea5d0036cfea85038dc24120ed"
+    },
+    "frontend-skill": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "2074b8fa089e7ac633689b7202965513a5fd069fd1baf2ea49a928bb85bb4c9c"
+    },
+    "gh-address-comments": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "0a480d4fe8deb31852cd47ec8708e66b66b94875a23ba7679b17cf11ae9255a0"
+    },
+    "gh-fix-ci": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "1b1ce4eeeae2bfc175d05f1b69e07b17dfa1fddf99a96c22b6dcae7e5fb4e550"
+    },
+    "imagegen": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "473ddcb8fa4a5e815e51b7309996d051317d575ae0fcd40883d427452f7be76e"
+    },
+    "jianying-video-gen": {
+      "source": "cclank/lanshu-waytovideo",
+      "sourceType": "github",
+      "computedHash": "a7ff274b85f6fa0fe9169837bdd6e21aaafa342220e834223a6528d303d33551"
+    },
+    "jupyter-notebook": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "aec85b4976af33923f957db1667207dfe8418592ddd91bbe4da24bbdc3058d8c"
+    },
+    "linear": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "702e1b8bb122bb981d276fbdcaa2fde1435b8c548910e1b365f088735b7a5365"
+    },
+    "loop": {
+      "source": "tanweai/pua",
+      "sourceType": "github",
+      "computedHash": "f1e1d8818f53f06dcbe554d90a2e0c413c8b8c1e67895f7f232a9ffd55b6ca33"
+    },
+    "netlify-deploy": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "1c8b071c2673df67a4ed681bd5c06e236c7a9ca7265cb1088a54f2ef3b906f9e"
+    },
+    "notion-knowledge-capture": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "c1376422aec0fb3a4733e5a8a99eed4feff24fa45e25a2ffddaf07a68eed9198"
+    },
+    "notion-meeting-intelligence": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "72f8805776688085ca6f748c313bdce9ebdc088ea1e9ac192689746b6b39fb33"
+    },
+    "notion-research-documentation": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "8dcb27b1c12f087568b4cd8b1f7ea576067a0c8df9af6addab78ef6975742ac3"
+    },
+    "notion-spec-to-implementation": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "887f15eb25fa806869f8eb04b16a697f678431da4a744ecdf9d136ef76c4132b"
+    },
+    "openai-docs": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "7c0cb31b80f601a4394449bf27bc865a9ff31cd0daaa1088a017fdb57b7ae306"
+    },
+    "p10": {
+      "source": "tanweai/pua",
+      "sourceType": "github",
+      "computedHash": "3f2a5c4d82a3f743e6b49af1f2bab69cb462f21928621616fd6e503189508bf5"
+    },
+    "p7": {
+      "source": "tanweai/pua",
+      "sourceType": "github",
+      "computedHash": "e94e8746ecac4101811d0990973614903065e9e234abd45b4b0889044c7d17b0"
+    },
+    "p9": {
+      "source": "tanweai/pua",
+      "sourceType": "github",
+      "computedHash": "6d2c4620ba72cf8945851082ce53859ed8b3801ee8a7db6ac551a71bf8c21ed0"
+    },
+    "pdf": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "ae0a8fde8447e83a08edd0baf5373cd52febce32494e47e17d5d695a441a1884"
+    },
+    "playwright": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "595a334de3bd5335f442a33d1bdefb01207c88c99fe43e3bd99b0d5435f230de"
+    },
+    "playwright-interactive": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "6a8871c4fba50a9a1f4c90a7955d94cef920d866c2ba7640fa009a26c73e0c83"
+    },
+    "pro": {
+      "source": "tanweai/pua",
+      "sourceType": "github",
+      "computedHash": "457a327b0b8f73dcccf4cc23e27a730cbdab3d3cb089a17a388a31fadfde2860"
+    },
+    "pua": {
+      "source": "tanweai/pua",
+      "sourceType": "github",
+      "computedHash": "0b2005f6f5783a3eaf89f7bd6417de92a3fd8b85c5ba6deb8602e4b4f57e1c4d"
+    },
+    "pua-en": {
+      "source": "tanweai/pua",
+      "sourceType": "github",
+      "computedHash": "33f44698dfa9344caebc77461c41e5cff95822c61f7254b4b0ffb2fe55bea5d6"
+    },
+    "pua-ja": {
+      "source": "tanweai/pua",
+      "sourceType": "github",
+      "computedHash": "c5419f7e1ae1e0be025512378c0caf7b9b8cf9005815c40cb4de725e608cfc98"
+    },
+    "render-deploy": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "3d5d532563bea44a0bd852b9d890fea848e1549035638e3ca119f0016bfb4632"
+    },
+    "screenshot": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "2dc50b3537ea27a1020a660ff17f12860f6ad05bcf40539165eb4655e5010d73"
+    },
+    "security-best-practices": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "c27616fb4e27999605b90b261dc729784420c8d77bd1a98748384ffaa5b35704"
+    },
+    "security-ownership-map": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "0eefbaabdbe0ccfc39555195b9a7f7c8369abe1b4dc969aabb2e5aec8c3705ab"
+    },
+    "security-threat-model": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "b3ad2dc0b2eee1f189680fdb8cf3b17853f12ab3403d389393f4237ebc6f9821"
+    },
+    "sentry": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "ded66300cf449c4507b54964f5536dc86d8697654f0ea4b5986c1a9cd278f3c0"
+    },
+    "skill-creator": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "c1f04920b03c2a412e1d0b90680dc10b6de64793db7daae7e4bf64535b9fdf75"
+    },
+    "skill-installer": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "44e8f0fda4a4aff2b98ae8587ceb812c15e7e5dba230f16295017c2f416f6d05"
+    },
+    "skywork-music-maker": {
+      "source": "SkyworkAI/Skywork-Skills",
+      "sourceType": "github",
+      "computedHash": "4e5ff6f23550e49e311c11eb18444d75e7b3db94a3268be9ef76ddbb18172a3f"
+    },
+    "slides": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "1aa418c52c6425757f5cfb29b14cb8bd34e8c153f0ddd4404771889f85d57681"
+    },
+    "sora": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "91fd781e669dd6457104a96fcd11dac9cd06a17a5888b2c854dd1cd92307869c"
+    },
+    "speech": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "767adf188f0beb4b45f4b60cfe1945f1f104884ff3d1597e09825dadcea5f7fa"
+    },
+    "spreadsheet": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "532287cf8e831de5b45f3e2196dc123e16374c61e459664649f0261c5aadd5c6"
+    },
+    "transcribe": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "0391b3fba28374df131946e0b515e62f5e2a9b51013d05a35791944ca6853dff"
+    },
+    "vercel-cli-with-tokens": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "computedHash": "1e1ef4ae4ad838d0ad5f93a659bf065475705cd552bd3c9a2a4faade6098b030"
+    },
+    "vercel-composition-patterns": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "computedHash": "f98931159fa9c7fed043bcd18a891a46dcf89ababa38df13a4c5b7b30dc0ce07"
+    },
+    "vercel-deploy": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "1bbc267739a93506229ae565d8dc56a13caae8dfc3b727957b966109a8da00d0"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "computedHash": "c858d2d9023e73edb4e5504868cb0e36313e58fd56af12ef888b43c5634a3c17"
+    },
+    "vercel-react-native-skills": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "computedHash": "2e9088a7333666d8c2833b8ff58bd51b955501c42b4c7244f72b4cbf22dafcc4"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "computedHash": "a6a44d5498f7e8f68289902f3dedfc6f38ae0cee1e96527c80724cf27f727c2a"
+    },
+    "winui-app": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "6231a756230fbf412b05e38249d47c3ced6ab51944bcfb6ea3452f026bcbe848"
+    },
+    "yeet": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "computedHash": "09d77be4566a654c0a7aa64fafbf4244ea154e7df09bc61814e71510bdad9f0c"
+    },
+    "yes": {
+      "source": "tanweai/pua",
+      "sourceType": "github",
+      "computedHash": "e6d54d8214bad2dde23bba0c83179670fd4becd0c902f931edd94e2f676a4a62"
+    },
+    "memos-memory-guide": {
+      "source": "memos-local-openclaw-plugin",
+      "sourceType": "plugin",
+      "computedHash": ""
+    }
+  }
+}

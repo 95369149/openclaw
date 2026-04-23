@@ -1,0 +1,26 @@
+[
+  {
+    "account": "vista8",
+    "batch_id": 2,
+    "task": "用 agent-reach 读取 @vista8 最新 3 条推文。\n\n要求：\n1. 提取有价值的技术/AI/创业相关内容\n2. 忽略广告、抽奖、情绪宣泄\n3. 对每条有价值的推文：\n   - 总结核心观点（50字内）\n   - 说明对红太阳的可借鉴之处\n   - 指出逻辑硬伤（如有）\n4. 返回 JSON 格式：\n{\n  \"status\": \"success|failed|no_content\",\n  \"account\": \"vista8\",\n  \"findings\": [\n    {\n      \"tweet_url\": \"...\",\n      \"summary\": \"...\",\n      \"actionable\": \"...\",\n      \"critique\": \"...\"\n    }\n  ],\n  \"produced_at\": \"2026-04-22T17:20:50.414658\"\n}\n\n完成后将结果写入：/Users/apple/.openclaw/workspace/memory/tmp/x_digest_vista8_2.json\n",
+    "output_file": "/Users/apple/.openclaw/workspace/memory/tmp/x_digest_vista8_2.json"
+  },
+  {
+    "account": "wwwgoubuli",
+    "batch_id": 2,
+    "task": "用 agent-reach 读取 @wwwgoubuli 最新 3 条推文。\n\n要求：\n1. 提取有价值的技术/AI/创业相关内容\n2. 忽略广告、抽奖、情绪宣泄\n3. 对每条有价值的推文：\n   - 总结核心观点（50字内）\n   - 说明对红太阳的可借鉴之处\n   - 指出逻辑硬伤（如有）\n4. 返回 JSON 格式：\n{\n  \"status\": \"success|failed|no_content\",\n  \"account\": \"wwwgoubuli\",\n  \"findings\": [\n    {\n      \"tweet_url\": \"...\",\n      \"summary\": \"...\",\n      \"actionable\": \"...\",\n      \"critique\": \"...\"\n    }\n  ],\n  \"produced_at\": \"2026-04-22T17:20:50.414680\"\n}\n\n完成后将结果写入：/Users/apple/.openclaw/workspace/memory/tmp/x_digest_wwwgoubuli_2.json\n",
+    "output_file": "/Users/apple/.openclaw/workspace/memory/tmp/x_digest_wwwgoubuli_2.json"
+  },
+  {
+    "account": "tuturetom",
+    "batch_id": 2,
+    "task": "用 agent-reach 读取 @tuturetom 最新 3 条推文。\n\n要求：\n1. 提取有价值的技术/AI/创业相关内容\n2. 忽略广告、抽奖、情绪宣泄\n3. 对每条有价值的推文：\n   - 总结核心观点（50字内）\n   - 说明对红太阳的可借鉴之处\n   - 指出逻辑硬伤（如有）\n4. 返回 JSON 格式：\n{\n  \"status\": \"success|failed|no_content\",\n  \"account\": \"tuturetom\",\n  \"findings\": [\n    {\n      \"tweet_url\": \"...\",\n      \"summary\": \"...\",\n      \"actionable\": \"...\",\n      \"critique\": \"...\"\n    }\n  ],\n  \"produced_at\": \"2026-04-22T17:20:50.414687\"\n}\n\n完成后将结果写入：/Users/apple/.openclaw/workspace/memory/tmp/x_digest_tuturetom_2.json\n",
+    "output_file": "/Users/apple/.openclaw/workspace/memory/tmp/x_digest_tuturetom_2.json"
+  },
+  {
+    "account": "balconychy",
+    "batch_id": 2,
+    "task": "用 agent-reach 读取 @balconychy 最新 3 条推文。\n\n要求：\n1. 提取有价值的技术/AI/创业相关内容\n2. 忽略广告、抽奖、情绪宣泄\n3. 对每条有价值的推文：\n   - 总结核心观点（50字内）\n   - 说明对红太阳的可借鉴之处\n   - 指出逻辑硬伤（如有）\n4. 返回 JSON 格式：\n{\n  \"status\": \"success|failed|no_content\",\n  \"account\": \"balconychy\",\n  \"findings\": [\n    {\n      \"tweet_url\": \"...\",\n      \"summary\": \"...\",\n      \"actionable\": \"...\",\n      \"critique\": \"...\"\n    }\n  ],\n  \"produced_at\": \"2026-04-22T17:20:50.414691\"\n}\n\n完成后将结果写入：/Users/apple/.openclaw/workspace/memory/tmp/x_digest_balconychy_2.json\n",
+    "output_file": "/Users/apple/.openclaw/workspace/memory/tmp/x_digest_balconychy_2.json"
+  }
+]

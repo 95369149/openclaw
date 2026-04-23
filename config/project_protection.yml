@@ -1,0 +1,33 @@
+version: 1
+
+global_protected_paths:
+  - "memory/10_项目/"
+  - "memory/task-board.json"
+  - "SOUL.md"
+  - "IDENTITY.md"
+  - "AGENTS.md"
+  - "MEMORY.md"
+
+projects:
+  - name: "抖音项目"
+    aliases: ["抖音", "短视频增长", "douyin"]
+    paths:
+      - "memory/10_项目/P02_视频推广计划"
+      - "workspace/douyin/"
+    task_board_ids: []
+
+  - name: "拓客系统"
+    aliases: ["拓客", "外贸拓客", "tuoke"]
+    paths:
+      - "memory/10_项目/P03_外贸自动拓客系统"
+      - "workspace/tuoke/"
+    task_board_ids: ["proj_tuoke_001"]
+
+  - name: "电路图项目"
+    aliases: ["电路图", "电路", "circuit", "振动刀电气"]
+    paths:
+      - "memory/10_项目/circuit/"
+      - "workspace/circuit/"
+      - "Desktop/cloud_handoff_perplexity_2026-04-04"
+      - "Desktop/exported-assets"
+    task_board_ids: ["proj_circuit_001"]

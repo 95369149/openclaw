@@ -1,0 +1,7 @@
+{
+  "account": "@Yangyixxxx",
+  "fetched_at": "2026-04-22T17:22:00+08:00",
+  "status": "error",
+  "error": "Unable to fetch tweets. Diagnostics: (1) @Yangyixxxx — account does not exist on X; (2) @yangyi_xxxx / @Yangyi_xxxx — account suspended; (3) Twitter search via agent-reach requires Exa API key (not configured); (4) bird CLI requires Twitter cookies (not available — no browser login found). No tweets could be retrieved.",
+  "tweets": []
+}

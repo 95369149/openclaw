@@ -1,0 +1,19 @@
+{
+  "providers": {
+    "default": {
+      "apiKey": "${API_KEY}",
+      "baseURL": "${BASE_URL}",
+      "model": "${MODEL}"
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": false,
+      "botToken": "${TELEGRAM_BOT_TOKEN}"
+    }
+  },
+  "runtime": {
+    "dataDir": "${DATA_DIR}",
+    "logLevel": "info"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "url": "https://x.com/_davideast/status/2046637414387536369",
+  "author": "David East",
+  "title": "DESIGN.md is now an open specification",
+  "summary": "Google Labs open-sourced the DESIGN.md draft specification, a shared format to capture design intent and token values for coding agents, enabling easy export/import of design rules across projects and platforms.",
+  "key_points": [
+    "DESIGN.md is now an open specification available on GitHub.",
+    "It's a shared format to capture design intent and token values in any project.",
+    "It gives coding agents a persistent, structured understanding of a design system.",
+    "Instead of guessing, agents know the exact purpose of a color and can validate choices against WCAG rules.",
+    "The baseline allows for extension and creativity."
+  ],
+  "action_items": [
+    "Review the DESIGN.md specification on GitHub: http://github.com/google-labs-code/design.md",
+    "Consider implementing DESIGN.md to standardize design systems for coding agents."
+  ]
+}

@@ -1,0 +1,2987 @@
+[
+  {
+    "problem_norm": "是否遇到的问题",
+    "count": 33,
+    "examples": [
+      {
+        "raw": "是否遇到的问题",
+        "solution": "解决方法",
+        "sheet": "何强聪",
+        "machine_model": "机器型号",
+        "material": "行业、材料"
+      },
+      {
+        "raw": "是否遇到的问题",
+        "solution": "解决方法",
+        "sheet": "何强聪",
+        "machine_model": "机器型号",
+        "material": "行业、材料"
+      },
+      {
+        "raw": "是否遇到的问题",
+        "solution": "解决方法",
+        "sheet": "何强聪",
+        "machine_model": "机器型号",
+        "material": "行业、材料"
+      },
+      {
+        "raw": "是否遇到的问题",
+        "solution": "解决方法",
+        "sheet": "何强聪",
+        "machine_model": "机器型号",
+        "material": "行业、材料"
+      },
+      {
+        "raw": "是否遇到的问题",
+        "solution": "解决方法",
+        "sheet": "何强聪",
+        "machine_model": "机器型号",
+        "material": "行业、材料"
+      }
+    ]
+  },
+  {
+    "problem_norm": "驱动器报警",
+    "count": 9,
+    "examples": [
+      {
+        "raw": "驱动器报警",
+        "solution": "更换动力线，编码器线",
+        "sheet": "曹元山",
+        "machine_model": "2240",
+        "material": ""
+      },
+      {
+        "raw": "驱动器报警",
+        "solution": "安装新电机",
+        "sheet": "维修登记表",
+        "machine_model": "2025",
+        "material": "皮草"
+      },
+      {
+        "raw": "驱动报警",
+        "solution": "乐于厂家过来调试",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "驱动器报警",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": "帆布"
+      },
+      {
+        "raw": "驱动器报警",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "1630",
+        "material": "帆布"
+      }
+    ]
+  },
+  {
+    "problem_norm": "问题:驱动器报警处理:关机重启就好了",
+    "count": 6,
+    "examples": [
+      {
+        "raw": "问题:驱动器报警 处理：关机重启就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题:驱动器报警 处理：关机重启就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题:驱动报警 处理：关机重启就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题:驱动器报警 处理：关机重启就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题:驱动器报警 处理：关机重启就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "改装双头互译",
+    "count": 4,
+    "examples": [
+      {
+        "raw": "改装双头互译",
+        "solution": "",
+        "sheet": "胡振国（维修）",
+        "machine_model": "1630.0",
+        "material": ""
+      },
+      {
+        "raw": "改装双头互译",
+        "solution": "",
+        "sheet": "胡振国（维修）",
+        "machine_model": "1630.0",
+        "material": ""
+      },
+      {
+        "raw": "改装双头互译",
+        "solution": "",
+        "sheet": "胡振国（维修）",
+        "machine_model": "1630.0",
+        "material": ""
+      },
+      {
+        "raw": "改装双头互译",
+        "solution": "",
+        "sheet": "胡振国（维修）",
+        "machine_model": "1630.0",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "问题:现在拉料滑毛毡两边有点翘处理:让客户把那个压料板两个气缸往上抬抬(客户现在在外面送货说明天下午弄一下明天再跟踪一下)",
+    "count": 3,
+    "examples": [
+      {
+        "raw": "问题：现在拉料滑毛毡两边有点翘 处理： 让客户把那个压料板两个气缸往上抬抬（客户现在在外面送货说明天下午弄一下明天再跟踪一下）",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题：现在拉料滑毛毡两边有点翘 处理： 让客户把那个压料板两个气缸往上抬抬（客户现在在外面送货说明天下午弄一下明天再跟踪一下）",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题：现在拉料滑毛毡两边有点翘 处理： 让客户把那个压料板两个气缸往上抬抬（客户现在在外面送货说明天下午弄一下明天再跟踪一下）",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "法兰掉了",
+    "count": 3,
+    "examples": [
+      {
+        "raw": "法兰掉了",
+        "solution": "未解决，差铁条",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "法兰掉了",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "法兰掉了",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "拆机",
+    "count": 3,
+    "examples": [
+      {
+        "raw": "拆机",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "拆机",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "拆机",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "相机掉线,标定相机,台面误差太大",
+    "count": 3,
+    "examples": [
+      {
+        "raw": "相机掉线，标定相机，台面误差太大",
+        "solution": "",
+        "sheet": "耿浩飞维修",
+        "machine_model": "1325双龙门",
+        "material": ""
+      },
+      {
+        "raw": "相机掉线，标定相机，台面误差太大",
+        "solution": "",
+        "sheet": "耿浩飞维修",
+        "machine_model": "1325双龙门",
+        "material": ""
+      },
+      {
+        "raw": "相机掉线，标定相机，台面误差太大",
+        "solution": "换了一个连接线",
+        "sheet": "耿浩飞维修",
+        "machine_model": "1325双龙门",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "更换毛毡,机器回不了原点,风机吸风小",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "更换毛毡，机器回不了原点，风机吸风小",
+        "solution": "换毛毡，安装原点限位挡片，清理风机管道",
+        "sheet": "曹元山",
+        "machine_model": "1625",
+        "material": ""
+      },
+      {
+        "raw": "更换毛毡，机器回不了原点，风机吸风小",
+        "solution": "换毛毡，安装原点限位挡片，清理风机管道",
+        "sheet": "曹元山",
+        "machine_model": "1625",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "毛毡开裂,拉料补偿过长",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "毛毡开裂，拉料补偿过长",
+        "solution": "粘毛毡，调整拉料补偿",
+        "sheet": "曹元山",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "毛毡开裂，拉料补偿过长",
+        "solution": "粘毛毡，调整拉料补偿",
+        "sheet": "曹元山",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "问题:刀切波浪线处理:刀转反了,改一下信号线就好了",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "问题：刀切波浪线 处理：刀转反了，改一下信号线就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题：刀切波浪线 处理：刀转反了，改一下信号线就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "问题:客户忘记如何调刀深,处理:教客户调下刀深",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "问题：客户忘记如何调刀深，处理：教客户调下刀深",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题：客户忘记如何调刀深，处理：教客户调下刀深",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "问题:联轴器松了处理:教客户紧一下联轴器螺丝",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "问题:联轴器松了 处理：教客户紧一下联轴器螺丝",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题:联轴器松了 处理：教客户紧一下联轴器螺丝",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "问题:切割速度慢处理:教客户调一下速度",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "问题：切割速度慢 处理：教客户调一下速度",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题:切割速度慢 处理：教客户调一下速度",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "问题:切软橡胶材料软胶有齿痕处理:让换个7号刀片,联系客服",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "问题:切软橡胶材料软胶有齿痕 处理：让换个7号刀片 ，联系客服",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题:切软橡胶材料软胶有齿痕 处理：让换个7号刀片 ，联系客服",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "问题:标定相机处理:协助客户标定相机",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "问题：标定相机 处理:协助客户标定相机",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题:标定相机 处理：协助客户标定相机",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "问题:电脑连不上机器处理:教客户连接一下ip机器上地址改了",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "问题：电脑连不上机器 处理：教客户连接一下ip机器上地址改了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题：电脑连不上机器 处理：教客户连接一下ip机器上地址改了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "问题:通讯失败处理:视频指导更改地址",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "问题:通讯失败 处理：视频指导更改地址",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "问题:通讯失败 处理：视频指导更改地址",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "v曹不一样宽",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "v曹不一样宽",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": "吸音板"
+      },
+      {
+        "raw": "v曹不一样宽",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "2035",
+        "material": "吸音板"
+      }
+    ]
+  },
+  {
+    "problem_norm": "标定相机",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "标定相机",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "标定相机",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "减速机齿轮底座",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "减速机齿轮底座",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "减速机齿轮底座",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "接口接不上",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "接口接不上",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "接口接不上",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "电机推不动",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "电机推不动",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "电机推不动",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "圆刀切圆弧跑料",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "圆刀切圆弧跑料",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "圆刀切圆弧跑料",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": "PVC"
+      }
+    ]
+  },
+  {
+    "problem_norm": "更换毛毡",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "更换毛毡",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": "皮革"
+      },
+      {
+        "raw": "更换毛毡",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": "皮革"
+      }
+    ]
+  },
+  {
+    "problem_norm": "对射有问题",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "对射有问题",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "对射有问题",
+        "solution": "",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "机器识别mk点左右有误差",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "机器识别mk点左右有误差",
+        "solution": "同步轮定丝松动",
+        "sheet": "维修登记表",
+        "machine_model": "1630",
+        "material": ""
+      },
+      {
+        "raw": "机器识别mk点左右有误差",
+        "solution": "同步轮定丝松动",
+        "sheet": "维修登记表",
+        "machine_model": "1630",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "切割刀深有深有浅",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "切割刀深有深有浅",
+        "solution": "调整气压，是气压不稳定",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "切割刀深有深有浅",
+        "solution": "调整气压，是气压不稳定",
+        "sheet": "维修登记表",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "对接信号",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "对接信号",
+        "solution": "",
+        "sheet": "刘奥林（维修）",
+        "machine_model": "1625.0",
+        "material": ""
+      },
+      {
+        "raw": "对接信号",
+        "solution": "加PLC接线，和厂家对接信号",
+        "sheet": "刘奥林（维修）",
+        "machine_model": "1625.0",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "换电机编码器线",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "换电机编码器线",
+        "solution": "",
+        "sheet": "贾泽琪（维修）",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "换电机编码器线",
+        "solution": "换线，换电机",
+        "sheet": "贾泽琪（维修）",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "刀切割偏",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "刀切割偏",
+        "solution": "",
+        "sheet": "贾泽琪（维修）",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "刀切割偏",
+        "solution": "",
+        "sheet": "贾泽琪（维修）",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "增加压棍",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "增加压棍",
+        "solution": "",
+        "sheet": "贾泽琪（维修）",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "增加压棍",
+        "solution": "",
+        "sheet": "贾泽琪（维修）",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "驱东器报警",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "驱东器报警",
+        "solution": "更换驱动器",
+        "sheet": "户振磊（维修）",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "驱东器报警",
+        "solution": "更换驱动器",
+        "sheet": "户振磊（维修）",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "主轴坏了,铣刀不能用",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "主轴坏了，铣刀不能用",
+        "solution": "让仓库发",
+        "sheet": "耿浩飞-1",
+        "machine_model": "1625",
+        "material": "橡胶"
+      },
+      {
+        "raw": "主轴坏了，铣刀不能用",
+        "solution": "让仓库发",
+        "sheet": "耿浩飞-1",
+        "machine_model": "1625",
+        "material": "橡胶"
+      }
+    ]
+  },
+  {
+    "problem_norm": "装伟鸿系统",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "装伟鸿系统",
+        "solution": "硬件坏了，客户已买",
+        "sheet": "耿浩飞维修",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "装伟鸿系统",
+        "solution": "硬件坏了，客户已买",
+        "sheet": "耿浩飞维修",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "断刀片",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "断刀片",
+        "solution": "板卡坏了 等着厂里发板卡过来",
+        "sheet": "秦振洋（维修）",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "断刀片",
+        "solution": "板卡坏了 等着厂里发板卡过来",
+        "sheet": "秦振洋（维修）",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "换皮带",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "换皮带",
+        "solution": "",
+        "sheet": "秦振洋（维修）",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "换皮带",
+        "solution": "",
+        "sheet": "秦振洋（维修）",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "换电机编码器线毛毡相机卡顿",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "换电机编码器线毛毡 相机卡顿",
+        "solution": "明天给客户换一根网线看看",
+        "sheet": "秦振洋（维修）",
+        "machine_model": "",
+        "material": ""
+      },
+      {
+        "raw": "换电机编码器线毛毡 相机卡顿",
+        "solution": "换电脑主机",
+        "sheet": "秦振洋（维修）",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "加圆刀",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "加圆刀",
+        "solution": "",
+        "sheet": "秦振洋（维修）",
+        "machine_model": "1725.0",
+        "material": ""
+      },
+      {
+        "raw": "加圆刀",
+        "solution": "",
+        "sheet": "秦振洋（维修）",
+        "machine_model": "1725.0",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "刀角度不对,好多橡胶颗粒,刀片不对,切割橡胶光滑度不行",
+    "count": 2,
+    "examples": [
+      {
+        "raw": "刀角度不对，好多橡胶颗粒，刀片不对，切割橡胶光滑度不行",
+        "solution": "",
+        "sheet": "何强聪",
+        "machine_model": "1630",
+        "material": "橡胶"
+      },
+      {
+        "raw": "刀角度不对，好多橡胶颗粒，刀片不对，切割橡胶光滑度不行",
+        "solution": "换刀片",
+        "sheet": "何强聪",
+        "machine_model": "1630",
+        "material": "橡胶"
+      }
+    ]
+  },
+  {
+    "problem_norm": "分区掉了,吸力不行",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "分区掉了，吸力不行",
+        "solution": "",
+        "sheet": "何强聪",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "风机吸风和机器检查保养",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "风机吸风和机器检查保养",
+        "solution": ":材料放全，小料的用自动放区",
+        "sheet": "何强聪",
+        "machine_model": "3150/1625",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "机器搬家拆梁,切割有有偏移对不齐",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "机器搬家拆梁，切割有有偏移对不齐",
+        "solution": "刀角度问题调一下",
+        "sheet": "何强聪",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "安装红光",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "安装红光",
+        "solution": "",
+        "sheet": "何强聪",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "安装毛毡,驱动器报警",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "安装毛毡，驱动器报警",
+        "solution": "",
+        "sheet": "何强聪",
+        "machine_model": "2125",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "甘肃客户问题:驱动器报警处理:视频给客户看了一下,不是公司机器",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "甘肃客户 问题:驱动器报警 处理:视频给客户看了一下，不是公司机器",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "新乡客户问题:侧台面处理:视频教客户测台面",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "新乡客户 问题:侧台面 处理:视频教客户测台面",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "保定客户问题客户左右电机处异响,明天给客户跟踪一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "保定客户 问题客户左右电机处异响，明天给客户跟踪一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "六盘水客户问题:教客户调刀深",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "六盘水客户 问题：教客户调刀深",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北客户问题:刀头不转了,把刀重新装一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北客户 问题：刀头不转了，把刀重新装一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "湖南客户问题:教客户安装刀具调刀深",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "湖南客户 问题：教客户安装刀具调刀深",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "浙江客户问题:电动斜切刀电机那个插头插不紧了卖她一根线",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "浙江客户 问题：电动斜切刀电机那个插头插不紧了卖她一根线",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "新沂客户问题:博客生成裁片少线条处理:给客户排个视频教程,两个裁片连接到一块时,把线条接连一下,再生成裁片就好了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "新沂客户 问题:博客生成裁片少线条 处理:给客户排个视频教程，两个裁片连接到一块时，把线条接连一下，再生成裁片就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "丹阳客户问题:客户共线切割删除覆盖线处理:给客户拍个删除覆盖线的视频发给客户",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "丹阳客户 问题:客户共线切割删除覆盖线 处理:给客户拍个删除覆盖线的视频发给客户",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "贵州客户问题:刀不振处理:让客户清理一下,加点油可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "贵州客户 问题:刀不振 处理:让客户清理一下，加点油可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "新乡客户问题:有个图不会画处理:视频看了一下,给客户画了一个发过去了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "新乡客户 问题:有个图不会画 处理:视频看了一下，给客户画了一个发过去了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:刀不振处理:视频看了一下,振幅低上面灯闪,调高一点就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题:刀不振 处理:视频看了一下，振幅低上面灯闪，调高一点就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "成都客户问题:协助客户测台面处理:视频就客户测,调节台面,误差还有,明天再调",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "成都客户 问题:协助客户测台面 处理:视频就客户测，调节台面，误差还有，明天再调",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "滨州客户问题:视频教客户对焦相机",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "滨州客户 问题:视频教客户对焦相机",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "六盘水客户问题:视频教客户换刀片",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "六盘水客户 问题:视频教客户换刀片",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:客户想挪机器给他说一下注意事项和叉车怎么叉",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题:客户想挪机器给他说一下注意事项和叉车怎么叉",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北客户问题:机头有线路打火处理:让客户把线头包起来就行了,之前技术过去安装伺服刀的时候,220V的电路没拆,让客户包起来就行了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北客户 问题:机头有线路打火 处理:让客户把线头包起来就行了，之前技术过去安装伺服刀的时候，220V的电路没拆，让客户包起来就行了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "浦江客户问题:毛毡烂了处理:客户换刀片忘记调刀深了,把毛毡切烂了,已让客户联系客服购买一条",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "浦江客户 问题:毛毡烂了 处理:客户换刀片忘记调刀深了，把毛毡切烂了，已让客户联系客服购买一条",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "广州客户问题:软件检测不到加密狗处理:厂家下班了,明天在给客户远程看一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "广州客户 问题:软件检测不到加密狗 处理:厂家下班了，明天在给客户远程看一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "聊城阳谷客户问题客户老机器需要结尾出生成裁断线,给客户升级一下,系统已解决",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "聊城阳谷客户 问题客户老机器需要结尾出生成裁断线，给客户升级一下，系统已解决",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "山东滨州客户问题切割之后不送料,给客户更改一下,送料模式已解决",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "山东滨州客户 问题切割之后不送料，给客户更改一下，送料模式已解决",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北胜坊客户问题客户保存图形打不开,给客户讲解一下如何正确保存图形",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北胜坊客户 问题客户保存图形打不开，给客户讲解一下如何正确保存图形",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "成都客户问题:协助客户测台面处理:调好之后没问题了,切割也可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "成都客户 问题:协助客户测台面 处理:调好之后没问题了，切割也可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "甘肃客户问题:复位好几次才能行处理:客户没在现场,明天再看一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "甘肃客户 问题:复位好几次才能行 处理:客户没在现场，明天再看一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "常熟客户问题:刀夹卡住动不了了处理:让客户把刀夹撬出来看一下生锈了清理一下就好了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "常熟客户 问题:刀夹卡住动不了了 处理:让客户把刀夹撬出来看一下生锈了清理一下就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "温州代理客户问题:排版出来对称图形切割出来不一样多处理:客户60S排版设置裁片方向设置成合掌了,让客户改成双方向或者单方向就行了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "温州代理客户 问题:排版出来对称图形切割出来不一样多 处理:客户60S排版设置裁片方向设置成合掌了，让客户改成双方向或者单方向就行了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "甘肃客户问题:旋转轴复位不对处理:限位没问题,刀座感应不到",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "甘肃客户 问题:旋转轴复位不对 处理:限位没问题，刀座感应不到",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "温州客户问题:给客户发过去的压料气缸两边不一样处理:教客户调一下气缸高度",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "温州客户 问题:给客户发过去的压料气缸两边不一样 处理:教客户调一下气缸高度",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "菏泽客户问题:毛毡偏处理:一会往左偏一会右,跟客户讲一下毛毡都有一点误差,没事",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "菏泽客户 问题:毛毡偏 处理:一会往左偏一会右，跟客户讲一下毛毡都有一点误差，没事",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "温州客户问题:风机变频器报警处理:把输出线卸了,量了一下电压,电压不够不稳定,需要换一个",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "温州客户 问题:风机变频器报警 处理:把输出线卸了，量了一下电压，电压不够不稳定，需要换一个",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "青岛客户问题:更换减速机处理:教客户如何安装减速机",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "青岛客户 问题:更换减速机 处理:教客户如何安装减速机",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "潍坊代理问题:真皮软件安装标定处理:远程给客户设置软件,对焦,教客户调相机,标定纸已切好,客户相机架子没有打螺丝,明天固定好,再标定",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "潍坊代理 问题:真皮软件安装标定 处理:远程给客户设置软件，对焦，教客户调相机，标定纸已切好，客户相机架子没有打螺丝，明天固定好，再标定",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北保定客户问题客户驱动器报警给客户检查一下编码器下的插头有没有松动",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北保定客户 问题客户驱动器报警给客户检查一下编码器下的插头有没有松动",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北景县客户问题客户的电磁阀不通电,给客户检查一下线路是客户电磁阀有问题",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北景县客户 问题客户的电磁阀不通电，给客户检查一下线路是客户电磁阀有问题",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "山东聊城客户问题驱动器报警让客户检查一下,导轨没有什么问题,可能是速度过快",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "山东聊城客户 问题驱动器报警让客户检查一下，导轨没有什么问题，可能是速度过快",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "甘肃客户问题:送料滑料处理:让客户找个比料有摩擦力的沾到压料板上",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "甘肃客户 问题:送料滑料 处理:让客户找个比料有摩擦力的沾到压料板上",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "郑州客户问题:图片想镜像一下处理:视频教客户垂直反转",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "郑州客户 问题:图片想镜像一下 处理:视频教客户垂直反转",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "六盘水客户问题:视频教客户调刀深",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "六盘水客户 问题:视频教客户调刀深",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "新沂客户问题:切割有重线处理:让客户删除一下重叠线,再合并一下相连线",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "新沂客户 问题:切割有重线 处理:让客户删除一下重叠线，再合并一下相连线",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "上海客户问题:改送料补偿处理:教客户聪软件改送料补偿",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "上海客户 问题:改送料补偿 处理:教客户聪软件改送料补偿",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "山西客户问题:前后轴复位失败处理:阳光照到对射了,挡住阳光就好了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "山西客户 问题：前后轴复位失败 处理:阳光照到对射了，挡住阳光就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "长春客户问题:设置拉料处理:让客户把自动拉料打开,分页打开就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "长春客户 问题:设置拉料 处理:让客户把自动拉料打开，分页打开就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "昆山客户问题:刀摆,刀不转了处理:旋转轴皮带断了,刀摆明天再看一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "昆山客户 问题:刀摆，刀不转了 处理:旋转轴皮带断了，刀摆明天再看一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:客户想改下速度处理:视频教客户改下速度",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题:客户想改下速度 处理:视频教客户改下速度",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "温州客户问题:换变频器,改风机线处理:变频器报警,明天再看一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "温州客户 问题:换变频器，改风机线 处理:变频器报警，明天再看一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "广州客户问题:定位不准处理:图形外围有个点,删掉就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "广州客户 问题:定位不准 处理:图形外围有个点，删掉就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "衡水客户问题:视频教客户换线位",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "衡水客户 问题:视频教客户换线位",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "温州客户问题:剪口不对处理,视频教客户改剪口",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "温州客户 问题:剪口不对 处理，视频教客户改剪口",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:图形超界处理视频看了一下,让客服走到最右下角就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题:图形超界 处理 视频看了一下，让客服走到最右下角就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "商丘客户问题:切割有点带料处理视频看了一下,客户风机没清理过让他清理一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "商丘客户 问题:切割有点带料 处理 视频看了一下，客户风机没清理过让他清理一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "洛阳客户问题:视频教客户调延时",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "洛阳客户 问题:视频教客户调延时",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "石家庄客户问题:加载文件,到系统不显示处理:客户图层输出没有勾选,勾上就行了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "石家庄客户 问题:加载文件，到系统不显示 处理:客户图层输出没有勾选，勾上就行了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "景县客户问题:铣刀滑块有间隙晃动处理:让客户把螺丝紧一下就行了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "景县客户 问题:铣刀滑块有间隙晃动 处理:让客户把螺丝紧一下就行了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "白沟客户问题:断了个刀片,刀卡安装不上了处理:客户那里有一个旧的刀卡安装上就行了,安装不上的那个让客户用砂纸打磨一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "白沟客户 问题:断了个刀片，刀卡安装不上了 处理:客户那里有一个旧的刀卡安装上就行了，安装不上的那个让客户用砂纸打磨一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "东北海城识别花有点歪处理:客户材料印花有点误差整版做模版会偏让客户单片识别明天联系一下客户",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "东北海城 识别花有点歪 处理：客户材料印花有点误差整版做模版会偏 让客户单片识别明天联系一下客户",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北唐山Z轴复位报警过载处理:客户Z轴过限位了没感应到重新复位一下好了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北唐山 Z轴复位报警过载 处理：客户Z轴过限位了没感应到 重新复位一下好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "山东青岛气动刀异响处理:客户气动刀有时候刀柄里面异响大前两天让客户放点油还是不是联系客服这个刀发过来维修",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "山东青岛 气动刀异响 处理：客户气动刀有时候刀柄里面异响大前两天让客户放点油还是不是联系客服这个刀发过来维修",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "山西太原客户问题切割中有异响,客户把机器关机重启一下没有了要客户以后得有问题及时联系",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "山西太原客户 问题切割中有异响，客户把机器关机重启一下没有了要客户以后得有问题及时联系",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "临沂客户问题:换电脑了处理:视频教客户调参数",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "临沂客户 问题:换电脑了 处理:视频教客户调参数",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "郑州客户问题:视频教客户定位",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "郑州客户 问题：视频教客户定位",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "昆山客户问题:换皮带调刀处理:皮带换好了,明天再看一下刀",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "昆山客户 问题:换皮带调刀 处理:皮带换好了，明天再看一下刀",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "广州客户问题:连接不到相机,视频教客户重新安装软件就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "广州客户 问题：连接不到相机，视频教客户重新安装软件就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "常熟客户问题:两块板子同时切出来打小不一样调一下刀角度在看一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "常熟客户 问题：两块板子同时切出来打小不一样调一下刀角度在看一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "菏泽客户问题:软件保存文件处理:教客户切割软件导出文件",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "菏泽客户 问题:软件保存文件 处理:教客户切割软件导出文件",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北霸州客户问题机器不吸风给客户检查一下,风机管没有什么问题,是客户的材料透气吸不住",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北霸州客户 问题机器不吸风给客户检查一下，风机管没有什么问题，是客户的材料透气吸不住",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "山东临沂客户问题客户驱动器报警给客户检查一下,是有东西挡到对设开关造成坐标错误",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "山东临沂客户 问题客户驱动器报警给客户检查一下，是有东西挡到对设开关造成坐标错误",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "广州客户问题:视频教客户换电机,驱动",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "广州客户 问题：视频教客户换电机，驱动",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "南通客户问题:驱动器报警处理:关机重启一下就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "南通客户 问题:驱动器报警 处理:关机重启一下就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "嘉兴客户问题:客户要挪机器处理:视频教客户怎么挪,那些注意事项",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "嘉兴客户 问题:客户要挪机器 处理:视频教客户怎么挪，那些注意事项",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "昆山客户问题:刀片摆处理:客户不敢试,在家里试试别的刀片,没问题发过去",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "昆山客户 问题:刀片摆 处理:客户不敢试，在家里试试别的刀片，没问题发过去",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "平阳客户问题:切割对切出来了处理:图形尺寸画长了改一下就好了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "平阳客户 问题:切割对切出来了 处理：图形尺寸画长了改一下就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "问题:拉料拉不动处理:毛毡太硬了,让两边夹子垫1块毛毡多垫一个",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "问题:拉料拉不动 处理:毛毡太硬了，让两边夹子垫1块毛毡多垫一个",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "偃师客户问题:改图层处理:视频教客户改图层",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "偃师客户 问题:改图层 处理:视频教客户改图层",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:换电脑了处理:协助客户装软件",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题:换电脑了 处理:协助客户装软件",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "北京客户问题:超幅面处理:分页打开就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "北京客户 问题:超幅面 处理:分页打开就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "德州客户问题:机器开机没反应处理:换了个插头试一下就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "德州客户 问题:机器开机没反应 处理:换了个插头试一下就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "周口客户问题:视频教客户安装拖链",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "周口客户 问题:视频教客户安装拖链",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "德州客户问题:驱动器报警处理:给客户试了一下,旋转轴电机有问题",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "德州客户 问题:驱动器报警 处理:给客户试了一下，旋转轴电机有问题",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "广西客户问题:切不断,和导图处理:光不对,教客户调一下光,导图格式不对,让客户找画图的改一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "广西客户 问题:切不断，和导图 处理:光不对，教客户调一下光，导图格式不对，让客户找画图的改一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "清河客户问题:面板通信中断处理:关机重启一下就好了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "清河客户 问题:面板通信中断 处理:关机重启一下就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "问题:驱动器报警13.1处理:断电上电太快报警了,重新关电,等一会儿开电就好了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "问题:驱动器报警13.1 处理:断电上电太快报警了，重新关电，等一会儿开电就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "问题:视频教客户调刀深",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "问题:视频教客户调刀深",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河南郑州客户问题刀座限位没有电,让客户重新外接一根线就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河南郑州客户 问题刀座限位没有电，让客户重新外接一根线就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "哈萨克斯坦客户问题:博客打板有缝制线处理:客户拍了一个输入数字化仪的视频,看到客户封边没有改成0,让客户改成0就行了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "哈萨克斯坦客户 问题:博客打板有缝制线 处理:客户拍了一个输入数字化仪的视频，看到客户封边没有改成0，让客户改成0就行了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "陕西客户问题:电脑换了,装软件处理:教客户装软件,和调",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "陕西客户 问题:电脑换了，装软件 处理:教客户装软件，和调",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "南通客户问题:连接失败处理:教客户改IP地址",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "南通客户 问题:连接失败 处理:教客户改IP地址",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "昆山客户问题:刀摆处理:调一下气压可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "昆山客户 问题:刀摆 处理:调一下气压可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:风机交流接触器不管用处理重新开机又好了,先用着吧",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题:风机交流接触器不管用 处理 重新开机又好了，先用着吧",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北景县客户问题:切割有毛刺给客户调节一下速度和刀角度,不太理想让客户发来点材料试切一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北景县客户 问题:切割有毛刺给客户调节一下速度和刀角度，不太理想让客户发来点材料试切一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "山西太原客户问题客户刀头不工作时也振动,排查啦一下是继电器坏了让客户更换一个",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "山西太原客户 问题客户刀头不工作时也振动，排查啦一下是继电器坏了让客户更换一个",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "临沂客户问题:线位客户感应不亮,电源没问题,线位坏了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "临沂客户 问题：线位客户感应不亮，电源没问题，线位坏了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:视频教客户调光",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题：视频教客户调光",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "新乡客户问题:刀座丝圈拧不动有东西敲一下松开就好了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "新乡客户 问题：刀座丝圈拧不动有东西敲一下松开就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北邢台客户问题刀片切割中断了,是客户切割速度太快",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北邢台客户 问题刀片切割中断了，是客户切割速度太快",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "山东临沂客户问题刀夹装不进去了,让客户把刀拆掉调整一下,刀夹的角度就可以",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "山东临沂客户 问题刀夹装不进去了，让客户把刀拆掉调整一下，刀夹的角度就可以",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "南通问题:机器连接不上电脑处理:客户主机网线口不亮让客户换个主机可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "南通 问题：机器连接不上电脑 处理：客户主机网线口不亮让客户换个主机可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "广州客户问题:驱动器报警处理:让客户固定一下编码线就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "广州客户 问题：驱动器报警 处理：让客户固定一下编码线就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "江西客户问题:风机不工作处理:线松了,重新固定一下就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "江西客户 问题：风机不工作 处理：线松了，重新固定一下就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "吴忠客户问题:视频教客户排版",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "吴忠客户 问题：视频教客户排版",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "淄博客户问题:换材料切了处理:给客户调一下速度",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "淄博客户 问题：换材料切了 处理：给客户调一下速度",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "蚌埠客户问题:视频教客户调气压",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "蚌埠客户 问题：视频教客户调气压",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "深圳客户问题:视频教客户调v刀参数",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "深圳客户 问题：视频教客户调v刀参数",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河南客户问题:客户换电脑了,重新设置一下软件参数",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河南客户 问题：客户换电脑了，重新设置一下软件参数",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "新乡客户问题:急停不管用处理:还没对射有点挡,客户要干活,明天教他调一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "新乡客户 问题：急停不管用 处理：还没对射有点挡 ，客户要干活，明天教他调一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "泰安客户问题:切的偏处理:看了一下,识别的不对,改一下就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "泰安客户 问题：切的偏 处理：看了一下，识别的不对，改一下就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "福建客户问题:面板没电处理:让他外接一根24伏电也不行,24伏没电,让他测量一下,开关电源那边电压",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "福建客户 问题：面板没电 处理：让他外接一根24伏电也不行，24伏没电，让他测量一下，开关电源那边电压",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "贵州客户问题:感应到对射开关处理:复位的时候感应到对射开关,让他先关上再复位,然后再打开就行了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "贵州客户 问题：感应到对射开关 处理：复位的时候感应到对射开关，让他先关上再复位，然后再打开就行了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "马来西亚客户问题:培训处理:远程给客户调相机软件,标定",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "马来西亚客户 问题:培训 处理:远程给客户调相机软件，标定",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "临沂客户问题:刀不振了处理:视频给客户看了一下,让客户把刀发回来",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "临沂客户 问题：刀不振了 处理：视频给客户看了一下，让客户把刀发回来",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:如何保养处理:给客户发了个视频",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题：如何保养 处理：给客户发了个视频",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:刀夹装不进去处理:视频教客户装刀夹",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题：刀夹装不进去 处理：视频教客户装刀夹",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "襄阳客户问题:刀不转处理:换根线就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "襄阳客户 问题：刀不转 处理：换根线就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:显示参数错误处理:重新调一下刀深就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题：显示参数错误 处理：重新调一下刀深就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北客户问题:刀抬的太低调一下最高点",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北客户 问题：刀抬的太低调一下最高点",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "青岛客户问题:调一下速度拉料完切割对不上调一下拉料补偿",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "青岛客户 问题：调一下速度拉料完切割对不上调一下拉料补偿",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "湖北武汉问题:客户换窄的材料吸不住让客户把分区改成跟随好了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "湖北武汉 问题：客户换窄的材料吸不住让客户把分区改成跟随好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北衡水问题:教客户测量台面测量完成之后让客户试试明天再跟踪一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北衡水 问题：教客户测量台面测量完成之后让客户试试明天再跟踪一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "中非问题:客户高点设置的太低刀抬不起来划材料教客户设置一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "中非 问题：客户高点设置的太低刀抬不起来划材料教客户设置一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "青岛问题:客户双头互译的机器主刀头切割有点浅让客户修改一下Z轴余地",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "青岛 问题：客户双头互译的机器主刀头切割有点浅让客户修改一下Z轴余地",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "印尼问题:客户反应切割尺寸不准视频给客户看一下机器脉冲没问题刀片安装在中心位置让客户重新发送图形切割明天再跟踪一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "印尼 问题：客户反应切割尺寸不准 视频给客户看一下机器脉冲没问题刀片安装在中心位置 让客户重新发送图形切割明天再跟踪一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "国外机器问题:视频培训国外客户软件设置参数软件使用机器操作",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "国外机器 问题：视频培训国外客户 软件设置参数软件使用机器操作",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "青岛欧特美问题:切割拉丝处理:让客户加一点刀深",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "青岛欧特美 问题:切割拉丝 处理:让客户加一点刀深",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北邯郸客户问题:激光机前后轴走不动处理:让客户换一根电机线还是不行,让客户把电机拆下来也空转也卡顿,让客户联系客服购买一套",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北邯郸客户 问题:激光机前后轴走不动 处理:让客户换一根电机线还是不行，让客户把电机拆下来也空转也卡顿，让客户联系客服购买一套",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "济南客户问题:博客打扮不标准处理:客户重置一下打版仪",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "济南客户 问题:博客打扮不标准 处理:客户重置一下打版仪",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知地区客户问题气缸不流畅,检查一下是气缸里面进水了,让客户联系客服购买",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知地区客户 问题气缸不流畅，检查一下是气缸里面进水了，让客户联系客服购买",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "浙江温州客户问题机器开不开机？给客户视频指导一下机停开关如何接线",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "浙江温州客户 问题机器开不开机？给客户视频指导一下机停开关如何接线",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "临沂客户问题:想调一下切割完在哪停处理:视频给客户调一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "临沂客户 问题:想调一下切割完在哪停 处理:视频给客户调一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:切不透,过切处理,调一下振幅和送料补偿",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题:切不透，过切 处理，调一下振幅和送料补偿",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "泰安客户问题:要搬机器处理,给客户讲一下注意事项和方法",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "泰安客户 问题:要搬机器 处理，给客户讲一下注意事项和方法",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "新乡客户问题:排版之后图形大了处理,调一下分辨率就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "新乡客户 问题:排版之后图形大了 处理，调一下分辨率就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "温州客户问题:旋转轴歪处理,教客户r轴复位一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "温州客户 问题:旋转轴歪 处理，教客户r轴复位一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "周口客户问题:C轴复位失败处理,看了一下,主板端口坏了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "周口客户 问题:C轴复位失败 处理，看了一下，主板端口坏了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "湖南客户问题:切割断刀片处理,看了一下,刀深太深了,重新调一下就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "湖南客户 问题:切割断刀片 处理，看了一下，刀深太深了，重新调一下就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "湖南客户问题:驱动器报警处理,看了一下,报502,给客户发线和电机试一下",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "湖南客户 问题:驱动器报警 处理，看了一下，报502，给客户发线和电机试一下",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "马来西亚客户问题:远程培训,相机切割处理:远程教客户巡边切割",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "马来西亚客户 问题:远程培训，相机切割 处理:远程教客户巡边切割",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "国外客户问题:斜切使用处理:给客户拍几个使用视频",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "国外客户 问题:斜切使用 处理:给客户拍几个使用视频",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "丹阳客户问题:切割10公分行程不够处理:让客户把刀耳朵调下来,刀座上提",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "丹阳客户 问题:切割10公分行程不够 处理:让客户把刀耳朵调下来，刀座上提",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河南项城客户问题客户机器不能复位,检查一下线路给客户更换一根电线就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河南项城客户 问题客户机器不能复位，检查一下线路给客户更换一根电线就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "湖北襄阳客户问题客户切割带料,给客户更该一下刀角度就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "湖北襄阳客户 问题客户切割带料，给客户更该一下刀角度就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "临沂客户问题客户风机不工作,客户家的电闸跳了推上去就好了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "临沂客户 问题客户风机不工作，客户家的电闸跳了推上去就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:换了根网线改一下软件里面的IP地址",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题：换了根网线改一下软件里面的IP地址",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北沧州问题:客户一个图超幅面让客户把超幅面切割打开",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北沧州 问题：客户一个图超幅面 让客户把超幅面切割打开",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北保定问题:客户软件被电脑杀毒软件删除了视频教客户安装",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北保定 问题：客户软件被电脑杀毒软件删除了 视频教客户安装",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "德州客户问题:图形保存不出来处理:把图形连接一下就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "德州客户 问题:图形保存不出来 处理:把图形连接一下就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "苏州客户问题:图形保存到U盘处理:视频教客户保存到U盘",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "苏州客户 问题:图形保存到U盘 处理:视频教客户保存到U盘",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "青岛客户问题:1分区不吸附处理:客户下班了明天再联系",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "青岛客户 问题:1分区不吸附 处理:客户下班了明天再联系",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:刀不转处理:刀头里面卡死了,让客户发回来维修",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题:刀不转 处理:刀头里面卡死了，让客户发回来维修",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "泰安客户问题:安装机器处理:教客户安装机器",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "泰安客户 问题:安装机器 处理:教客户安装机器",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "昆山客户问题:标定相机处理:视频教客户标定相机",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "昆山客户 问题:标定相机 处理:视频教客户标定相机",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "山东潍坊问题;轴报警12.0过压保护每次到最前面就报警让客户修改一下参数好了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "山东潍坊 问题；轴报警12.0 过压保护每次到最前面就报警 让客户修改一下参数好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "山东临沂问题:图形打开方式不对先让客户把图形拉到软件里面用",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "山东临沂 问题：图形打开方式不对先让客户把图形拉到软件里面用",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "安徽阜阳客户问题切割不圆滑,给客户调节一下刀角度客户材料稍微有点厚,让客户更换刀片已联系客户购买",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "安徽阜阳客户 问题切割不圆滑，给客户调节一下刀角度客户材料稍微有点厚，让客户更换刀片已联系客户购买",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "河北景县客户问题客户工作中不吸风给客户在设置中页面打开就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "河北景县客户 问题客户工作中不吸风给客户在设置中页面打开就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "青岛客户问题:空开调了,推不上去处理:按一下按钮就可以了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "青岛客户 问题:空开调了，推不上去 处理:按一下按钮就可以了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  },
+  {
+    "problem_norm": "未知客户问题:打板仪连不上处理:软件关掉重新打开一下就好了",
+    "count": 1,
+    "examples": [
+      {
+        "raw": "未知客户 问题:打板仪连不上 处理:软件关掉重新打开一下就好了",
+        "solution": "",
+        "sheet": "售后电话",
+        "machine_model": "",
+        "material": ""
+      }
+    ]
+  }
+]

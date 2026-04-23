@@ -1,0 +1,550 @@
+#!/bin/bash
+# 统一记忆同步脚本 v2.0
+# 核心原则：auto 只备份，永不自动恢复。restore 必须显式执行。
+#
+# 用法:
+#   bash sync.sh              → 自动模式（Git + iCloud快照 + latest镜像 + 配置备份）
+#   bash sync.sh restore git:HEAD          → 从 Git 最新恢复
+#   bash sync.sh restore git:<commit>      → 从 Git 指定提交恢复
+#   bash sync.sh restore icloud:<timestamp> → 从 iCloud 快照恢复
+#   bash sync.sh status       → 显示备份状态
+#   bash sync.sh snapshot     → 仅生成 iCloud tar 快照
+#   bash sync.sh git-only     → 仅 Git 提交推送
+#   bash sync.sh full         → 全量：Git + iCloud + 多agent
+
+set -e
+
+# ── 配置 ──
+OPENCLAW="$HOME/.openclaw"
+WS="$OPENCLAW/workspace"
+CLOUD="$HOME/Library/Mobile Documents/com~apple~CloudDocs/OpenClaw_Memory"
+ICLOUD_SNAPSHOTS="$CLOUD/Snapshots"
+ICLOUD_LATEST="$CLOUD/latest"
+ICLOUD_CONFIGS="$CLOUD/Configs"
+ICLOUD_AGENTS="$CLOUD/agents"
+QUARANTINE="$CLOUD/ConflictsQuarantine"
+
+REMOTE="https://$(gh auth token 2>/dev/null)@github.com/95369149/kitt-brain.git"
+BRAIN_REPO="/tmp/kitt-brain-sync"
+STAGING="/tmp/openclaw-staging-$$"
+LOCK_FILE="/tmp/memory-sync.lock"
+LOG_FILE="/tmp/openclaw-sync.log"
+NOW=$(date '+%Y-%m-%d_%H%M%S')
+NOW_SHORT=$(date '+%Y-%m-%d %H:%M')
+
+CORE_FILES="SOUL.md IDENTITY.md USER.md HEARTBEAT.md TOOLS.md AGENTS.md BOOTSTRAP.md"
+STABILITY_WINDOW=20  # 跳过最近 N 秒内改动的文件
+SNAPSHOT_KEEP=30     # iCloud 快照保留份数（约15小时）
+
+RSYNC_EXCLUDES=(
+    --exclude='__pycache__' --exclude='*.pyc' --exclude='.DS_Store'
+    --exclude='* [0-9].md' --exclude='* [0-9][0-9].md' --exclude='* [0-9][0-9][0-9].md'
+    --exclude='* 2' --exclude='* 3' --exclude='* 4' --exclude='* 5'
+    --exclude='* [0-9].json' --exclude='* [0-9].sh' --exclude='* [0-9].py'
+    --exclude='* [0-9].txt' --exclude='* [0-9].jsonl'
+)
+
+# ── 日志 ──
+log() {
+    local level="$1"; shift
+    local msg="[$(date '+%H:%M:%S')] [$level] $*"
+    echo "$msg"
+    echo "$msg" >> "$LOG_FILE"
+}
+
+# ── 防并发 ──
+acquire_lock() {
+    if [ -f "$LOCK_FILE" ]; then
+        local lock_pid=$(cat "$LOCK_FILE" 2>/dev/null)
+        if [ -n "$lock_pid" ] && kill -0 "$lock_pid" 2>/dev/null; then
+            log WARN "同步进行中 (pid=$lock_pid)，跳过"
+            exit 0
+        fi
+        log WARN "清理残留锁文件"
+        rm -f "$LOCK_FILE"
+    fi
+    echo $$ > "$LOCK_FILE"
+    trap "rm -f '$LOCK_FILE' ; rm -rf '$STAGING'" EXIT
+}
+
+# ── 发现所有 agent ──
+discover_agents() {
+    # 输出格式: agent_id:memory_path （每行一个）
+    # 主 agent
+    [ -d "$WS/memory" ] && echo "kitt:$WS/memory"
+    # 其他 agent
+    for ws_dir in "$OPENCLAW"/workspace-*; do
+        [ -d "$ws_dir/memory" ] || continue
+        local name=$(basename "$ws_dir" | sed 's/workspace-//')
+        echo "$name:$ws_dir/memory"
+    done
+}
+
+# ── 构建 staging（汇总目录）──
+build_staging() {
+    log INFO "构建 staging..."
+    rm -rf "$STAGING"
+    mkdir -p "$STAGING"
+
+    local now_ts=$(date +%s)
+
+    while IFS=: read -r agent_id mem_path; do
+        local dst="$STAGING/agents/$agent_id/memory"
+        mkdir -p "$dst"
+
+        # 复制时跳过最近 N 秒内改动的文件（稳定窗口）
+        find "$mem_path" -type f | while read -r f; do
+            local mtime=$(stat -f %m "$f" 2>/dev/null || stat -c %Y "$f" 2>/dev/null)
+            local age=$((now_ts - mtime))
+            if [ "$age" -lt "$STABILITY_WINDOW" ]; then
+                log WARN "跳过不稳定文件: $f (${age}s ago)"
+                continue
+            fi
+            local rel="${f#$mem_path/}"
+            local target="$dst/$rel"
+            mkdir -p "$(dirname "$target")"
+            cp "$f" "$target"
+        done
+    done < <(discover_agents)
+
+    # 复制核心文件（主 workspace）
+    for f in $CORE_FILES; do
+        [ -f "$WS/$f" ] && cp "$WS/$f" "$STAGING/"
+    done
+
+    # 生成 manifest
+    write_manifest "$STAGING"
+
+    local file_count=$(find "$STAGING" -type f | wc -l | tr -d ' ')
+    log INFO "staging 完成: $file_count 文件"
+}
+
+# ── 生成 manifest ──
+write_manifest() {
+    local root="$1"
+    local manifest="$root/manifest.json"
+    echo "{" > "$manifest"
+    echo "  \"timestamp\": \"$NOW\"," >> "$manifest"
+    echo "  \"files\": [" >> "$manifest"
+    local first=true
+    find "$root" -type f -not -name "manifest.json" | sort | while read -r f; do
+        local rel="${f#$root/}"
+        local size=$(stat -f %z "$f" 2>/dev/null || stat -c %s "$f" 2>/dev/null)
+        local hash=$(md5 -q "$f" 2>/dev/null || md5sum "$f" 2>/dev/null | cut -d' ' -f1)
+        if [ "$first" = true ]; then
+            first=false
+        else
+            echo "," >> "$manifest"
+        fi
+        printf '    {"path":"%s","size":%s,"md5":"%s"}' "$rel" "$size" "$hash" >> "$manifest"
+    done
+    echo "" >> "$manifest"
+    echo "  ]" >> "$manifest"
+    echo "}" >> "$manifest"
+}
+
+# ── Git 仓库初始化 ──
+init_git_repo() {
+    if [ -d "$BRAIN_REPO/.git" ]; then
+        cd "$BRAIN_REPO"
+        git fetch origin main 2>/dev/null || true
+        git pull --ff-only origin main 2>/dev/null || {
+            log WARN "Git pull --ff-only 失败，可能有分歧，仅本地提交"
+        }
+    else
+        rm -rf "$BRAIN_REPO"
+        git clone "$REMOTE" "$BRAIN_REPO" 2>/dev/null || {
+            log ERROR "Git clone 失败"
+            return 1
+        }
+        cd "$BRAIN_REPO"
+    fi
+    git config http.postBuffer 52428800
+}
+
+# ── Git 快照 ──
+git_snapshot() {
+    log INFO "Git 快照..."
+    init_git_repo || { log ERROR "Git 不可用，跳过"; return 1; }
+
+    # 从 staging 同步到 git 工作区
+    rsync -a --delete "${RSYNC_EXCLUDES[@]}" "$STAGING/agents/" ./agents/ 2>/dev/null || true
+    for f in $CORE_FILES manifest.json; do
+        [ -f "$STAGING/$f" ] && cp "$STAGING/$f" .
+    done
+
+    git add -A
+    if ! git diff --cached --quiet; then
+        local changes=$(git diff --cached --stat | tail -1)
+        git commit -m "🧠 auto $NOW_SHORT" -m "$changes"
+        git push origin main 2>/dev/null && {
+            log INFO "Git 推送完成: $changes"
+        } || {
+            log WARN "Git push 失败，本地已提交，稍后重试"
+        }
+    else
+        log INFO "Git 无变更"
+    fi
+}
+
+# ── iCloud tar 快照（追加写，主灾备）──
+icloud_tar_snapshot() {
+    log INFO "iCloud tar 快照..."
+    mkdir -p "$ICLOUD_SNAPSHOTS"
+
+    local tar_name="memory-${NOW}.tar.gz"
+    tar -czf "$ICLOUD_SNAPSHOTS/$tar_name" -C "$STAGING" . 2>/dev/null || {
+        log ERROR "tar 快照生成失败"
+        return 1
+    }
+
+    # 复制 manifest
+    [ -f "$STAGING/manifest.json" ] && cp "$STAGING/manifest.json" "$ICLOUD_SNAPSHOTS/manifest-${NOW}.json"
+
+    local size=$(du -sh "$ICLOUD_SNAPSHOTS/$tar_name" | cut -f1)
+    log INFO "快照完成: $tar_name ($size)"
+}
+
+# ── 清理旧快照 ──
+prune_snapshots() {
+    local count=$(ls -1 "$ICLOUD_SNAPSHOTS"/memory-*.tar.gz 2>/dev/null | wc -l | tr -d ' ')
+    if [ "$count" -gt "$SNAPSHOT_KEEP" ]; then
+        local to_delete=$((count - SNAPSHOT_KEEP))
+        log INFO "清理旧快照: 删除 $to_delete 份（保留 $SNAPSHOT_KEEP）"
+        ls -1t "$ICLOUD_SNAPSHOTS"/memory-*.tar.gz | tail -n "$to_delete" | while read -r f; do
+            rm -f "$f"
+            # 同时删除对应的 manifest
+            local base=$(basename "$f" .tar.gz)
+            rm -f "$ICLOUD_SNAPSHOTS/${base/memory-/manifest-}.json"
+        done
+    fi
+}
+
+# ── iCloud latest 镜像 ──
+icloud_latest_mirror() {
+    log INFO "iCloud latest 镜像..."
+    mkdir -p "$ICLOUD_LATEST"
+
+    rsync -a --checksum "${RSYNC_EXCLUDES[@]}" "$STAGING/" "$ICLOUD_LATEST/"
+
+    # 清理 iCloud 冲突副本 → 隔离而非删除
+    local conflicts=0
+    while IFS= read -r -d '' f; do
+        mkdir -p "$QUARANTINE"
+        mv "$f" "$QUARANTINE/" 2>/dev/null && ((conflicts++)) || true
+    done < <(find "$ICLOUD_LATEST" \( \
+        -name "* [0-9].md" -o -name "* [0-9].json" -o -name "* [0-9].sh" -o \
+        -name "* [0-9].py" -o -name "* [0-9].txt" -o -name "* [0-9].jsonl" -o \
+        -name "* [0-9][0-9].md" -o -name "* [0-9][0-9].json" \
+    \) -print0 2>/dev/null)
+
+    [ "$conflicts" -gt 0 ] && log WARN "隔离 $conflicts 个冲突副本到 ConflictsQuarantine/"
+
+    # 同步急救手册到 iCloud 根目录（厂长手机可直接查看）
+    local rescue="$WS/memory/01_强制规则/急救手册.md"
+    [ -f "$rescue" ] && cp "$rescue" "$CLOUD/急救手册.md" && log INFO "急救手册已同步到 iCloud"
+
+    local file_count=$(find "$ICLOUD_LATEST" -type f -not -name "manifest.json" | wc -l | tr -d ' ')
+    log INFO "latest 镜像完成: $file_count 文件"
+}
+
+# ── 配置文件备份 ──
+backup_configs() {
+    log INFO "配置文件备份..."
+    mkdir -p "$ICLOUD_CONFIGS"
+
+    local config="$OPENCLAW/openclaw.json"
+    [ -f "$config" ] || { log WARN "openclaw.json 不存在"; return; }
+
+    # rolling：每次都更新
+    cp "$config" "$ICLOUD_CONFIGS/rolling.json"
+
+    # weekly：每周第一次运行（周一 或 本周还没生成过）
+    local week_id=$(date '+%YW%V')
+    if [ ! -f "$ICLOUD_CONFIGS/weekly-${week_id}.json" ]; then
+        cp "$config" "$ICLOUD_CONFIGS/weekly-${week_id}.json"
+        log INFO "weekly 配置快照: weekly-${week_id}.json"
+    fi
+
+    # golden：每月第一次运行
+    local month_id=$(date '+%Y%m')
+    if [ ! -f "$ICLOUD_CONFIGS/golden-${month_id}.json" ]; then
+        cp "$config" "$ICLOUD_CONFIGS/golden-${month_id}.json"
+        log INFO "golden 配置快照: golden-${month_id}.json"
+    fi
+
+    # 也放一份到 Git 仓库
+    if [ -d "$BRAIN_REPO/.git" ]; then
+        mkdir -p "$BRAIN_REPO/configs"
+        cp "$config" "$BRAIN_REPO/configs/rolling.json"
+        [ -f "$ICLOUD_CONFIGS/weekly-${week_id}.json" ] && cp "$ICLOUD_CONFIGS/weekly-${week_id}.json" "$BRAIN_REPO/configs/"
+        [ -f "$ICLOUD_CONFIGS/golden-${month_id}.json" ] && cp "$ICLOUD_CONFIGS/golden-${month_id}.json" "$BRAIN_REPO/configs/"
+        cd "$BRAIN_REPO"
+        git add configs/ 2>/dev/null
+        git diff --cached --quiet || git commit -m "📋 config $NOW_SHORT" 2>/dev/null
+        git push origin main 2>/dev/null || true
+    fi
+}
+
+# ── 多 agent 同步到 iCloud ──
+sync_agents_icloud() {
+    log INFO "同步 agent 到 iCloud..."
+    mkdir -p "$ICLOUD_AGENTS"
+
+    for ws_dir in "$OPENCLAW"/workspace-*; do
+        [ -d "$ws_dir" ] || continue
+        local agent_name=$(basename "$ws_dir" | sed 's/workspace-//')
+        local agent_cloud="$ICLOUD_AGENTS/$agent_name"
+        mkdir -p "$agent_cloud"
+
+        for f in SOUL.md IDENTITY.md USER.md TOOLS.md AGENTS.md; do
+            [ -f "$ws_dir/$f" ] && cp "$ws_dir/$f" "$agent_cloud/"
+        done
+        if [ -d "$ws_dir/memory" ]; then
+            mkdir -p "$agent_cloud/memory"
+            rsync -a --checksum "${RSYNC_EXCLUDES[@]}" "$ws_dir/memory/" "$agent_cloud/memory/"
+        fi
+    done
+    log INFO "agent 同步完成"
+}
+
+# ── 健康检查 ──
+health_checks() {
+    local ok=true
+
+    # iCloud 可写？
+    if [ ! -d "$CLOUD" ] || ! touch "$CLOUD/.health-check" 2>/dev/null; then
+        log WARN "iCloud 路径不可写，跳过 iCloud 备份"
+        SKIP_ICLOUD=true
+    else
+        rm -f "$CLOUD/.health-check"
+        SKIP_ICLOUD=false
+    fi
+
+    # Git remote 可用？
+    if ! gh auth token &>/dev/null; then
+        log WARN "GitHub 认证不可用，仅本地 Git"
+        SKIP_GIT_PUSH=true
+    else
+        SKIP_GIT_PUSH=false
+    fi
+}
+
+# ── auto 模式（只备份，永不自动恢复）──
+auto_sync() {
+    log INFO "=== auto 开始 ==="
+    health_checks
+    build_staging
+
+    # 1) Git 版本化
+    git_snapshot || true
+
+    # 2) iCloud 快照 + latest
+    if [ "$SKIP_ICLOUD" != "true" ]; then
+        icloud_tar_snapshot || true
+        prune_snapshots
+        icloud_latest_mirror || true
+    fi
+
+    # 3) 配置文件备份
+
+    # 3.5) QMD 索引增量更新
+    if command -v qmd >/dev/null 2>&1; then
+        log INFO "QMD 索引更新..."
+        qmd collection add "$WS/memory" --update 2>/dev/null || qmd collection add "$WS/memory" 2>/dev/null || true
+        log INFO "QMD 索引完成"
+    fi
+    backup_configs || true
+
+    # 4) 写状态到 ops/state.json
+    local state_file="$WS/memory/ops/state.json"
+    if [ -f "$state_file" ]; then
+        local now_iso=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
+        local duration=$(($(date +%s) - $(date -j -f "%Y-%m-%d_%H%M%S" "$NOW" "+%s" 2>/dev/null || echo 0)))
+        python3 -c "
+import json, sys
+with open('$state_file') as f: s = json.load(f)
+s['lastUpdated'] = '$now_iso'
+s['memorySync']['lastOkAt'] = '$now_iso'
+s['memorySync']['durationMs'] = ${duration}000
+s['memorySync']['error'] = ''
+with open('$state_file', 'w') as f: json.dump(s, f, indent=2, ensure_ascii=False)
+" 2>/dev/null || log WARN "ops/state.json 更新失败"
+    fi
+
+    log INFO "=== auto 完成 ==="
+}
+
+# ── restore 模式（显式恢复，先打本地安全快照）──
+restore() {
+    local source="$1"
+    [ -z "$source" ] && { echo "用法: sync.sh restore git:HEAD | git:<commit> | icloud:<timestamp>"; exit 1; }
+
+    log INFO "=== restore 开始: $source ==="
+
+    # 0) 先打本地安全快照
+    local safety_backup="$HOME/Downloads/OpenClaw-Restore-Backup-${NOW}.tar.gz"
+    log INFO "安全快照: $safety_backup"
+    tar -czf "$safety_backup" -C "$OPENCLAW" \
+        $(for ws in workspace workspace-*; do [ -d "$OPENCLAW/$ws/memory" ] && echo "$ws/memory"; done) \
+        2>/dev/null || true
+    log INFO "本地安全快照完成 ($(du -sh "$safety_backup" | cut -f1))"
+
+    # 1) 准备恢复源
+    local restore_dir="/tmp/openclaw-restore-$$"
+    rm -rf "$restore_dir"
+    mkdir -p "$restore_dir"
+
+    case "$source" in
+        git:*)
+            local ref="${source#git:}"
+            init_git_repo
+            cd "$BRAIN_REPO"
+            git checkout "$ref" -- . 2>/dev/null || { log ERROR "Git checkout $ref 失败"; exit 1; }
+            cp -R "$BRAIN_REPO/agents" "$restore_dir/" 2>/dev/null || {
+                # v1 格式兼容：没有 agents/ 目录，直接用 memory/
+                mkdir -p "$restore_dir/agents/kitt"
+                cp -R "$BRAIN_REPO/memory" "$restore_dir/agents/kitt/" 2>/dev/null || true
+                for f in $CORE_FILES; do
+                    [ -f "$BRAIN_REPO/$f" ] && cp "$BRAIN_REPO/$f" "$restore_dir/"
+                done
+            }
+            ;;
+        icloud:*)
+            local ts="${source#icloud:}"
+            local tar_file="$ICLOUD_SNAPSHOTS/memory-${ts}.tar.gz"
+            [ -f "$tar_file" ] || { log ERROR "快照不存在: $tar_file"; exit 1; }
+            tar -xzf "$tar_file" -C "$restore_dir"
+            ;;
+        *)
+            log ERROR "未知恢复源: $source"
+            exit 1
+            ;;
+    esac
+
+    # 2) 预演
+    log INFO "恢复预览:"
+    local agents_found=0
+    for agent_dir in "$restore_dir"/agents/*/; do
+        [ -d "$agent_dir" ] || continue
+        local agent_id=$(basename "$agent_dir")
+        local file_count=$(find "$agent_dir" -type f | wc -l | tr -d ' ')
+        log INFO "  $agent_id: $file_count 文件"
+        ((agents_found++))
+    done
+
+    if [ "$agents_found" -eq 0 ]; then
+        log ERROR "恢复源中没有找到 agent 数据"
+        rm -rf "$restore_dir"
+        exit 1
+    fi
+
+    # 3) 确认
+    echo ""
+    echo "⚠️  即将覆盖本地记忆文件。本地已备份到: $safety_backup"
+    read -p "确认恢复？(yes/no): " confirm
+    [ "$confirm" = "yes" ] || { log INFO "取消恢复"; rm -rf "$restore_dir"; exit 0; }
+
+    # 4) 分发回各 workspace
+    for agent_dir in "$restore_dir"/agents/*/; do
+        [ -d "$agent_dir" ] || continue
+        local agent_id=$(basename "$agent_dir")
+        local target_mem
+
+        if [ "$agent_id" = "kitt" ]; then
+            target_mem="$WS/memory"
+        else
+            target_mem="$OPENCLAW/workspace-$agent_id/memory"
+        fi
+
+        [ -d "$target_mem" ] || { log WARN "目标不存在: $target_mem，跳过"; continue; }
+
+        rsync -a --delete "$agent_dir/memory/" "$target_mem/"
+        log INFO "已恢复: $agent_id → $target_mem"
+    done
+
+    # 恢复核心文件
+    for f in $CORE_FILES; do
+        [ -f "$restore_dir/$f" ] && cp "$restore_dir/$f" "$WS/"
+    done
+
+    rm -rf "$restore_dir"
+    log INFO "=== restore 完成 ==="
+}
+
+# ── status ──
+show_status() {
+    echo "📊 sync.sh v2.0 状态"
+    echo "─────────────────────"
+
+    # Git
+    if [ -d "$BRAIN_REPO/.git" ]; then
+        cd "$BRAIN_REPO"
+        local last_commit=$(git log -1 --format='%ci %s' 2>/dev/null || echo "无")
+        echo "Git 最后提交: $last_commit"
+    else
+        echo "Git: 未初始化"
+    fi
+
+    # iCloud 快照
+    if [ -d "$ICLOUD_SNAPSHOTS" ]; then
+        local snap_count=$(ls -1 "$ICLOUD_SNAPSHOTS"/memory-*.tar.gz 2>/dev/null | wc -l | tr -d ' ')
+        local latest_snap=$(ls -1t "$ICLOUD_SNAPSHOTS"/memory-*.tar.gz 2>/dev/null | head -1)
+        echo "iCloud 快照: $snap_count 份"
+        [ -n "$latest_snap" ] && echo "最新快照: $(basename "$latest_snap")"
+    else
+        echo "iCloud 快照: 无"
+    fi
+
+    # iCloud latest
+    if [ -d "$ICLOUD_LATEST" ]; then
+        local latest_count=$(find "$ICLOUD_LATEST" -type f -not -name "manifest.json" | wc -l | tr -d ' ')
+        echo "iCloud latest: $latest_count 文件"
+    fi
+
+    # 本地
+    local local_count=$(find "$WS/memory" -type f | wc -l | tr -d ' ')
+    echo "本地记忆: $local_count 文件"
+
+    # Agents
+    local agent_count=0
+    for ws_dir in "$OPENCLAW"/workspace-*; do
+        [ -d "$ws_dir/memory" ] && ((agent_count++))
+    done
+    echo "其他 agent: $agent_count 个"
+
+    # 隔离区
+    if [ -d "$QUARANTINE" ]; then
+        local q_count=$(find "$QUARANTINE" -type f 2>/dev/null | wc -l | tr -d ' ')
+        [ "$q_count" -gt 0 ] && echo "⚠️  隔离区: $q_count 个冲突文件待确认"
+    fi
+}
+
+# ── 主入口 ──
+acquire_lock
+
+case "${1:-auto}" in
+    auto)       auto_sync ;;
+    restore)    restore "$2" ;;
+    status)     show_status ;;
+    snapshot)   build_staging; icloud_tar_snapshot ;;
+    git-only)   build_staging; git_snapshot ;;
+    full)
+        auto_sync
+        sync_agents_icloud
+        ;;
+    *)
+        echo "sync.sh v2.0 - 记忆同步"
+        echo ""
+        echo "用法:"
+        echo "  sync.sh              自动备份（Git + iCloud快照 + latest + 配置）"
+        echo "  sync.sh restore git:HEAD|git:<commit>|icloud:<timestamp>"
+        echo "  sync.sh status       显示备份状态"
+        echo "  sync.sh snapshot     仅生成 iCloud tar 快照"
+        echo "  sync.sh git-only     仅 Git 提交推送"
+        echo "  sync.sh full         全量（含多agent iCloud同步）"
+        exit 1
+        ;;
+esac
+
+log INFO "🏁 同步完成 $(date '+%Y-%m-%d %H:%M:%S')"

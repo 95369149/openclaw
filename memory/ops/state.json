@@ -1,0 +1,81 @@
+{
+  "providerHealth": {
+    "lastCheckedAt": "2026-03-15T03:00:00+08:00",
+    "status": "healthy",
+    "dead": [],
+    "recovered": [
+      "mynewapi/claude-sonnet-4-6"
+    ],
+    "lastErrors": {}
+  },
+  "opsHourlySweep": {
+    "lastOkAt": "2026-03-23T03:00:00.000Z",
+    "issues": []
+  },
+  "dailyEvolution": {
+    "lastOkAt": "2026-03-25T11:53:00+08:00",
+    "runCount": 29,
+    "findings": [
+      "今日主线转向系统稳定性排查：SIGTERM / transcript repair / Compacting context 已形成初步因果链",
+      "任务板快照：readyTasks=40，active=0，completed=12，P0 仍有 4 项未推进",
+      "shared 最新信号显示：b2b 线索采集因 fastapi 缺失持续失败，属低风险可修复问题",
+      "外链学习结论：2026 Agent 落地核心是可编排、可恢复、有治理；制造业主线是工业智能体数据闭环",
+      "SOUL.md 存在版本引用过时；排兵布阵与 openclaw.json 核心 agent 一致，但文档对 fallback/timeout 描述偏超前",
+      ".abstract 已完成低风险更新：Last Updated 与今日日志已校准到 2026-03-25"
+    ],
+    "nextActions": [
+      "🔴 P0（厂长操作）：/cron list → 清理daily_self_evolution重复注册，保留1个删除其余",
+      "🔴 P0：T-146 微信ClawBot接入测试（5分钟，手机端）",
+      "🟡 P1：b2b后端修复 → cd projects/b2b-growth-system/backend && .venv/bin/pip install fastapi uvicorn",
+      "🟡 P1：T-137 工信部AI+制造试点申报（政策窗口，2027年万亿市场紧迫）",
+      "🟡 P1：T-114 AI落地三环节MVP（报价/排产/远程诊断）→ 派deep"
+    ]
+  },
+  "nightlyOps": {
+    "lastRunAt": "2026-04-06T07:30:00+08:00",
+    "summary": {
+      "activeTasks": 0,
+      "readyTasks": 50,
+      "completedTasks": 13,
+      "blockedTasks": 0,
+      "successRate": "今日看板完成率 13/63（20.6%）；当前活跃 0，待办 50，阻塞 0。",
+      "anomalies": [
+        "- 今日 X 推文消化与简报生成：2026-03-12 18:15 回收，准备重启",
+        "- OpenClaw 深度集成到红太阳内部运营：将 OpenClaw 部署到客服、数据分析、内容生产，优先使用中国模型（豆包/智谱/Kimi）降低成本，抓住窗口期",
+        "- 申报工信部「AI+制造」试点项目（2027年70%普及率目标）：响应国务院2027年智能体应用普及率超70%目标，包装点：国产鸿蒙化PLC+智能体+柔性材料切割，获得财政支持和品牌背书"
+      ]
+    },
+    "priorities": [
+      "今日 X 推文消化与简报生成",
+      "OpenClaw 深度集成到红太阳内部运营",
+      "申报工信部「AI+制造」试点项目（2027年70%普及率目标）"
+    ],
+    "deliveryNote": "cron 自动执行；由系统 delivery 推送至 Discord"
+  },
+  "weeklyEvolution": {
+    "lastRunAt": "2026-03-25T21:00:00+08:00",
+    "status": "ok",
+    "report": "memory/07_版本控制/进化提案_2026-03-25.md",
+    "shared": "memory/shared/evolution_scout_2026-03-25.md",
+    "topFindings": [
+      "Context engineering 主流已收敛到按需激活 + 滑动窗口 + 摘要压缩混合路线",
+      "多 Agent 记忆应按 I/O / Cache / Memory 三层治理，而非把 shared 当万能记忆池",
+      "错误轨迹应保留在活跃上下文，避免 Agent 重复踩坑",
+      "OpenClaw 生态关注点转向 smart pruning、secrets、sandbox、多模块治理",
+      "evolution_scout.py 当前仍输出示例结果，Scout 链路修复应列为 P0"
+    ],
+    "topImprovements": [
+      "P0 修复 evolution_scout.py 为真实侦察输出",
+      "P0 给 shared/ops 记忆增加版本与冲突治理元数据",
+      "P0 明确 I/O、Cache、Memory 三层边界并开始 facts/skills 提炼"
+    ],
+    "telegramTarget": "telegram:8184569453",
+    "telegramPendingNote": "按本次 cron 指令，不实际发送，由系统备注去向"
+  },
+  "lastUpdated": "2026-04-20T06:59:20+08:00",
+  "memorySync": {
+    "lastOkAt": "2026-04-20T06:59:20+08:00",
+    "durationMs": 211000,
+    "error": ""
+  }
+}

@@ -1,0 +1,1165 @@
+[
+  {
+    "topic": "未归类",
+    "count": 2293,
+    "examples": [
+      {
+        "problem_raw": "分区掉了，吸力不行",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "何强聪"
+      },
+      {
+        "problem_raw": "机器搬家拆梁，切割有有偏移对不齐",
+        "solution": "刀角度问题调一下",
+        "machine_model": "",
+        "material": "",
+        "sheet": "何强聪"
+      },
+      {
+        "problem_raw": "安装红光",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "何强聪"
+      },
+      {
+        "problem_raw": "新乡客户 问题:侧台面 处理:视频教客户测台面",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "六盘水客户 问题：教客户调刀深",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "湖南客户 问题：教客户安装刀具调刀深",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "新沂客户 问题:博客生成裁片少线条 处理:给客户排个视频教程，两个裁片连接到一块时，把线条接连一下，再生成裁片就好了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "丹阳客户 问题:客户共线切割删除覆盖线 处理:给客户拍个删除覆盖线的视频发给客户",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "驱动器报警",
+    "count": 255,
+    "examples": [
+      {
+        "problem_raw": "安装毛毡，驱动器报警",
+        "solution": "",
+        "machine_model": "2125",
+        "material": "",
+        "sheet": "何强聪"
+      },
+      {
+        "problem_raw": "驱动器报警",
+        "solution": "更换动力线，编码器线",
+        "machine_model": "2240",
+        "material": "",
+        "sheet": "曹元山"
+      },
+      {
+        "problem_raw": "甘肃客户 问题:驱动器报警 处理:视频给客户看了一下，不是公司机器",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河北保定客户 问题客户驱动器报警给客户检查一下编码器下的插头有没有松动",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "山东聊城客户 问题驱动器报警让客户检查一下，导轨没有什么问题，可能是速度过快",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "山东临沂客户 问题客户驱动器报警给客户检查一下，是有东西挡到对设开关造成坐标错误",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "南通客户 问题:驱动器报警 处理:关机重启一下就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "德州客户 问题:驱动器报警 处理:给客户试了一下，旋转轴电机有问题",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "跑料/送料偏移",
+    "count": 144,
+    "examples": [
+      {
+        "problem_raw": "毛毡开裂，拉料补偿过长",
+        "solution": "粘毛毡，调整拉料补偿",
+        "machine_model": "",
+        "material": "",
+        "sheet": "曹元山"
+      },
+      {
+        "problem_raw": "山东滨州客户 问题切割之后不送料，给客户更改一下，送料模式已解决",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "甘肃客户 问题:送料滑料 处理:让客户找个比料有摩擦力的沾到压料板上",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "上海客户 问题:改送料补偿 处理:教客户聪软件改送料补偿",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "长春客户 问题:设置拉料 处理:让客户把自动拉料打开，分页打开就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题:拉料拉不动 处理:毛毡太硬了，让两边夹子垫1块毛毡多垫一个",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "青岛客户 问题：调一下速度拉料完切割对不上调一下拉料补偿",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "保定客户 问题:拉料滑料 处理:教客户把压料板螺丝松一下，压紧紧一下螺丝就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "风机吸附异常",
+    "count": 134,
+    "examples": [
+      {
+        "problem_raw": "风机吸风和机器检查保养",
+        "solution": ":材料放全，小料的用自动放区",
+        "machine_model": "3150/1625",
+        "material": "",
+        "sheet": "何强聪"
+      },
+      {
+        "problem_raw": "商丘客户 问题:切割有点带料 处理 视频看了一下，客户风机没清理过让他清理一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河北霸州客户 问题机器不吸风给客户检查一下，风机管没有什么问题，是客户的材料透气吸不住",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "未知客户 问题:风机交流接触器不管用 处理 重新开机又好了，先用着吧",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "江西客户 问题：风机不工作 处理：线松了，重新固定一下就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "临沂客户 问题客户风机不工作，客户家的电闸跳了推上去就好了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "青岛客户 问题:1分区不吸附 处理:客户下班了明天再联系",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "秦皇岛客户 问题：客户问一下风机怎么清理给客户讲解一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "刀片/耗材损坏",
+    "count": 119,
+    "examples": [
+      {
+        "problem_raw": "六盘水客户 问题:视频教客户换刀片",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "白沟客户 问题:断了个刀片，刀卡安装不上了 处理:客户那里有一个旧的刀卡安装上就行了，安装不上的那个让客户用砂纸打磨一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "昆山客户 问题:刀片摆 处理:客户不敢试，在家里试试别的刀片，没问题发过去",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河北邢台客户 问题刀片切割中断了，是客户切割速度太快",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "湖南客户 问题:切割断刀片 处理，看了一下，刀深太深了，重新调一下就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "安徽阜阳客户 问题切割不圆滑，给客户调节一下刀角度客户材料稍微有点厚，让客户更换刀片已联系客户购买",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "江苏客户 问题:切割断刀片 处理:刀深太深了，调一下就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "临沂客户 问题:切割有问题 处理:让客户换刀片试一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "刀头/刀座异常",
+    "count": 97,
+    "examples": [
+      {
+        "problem_raw": "河北客户 问题：刀头不转了，把刀重新装一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "甘肃客户 问题:旋转轴复位不对 处理:限位没问题，刀座感应不到",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河南郑州客户 问题刀座限位没有电，让客户重新外接一根线就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "山西太原客户 问题客户刀头不工作时也振动，排查啦一下是继电器坏了让客户更换一个",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "新乡客户 问题：刀座丝圈拧不动有东西敲一下松开就好了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "青岛 问题：客户双头互译的机器主刀头切割有点浅让客户修改一下Z轴余地",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "丹阳客户 问题:切割10公分行程不够 处理:让客户把刀耳朵调下来，刀座上提",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "未知客户 问题:刀不转 处理:刀头里面卡死了，让客户发回来维修",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "相机掉线/标定异常",
+    "count": 97,
+    "examples": [
+      {
+        "problem_raw": "滨州客户 问题:视频教客户对焦相机",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "潍坊代理 问题:真皮软件安装标定 处理:远程给客户设置软件，对焦，教客户调相机，标定纸已切好，客户相机架子没有打螺丝，明天固定好，再标定",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "广州客户 问题：连接不到相机，视频教客户重新安装软件就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "马来西亚客户 问题:培训 处理:远程给客户调相机软件，标定",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "马来西亚客户 问题:远程培训，相机切割 处理:远程教客户巡边切割",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "昆山客户 问题:标定相机 处理:视频教客户标定相机",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "沈阳客户 问题:标定相机 处理:视频教客户标定相机",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "邵阳客户 问题：视频教客户调相机误差",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "报警类故障",
+    "count": 94,
+    "examples": [
+      {
+        "problem_raw": "温州客户 问题:风机变频器报警 处理:把输出线卸了，量了一下电压，电压不够不稳定，需要换一个",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "温州客户 问题:换变频器，改风机线 处理:变频器报警，明天再看一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河北唐山 Z轴复位报警过载 处理：客户Z轴过限位了没感应到 重新复位一下好了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "山东潍坊 问题；轴报警12.0 过压保护每次到最前面就报警 让客户修改一下参数好了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "温州客户 问题：变频器报警风机坏了一个拆掉之后就不报了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "青岛客户 问题：变频器报警 处理:给客户看了一下，变频器没问题，风机明天看一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "代理客户 问题:一下刀就报警，刀太短了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河北廊坊 问题：UD轴复位报警 处理：限位感应不太好 让客户在贴片上面再粘块铁试试 给客户发信息没回明天跟一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "毛毡/台面耗材问题",
+    "count": 62,
+    "examples": [
+      {
+        "problem_raw": "浦江客户 问题:毛毡烂了 处理:客户换刀片忘记调刀深了，把毛毡切烂了，已让客户联系客服购买一条",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "菏泽客户 问题:毛毡偏 处理:一会往左偏一会右，跟客户讲一下毛毡都有一点误差，没事",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "广东广州 问题：客户毛毡拉不动让客户松松毛毡好点 毛毡有点气鼓 让机器拉一会毛毡再用明天跟踪一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "德州客户 问题:毛毡有点松 处理:教客户紧一下毛毡",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "广州客户 问题双头互译切割一侧伤毛让客户把压料侧面往下落，原因是侧面太高，把毛毡带起来",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题:毛毡鼓起 处理：教客户调一下毛毡",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "教客户拽毛毡，粘上",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题:毛毡裂开了 处理：把客户推给客服，让客户买条毛毡",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "电机/驱动丢步",
+    "count": 60,
+    "examples": [
+      {
+        "problem_raw": "保定客户 问题客户左右电机处异响，明天给客户跟踪一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "浙江客户 问题：电动斜切刀电机那个插头插不紧了卖她一根线",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "广州客户 问题：视频教客户换电机，驱动",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河北邯郸客户 问题:激光机前后轴走不动 处理:让客户换一根电机线还是不行，让客户把电机拆下来也空转也卡顿，让客户联系客服购买一套",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "山东临沂 问题：电动斜切刀不震动 电机固定联轴器顶丝松了 让客户紧上里面打上胶",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "山东临沂 问题：客户减速机抱死 电机取不下来 客户不行更换 让客户发回公司 试试不行就让客户买一套",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "廊坊客户 问题:切割切着切着角度就不对了 处理：联系客服买一下电机驱动和线",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "廊坊客户 问题:客户换电机驱动换限位 处理:教客户安装驱动调驱动参数",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "气动刀异常",
+    "count": 44,
+    "examples": [
+      {
+        "problem_raw": "山东青岛 气动刀异响 处理：客户气动刀有时候刀柄里面异响大前两天让客户放点油还是不是联系客服这个刀发过来维修",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河南郑州客户 客户机器切割中漏气，让客户检查了一下漏气的位置已解决",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "沈阳 问题：气动刀不震动 处理：客户继电器头坏了 还在质保期让客户从附近买一个装上",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "平湖客户 问题:反吹漏气 处理:让客户焊一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "滨州客户 问题:气动刀不震 处理:刀有问题电磁阀有点不通联系客服发回来维修一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "温州客户 问题:气动刀漏气 处理：让客户把刀发回来",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "赣榆客户 问题:老是断刀片 处理：再教一遍客户装刀片并给客户发气动刀安装刀片视频",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题：气动刀不工作 处理：让客户观察气动刀模块电磁阀",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "切不透",
+    "count": 42,
+    "examples": [
+      {
+        "problem_raw": "未知客户 问题:切不透，过切 处理，调一下振幅和送料补偿",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河北保定 问题：客户切割有点切不透 换新刀片也不行 视频给客户看看 差的不多让客户加点刀深",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "未知客户 问题:切不透 处理:让客户加点刀深",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "郑州客户 问题:切不透 处理:让客户加点刀深就OK了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河北景县客户 问题切割硅胶材质切不透，让客户更改一下速度",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "山东临沂客户 问题材料切不透，调的刀深刀口不一样，让客户更改一下就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "浙江平湖 问题：客户气动刀声音不对感觉没劲刀头上面漏气切割材料切不透让客户把这个刀头发回来给客户换一个备用的",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "宜宾客户 问题:切不透 处理:客户刀深调反了调一下就好了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "回原点异常",
+    "count": 35,
+    "examples": [
+      {
+        "problem_raw": "更换毛毡，机器回不了原点，风机吸风小",
+        "solution": "换毛毡，安装原点限位挡片，清理风机管道",
+        "machine_model": "1625",
+        "material": "",
+        "sheet": "曹元山"
+      },
+      {
+        "problem_raw": "河南郑州客户 问题：双横梁激光机切割1头和2头切割线有偏差 检查客户限位螺丝没有松动教客户调一下原点偏移好了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "汕头客户 问题:原点会变 处理:教客户调一下参数",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "徐州客户 问题:Z原点检测测试 处理:给客户看了一下，信号线松了，紧上就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "泰安客户 问题:改幅面，原点偏移 处理:让客户改一下参数",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河南客户 问题:回原点时，高度不一样 处理:让客户把回原点速度调慢，让客户在试试",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "原点检测异常客户 问题:斜切刀切的不好看 处理:阳光有点照，遮一下就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "泰安客户 问题：回不了原点 处理：限位没信号换限位",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "面板/电气故障",
+    "count": 34,
+    "examples": [
+      {
+        "problem_raw": "嫩江客户问题:切割时停电了，续切 处理:客户把材料收了，让客 户把剩下的重新发送在切割，教客户断电续切功能",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "嫩江 问题:断电续切 处理:教一下客户断电续切处理",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "瑞安客户 问题：机器突然断电，排版 处理：1、机器突然断电，交流接触器开机也吸合，让客户断电，把端子排的线都按一下，再开机就好了 2、教客户切割软件阵列复制，和镜像使用",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "吉林延边客户 问题:断电需要恢复续切 处理：交给客户怎么使用续切",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题:回原点异常 处理:横梁已过限位，断电后将机器回推，再次回原点恢复",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "宁波客户 问题:断电了机头抬不起来 处理：关机手动抬一下就好了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题：z轴撞机 处理：让客户断电检查升降，发现卡住拆盖子发现螺丝卡住拿掉就好了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题：机器工作中断电 处理：客户总电源那边缺相",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "切割毛边/拉丝",
+    "count": 30,
+    "examples": [
+      {
+        "problem_raw": "青岛欧特美 问题:切割拉丝 处理:让客户加一点刀深",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "南通客户 问题：切割有点毛边 处理:把速度降一点就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "福建客户 问题：背胶切出来有毛边 处理:一开始是正着切了，把它反过来切就没了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "菏泽客户 问题:有一个刀头切割拉丝 处理:让客户加深，让客户改一下原点偏移加一点",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "代理客户 问题：切割有毛边，换个刀片就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河南洛阳 问题：切割材料有毛边 让客户换个新刀片 圆角速度慢点",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "台州客户 问题:双v刀切出来前面后面都有毛边 处理：让客户减一下刀深，减一下速度客户没有回消息",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题：切割材料有毛边 处理：换9号刀片 材料上面喷点水",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "切不断",
+    "count": 21,
+    "examples": [
+      {
+        "problem_raw": "广西客户 问题:切不断，和导图 处理:光不对，教客户调一下光，导图格式不对，让客户找画图的改一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河北胜芳客户 问题客户结尾处切不断给客户调节一下，过切已解决",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "湖南客户 问题:切不断 处理:减一点速度就可以了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "洛阳客户 问题:切不断 处理：教客户调一下气压",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "桐乡客户 问题:客户材料切不断，丝圈送了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题：客户切割断刀 处理：客户换刀头装反了 切割材料剪口切不断 把小圆速度改慢就行了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题：切1.2橡胶板夹线的切不断一刀 处理：看了一下气压也没问题，让客户分两层切割速度调快一点下落速度调慢一点，现在能切断了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题:切割切不断 处理：教客户加点过切就好了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "通信中断",
+    "count": 12,
+    "examples": [
+      {
+        "problem_raw": "聊城阳谷客户 问题客户老机器需要结尾出生成裁断线，给客户升级一下，系统已解决",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "清河客户 问题:面板通信中断 处理:关机重启一下就好了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "河边胜芳 问题：客户电脑网口有问题 给客户发了USB教一下客户怎么连接",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题：客户想问一下扯一根网线电脑怎么连接网络 处理：给客户讲一下买一个USB转网口得转换器就好了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题:通讯错误 处理：网口松动",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题:设备未连接 处理：设备跟主机连接不上，网口有问题，叫换台电脑",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题:面版无主板通信中断 处理:主板指示灯不亮，让客户把段子拔掉一个一个的试，最后确认是旋转轴限位信号有问题，是限位烧了，让客户强行回原点，先干活 处理结果:强行回原点先干活，让客户换限位",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题：办卡网口连接不上 处理：让客户找他更换一个办卡网卡口有问题",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "机械件松脱/损坏",
+    "count": 9,
+    "examples": [
+      {
+        "problem_raw": "问题:分区法兰坏了两个 处理：联系客服发两个法兰",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题：安装法兰 处理：教客户安装法兰",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题：安装法兰 处理：教客户安装法兰，",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题：分区法兰管子掉了 处理：联系客服先把配件发过去",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题:法兰坏了 处理：让客户联系客服买新的",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题:切割材料边磨的太多 处理：法兰掉了，还有好几个裂了，客户需要上门",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "法兰掉了",
+        "solution": "未解决，差铁条",
+        "machine_model": "",
+        "material": "",
+        "sheet": "维修登记表"
+      },
+      {
+        "problem_raw": "法兰掉了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "维修登记表"
+      }
+    ]
+  },
+  {
+    "topic": "切圆不圆/图形变形",
+    "count": 4,
+    "examples": [
+      {
+        "problem_raw": "问题：图形不对 处理：重画一个切",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题:图形忘了改颜色提示图形错误 处理：让客户改一下颜色",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题:切割图形错误 处理：刀号选错了，让客户改一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      },
+      {
+        "problem_raw": "问题:切出来图形不对 处理：让客户调一下刀角度就好了",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  },
+  {
+    "topic": "尺寸误差",
+    "count": 1,
+    "examples": [
+      {
+        "problem_raw": "印尼 问题：客户反应切割尺寸不准 视频给客户看一下机器脉冲没问题刀片安装在中心位置 让客户重新发送图形切割明天再跟踪一下",
+        "solution": "",
+        "machine_model": "",
+        "material": "",
+        "sheet": "售后电话"
+      }
+    ]
+  }
+]

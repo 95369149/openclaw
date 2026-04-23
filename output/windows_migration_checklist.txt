@@ -1,0 +1,14 @@
+Windows 迁移必改字段清单
+
+1. API_KEY
+2. BASE_URL
+3. MODEL
+4. TELEGRAM_BOT_TOKEN
+5. DATA_DIR
+
+检查项
+- 所有 /Users/apple/ 路径改成 Windows 路径
+- 所有 ~/ 路径改成绝对路径或相对路径
+- 检查端口占用
+- 检查日志目录可写
+- 如果 Windows 不接 Telegram，保持 enabled=false

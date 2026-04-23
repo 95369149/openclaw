@@ -1,0 +1,48 @@
+"""Kitt 进化引擎配置 v3.0 — 适配新目录结构"""
+from pathlib import Path
+
+MEMORY_ROOT = Path(__file__).parent.parent
+SCRIPTS_DIR = MEMORY_ROOT / "scripts"
+
+# v3.0 目录结构
+RULES_DIR = MEMORY_ROOT / "01_强制规则"
+KNOWLEDGE_DIR = MEMORY_ROOT / "02_知识库"
+SEMANTIC_DIR = MEMORY_ROOT / "03_语义记忆"
+EPISODES_DIR = MEMORY_ROOT / "04_情景记忆"
+DAILY_LOG_DIR = MEMORY_ROOT / "05_日常日志"
+VERSION_DIR = MEMORY_ROOT / "07_版本控制"
+PROJECTS_DIR = MEMORY_ROOT / "10_项目"
+BOOKMARKS_DIR = MEMORY_ROOT / "80_收藏"
+ARCHIVE_DIR = MEMORY_ROOT / "90_归档"
+
+# 进化引擎工作目录（scripts 下，不污染主目录）
+ENGINE_DATA_DIR = SCRIPTS_DIR / "engine_data"
+PATTERNS_DIR = ENGINE_DATA_DIR / "patterns"
+INDEX_FILE = ENGINE_DATA_DIR / "index.json"
+
+# 记忆层配置
+SHORT_TERM_TTL_DAYS = 7
+LONG_TERM_PROMOTE_THRESHOLD = 3
+COMPRESSION_TRIGGER_COUNT = 50
+MAX_WORKING_MEMORY_ITEMS = 10
+
+# 模式提取
+MIN_PATTERN_OCCURRENCES = 3
+PATTERN_CONFIDENCE_THRESHOLD = 0.7
+
+# 元认知
+DAILY_REPORT_HOUR = 23
+HELP_ESCALATION_FAIL_COUNT = 2
+
+# SOUL 进化
+SOUL_FILE = MEMORY_ROOT.parent / "SOUL.md"
+SOUL_CHANGELOG = ENGINE_DATA_DIR / "soul_changelog.jsonl"
+RULE_VALIDATION_INTERVAL_DAYS = 7
+MIN_DATA_POINTS_FOR_RULE_CHANGE = 10
+
+# 日志源
+EXECUTION_LOG = ENGINE_DATA_DIR / "agent_execution.jsonl"
+
+# 确保目录存在
+for d in [ENGINE_DATA_DIR, PATTERNS_DIR]:
+    d.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,75 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#94a3b8" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="1600" fill="url(#bg)"/>
+  <text x="80" y="90" font-size="44" font-weight="700" font-family="Arial, PingFang SC, sans-serif" fill="#0f172a">红太阳周培训技术图谱样稿</text>
+  <text x="80" y="135" font-size="22" font-family="Arial, PingFang SC, sans-serif" fill="#475569">把周培训做成结构图，而不是只留成会议记录</text>
+
+  <rect x="70" y="190" width="1060" height="180" rx="28" fill="#ffffff" stroke="#cbd5e1" filter="url(#shadow)"/>
+  <text x="100" y="245" font-size="28" font-weight="700" font-family="Arial, PingFang SC, sans-serif" fill="#1e293b">培训输入层</text>
+  <rect x="100" y="275" width="220" height="60" rx="18" fill="#dbeafe" stroke="#93c5fd"/>
+  <text x="145" y="313" font-size="24" font-family="Arial, PingFang SC, sans-serif" fill="#1d4ed8">企业文化手册</text>
+  <rect x="360" y="275" width="220" height="60" rx="18" fill="#fee2e2" stroke="#fca5a5"/>
+  <text x="390" y="313" font-size="24" font-family="Arial, PingFang SC, sans-serif" fill="#b91c1c">延期案例复盘</text>
+  <rect x="620" y="275" width="220" height="60" rx="18" fill="#dcfce7" stroke="#86efac"/>
+  <text x="650" y="313" font-size="24" font-family="Arial, PingFang SC, sans-serif" fill="#15803d">售后高频问题</text>
+  <rect x="880" y="275" width="220" height="60" rx="18" fill="#ede9fe" stroke="#c4b5fd"/>
+  <text x="930" y="313" font-size="24" font-family="Arial, PingFang SC, sans-serif" fill="#6d28d9">部门动作清单</text>
+
+  <path d="M600,370 L600,450" stroke="#3b82f6" stroke-width="6" marker-end="url(#arrow)" fill="none"/>
+
+  <rect x="220" y="450" width="760" height="220" rx="32" fill="#ffffff" stroke="#cbd5e1" filter="url(#shadow)"/>
+  <text x="470" y="505" font-size="30" font-weight="700" font-family="Arial, PingFang SC, sans-serif" fill="#0f172a">周培训引擎</text>
+  <rect x="270" y="540" width="180" height="80" rx="20" fill="#e0f2fe" stroke="#7dd3fc"/>
+  <text x="304" y="588" font-size="24" font-family="Arial, PingFang SC, sans-serif" fill="#0369a1">统一认知</text>
+  <rect x="495" y="540" width="210" height="80" rx="20" fill="#fef3c7" stroke="#fcd34d"/>
+  <text x="548" y="588" font-size="24" font-family="Arial, PingFang SC, sans-serif" fill="#b45309">拆动作</text>
+  <rect x="750" y="540" width="180" height="80" rx="20" fill="#fae8ff" stroke="#e879f9"/>
+  <text x="796" y="588" font-size="24" font-family="Arial, PingFang SC, sans-serif" fill="#a21caf">定责任</text>
+  <path d="M450,580 L495,580" stroke="#3b82f6" stroke-width="5" marker-end="url(#arrow)" fill="none"/>
+  <path d="M705,580 L750,580" stroke="#3b82f6" stroke-width="5" marker-end="url(#arrow)" fill="none"/>
+
+  <path d="M600,670 L600,760" stroke="#10b981" stroke-width="6" marker-end="url(#arrow)" fill="none"/>
+
+  <rect x="70" y="760" width="1060" height="300" rx="28" fill="#ffffff" stroke="#cbd5e1" filter="url(#shadow)"/>
+  <text x="100" y="815" font-size="28" font-weight="700" font-family="Arial, PingFang SC, sans-serif" fill="#1e293b">输出层</text>
+  <rect x="100" y="860" width="220" height="130" rx="22" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="155" y="915" font-size="25" font-family="Arial, PingFang SC, sans-serif" fill="#1d4ed8">培训图表</text>
+  <text x="130" y="955" font-size="18" font-family="Arial, PingFang SC, sans-serif" fill="#475569">手机可看 · 管理层汇报</text>
+  <rect x="360" y="860" width="220" height="130" rx="22" fill="#f0fdf4" stroke="#86efac"/>
+  <text x="430" y="915" font-size="25" font-family="Arial, PingFang SC, sans-serif" fill="#15803d">动作清单</text>
+  <text x="400" y="955" font-size="18" font-family="Arial, PingFang SC, sans-serif" fill="#475569">部门执行 · 责任到人</text>
+  <rect x="620" y="860" width="220" height="130" rx="22" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="700" y="915" font-size="25" font-family="Arial, PingFang SC, sans-serif" fill="#c2410c">SOP</text>
+  <text x="650" y="955" font-size="18" font-family="Arial, PingFang SC, sans-serif" fill="#475569">高频问题标准动作</text>
+  <rect x="880" y="860" width="220" height="130" rx="22" fill="#faf5ff" stroke="#d8b4fe"/>
+  <text x="945" y="915" font-size="25" font-family="Arial, PingFang SC, sans-serif" fill="#7e22ce">周报模板</text>
+  <text x="925" y="955" font-size="18" font-family="Arial, PingFang SC, sans-serif" fill="#475569">每周复用 · 滚动升级</text>
+
+  <path d="M210,990 L210,1080" stroke="#3b82f6" stroke-width="4" fill="none"/>
+  <path d="M470,990 L470,1080" stroke="#10b981" stroke-width="4" fill="none"/>
+  <path d="M730,990 L730,1080" stroke="#f59e0b" stroke-width="4" fill="none"/>
+  <path d="M990,990 L990,1080" stroke="#a855f7" stroke-width="4" fill="none"/>
+
+  <rect x="70" y="1080" width="1060" height="390" rx="28" fill="#ffffff" stroke="#cbd5e1" filter="url(#shadow)"/>
+  <text x="100" y="1135" font-size="28" font-weight="700" font-family="Arial, PingFang SC, sans-serif" fill="#1e293b">效果判断</text>
+  <g font-family="Arial, PingFang SC, sans-serif" fill="#334155" font-size="24">
+    <text x="120" y="1215">1. 这套项目适合拿来做“最终出图层”，价值高于纯 Markdown 图卡。</text>
+    <text x="120" y="1275">2. 它最适合你现在的周培训、制度梳理、OpenClaw/brain 架构图、售后流程图。</text>
+    <text x="120" y="1335">3. 它的强项是 SVG + PNG 正式图，直接适合手机、汇报、公众号、文档封面。</text>
+    <text x="120" y="1395">4. 它可以和你刚吸收的 markdown-viewer skills 形成“源文件 + 成品图”双层组合。</text>
+  </g>
+
+  <rect x="70" y="1490" width="1060" height="70" rx="20" fill="#0f172a"/>
+  <text x="110" y="1535" font-size="24" font-family="Arial, PingFang SC, sans-serif" fill="#ffffff">结论：保留这个项目，并把它定位成红太阳图形表达的“正式出图引擎”。</text>
+</svg>

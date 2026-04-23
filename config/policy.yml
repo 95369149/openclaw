@@ -1,0 +1,43 @@
+version: 1
+
+defaults:
+  route_mode: FAST
+  enforce_review: false
+
+rules:
+  - name: config_change_guard
+    match:
+      risk_level: high_config
+    then:
+      require_agents: [guard]
+      enforce_review: true
+      route_mode: FULL
+
+  - name: arch_design_kitt
+    match:
+      risk_level: high_arch
+    then:
+      require_agents: [kitt]
+      enforce_review: true
+      route_mode: FULL
+
+  - name: external_research_scout
+    match:
+      requires_external_research: true
+    then:
+      require_agents: [scout]
+
+  - name: code_review
+    match:
+      requires_code: true
+    then:
+      require_agents: [deep]
+      enforce_review: true
+
+  - name: high_business_kitt
+    match:
+      risk_level: high_business
+    then:
+      require_agents: [kitt]
+      enforce_review: true
+      route_mode: FULL

@@ -1,0 +1,39 @@
+version: 1
+
+# 各类文件的生命周期策略
+# ttl_days: 超过多少天后归档（不删除）
+# archive_path: 归档目标目录
+
+classes:
+  patrol:
+    path_prefix: "memory/80_收藏/每日巡逻_"
+    ttl_days: 7
+    archive_path: "archive/patrol/"
+
+  x_digest:
+    path_prefix: "memory/shared/"
+    filename_pattern: "*_X推文摘要*"
+    ttl_days: 14
+    archive_path: "archive/x_digest/"
+
+  learning_ingest:
+    path_prefix: "memory/shared/"
+    filename_pattern: "*_learning_ingest*"
+    ttl_days: 14
+    archive_path: "archive/learning_ingest/"
+
+  shared_general:
+    path_prefix: "memory/shared/"
+    ttl_days: 30
+    archive_path: "archive/shared/"
+
+# 永远不归档的路径（白名单）
+never_archive:
+  - "memory/task-board.json"
+  - "memory/.abstract"
+  - "memory/01_强制规则/"
+  - "memory/10_项目/"
+  - "SOUL.md"
+  - "IDENTITY.md"
+  - "AGENTS.md"
+  - "MEMORY.md"

@@ -1,0 +1,1513 @@
+{
+  "entries": {
+    "00425e1b7b72": {
+      "file": "00_大脑中枢.md",
+      "tags": [
+        "root"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T23:19:22.646709",
+      "summary": "# 00_大脑中枢 — Kitt 记忆体系 v4.0 > Last Updated: 2026-02-24 22:45 > Architecture: 编号目录 + 扁平文件 + 语义检索  ## ⚡"
+    },
+    "fb33124cd9f7": {
+      "file": "00_数字分身.md",
+      "tags": [
+        "root"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T23:47:10.856147",
+      "summary": "# 厂长数字分身 v2.1 > 用于外部模型（千问/Grok/DeepSeek等）快速了解厂长背景 > 最后更新：2026-02-23  ## 基本信息 - **身份**：济南红太阳数控设备有限公司厂"
+    },
+    "7a760937c2f7": {
+      "file": "04_情景记忆/_INDEX.md",
+      "tags": [
+        "04_情景记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T23:01:22",
+      "summary": "# 情景记忆索引 > 具体事件的时间线记录  | 文件 | 日期 | 摘要 | |---|---|---| | 2026-02/0215-系统进化到第二代.md | 2026-02-15 | Kitt"
+    },
+    "b952136309df": {
+      "file": "04_情景记忆/2026-02/0215-系统进化到第二代.md",
+      "tags": [
+        "04_情景记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-15T17:07:12",
+      "summary": "# 0215-系统进化到第二代.md  ## 事件 厂长发来 Roland 的「第二代 AI 工作系统」文章（25个优化方法），要求 Kitt 按此方式进化。  ## 采纳的核心变化 1. 三层记忆架"
+    },
+    "a6d3d406fb1c": {
+      "file": "01_强制规则/配置安全规则.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T19:03:56.616663",
+      "summary": "# 配置安全规则（2026-02-24 合并版）  ## 权限 - **只有 jimmy 有权修改** `openclaw.json`、`SOUL.md`、`IDENTITY.md`、`HEARTBE"
+    },
+    "c26574253542": {
+      "file": "01_强制规则/SiliconFlow轮动手册.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T13:34:17.933614",
+      "summary": "# SiliconFlow API Key 轮动操作手册  ## 原理 每个 14 元 Key 注册为独立 provider（siliconflow / siliconflow-2 / silicon"
+    },
+    "d7a571bfdd02": {
+      "file": "01_强制规则/行为准则.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T19:05:03.737414",
+      "summary": "# 行为准则（2026-02-24 合并版）  ## 第一原则：诚实守信 - **不说谎**：做了就是做了，没做就是没做 - **不夸大**：4/10 通过就说 4/10，不说\"基本完成\" - **不"
+    },
+    "07c0808cca8b": {
+      "file": "01_强制规则/知识库分布地图.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:25:53.464952",
+      "summary": "# 知识库分布地图 > 厂长的知识资产分布在多个平台，查资料前先确认在哪  ## 平台分布  | 平台 | 存储内容 | 访问方式 | |------|---------|---------| | O"
+    },
+    "05e3a0c6f90b": {
+      "file": "01_强制规则/频道工作流.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-17T15:06:19",
+      "summary": "# 强制规则：频道工作流协议  ## 1. #收藏 (Bookmarks) - 认知进化引擎 **触发机制**:  - **被动触发**: 用户发布内容并 @Kitt - **主动扫描**: 每 2 "
+    },
+    "e063a2f9a7aa": {
+      "file": "01_强制规则/急救手册.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T23:19:27.956784",
+      "summary": "# Kitt 急救手册 v3.3（2026-02-24 更新）  ## 🚨 失联急救  ### 情况1：Kitt 不回复（Discord/Telegram） ```bash # 1. 检查 Gatew"
+    },
+    "a569da171393": {
+      "file": "01_强制规则/质量检查清单.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T20:12:11.424591",
+      "summary": "# 强制规则：质量检查清单  ## 核心原则 **先检查，后交付。不发半成品。**  ## 1. 文案/内容交付检查 - [ ] **风格匹配**：是否符合“直接、高效、零废话”的 Kitt 风格？ "
+    },
+    "76577d31454e": {
+      "file": "01_强制规则/画画频道.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-17T15:17:54",
+      "summary": "# 画画频道处理规则  ## 触发条件 当收到来自 Discord #画画 频道 (ID: 1473185796046721159) 的消息且 @Kitt 时自动触发  ## 处理流程  ### St"
+    },
+    "490323aa8aa8": {
+      "file": "01_强制规则/Triage_Prompt_v2.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T22:55:03",
+      "summary": "# Triage Prompt v2.0  ## 版本信息 - 版本: 2.0 - 日期: 2026-02-22 - 测试准确率: 100% (10/10) - 模型: GLM 4.5 Air (¥0"
+    },
+    "6a063a6105fd": {
+      "file": "01_强制规则/业务落地方案.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T21:06:47.454181",
+      "summary": "# 业务落地方案（GPT-5.2 顾问建议）  > 来源：GPT-5.2 第三波建议（2026-02-22） > 主题：数据底座 + 四条业务流水线 + 人审闸门  ---  ## 一、数据底座：Ex"
+    },
+    "fa8817008600": {
+      "file": "01_强制规则/排兵布阵.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T18:08:42.013401",
+      "summary": "# Kitt 排兵布阵 v3.4（2026-02-24 修正版）  **制定时间**: 2026-02-24 18:10   **基于**: v3.3（2026-02-23）   **修正人**: j"
+    },
+    "3463f46dfdba": {
+      "file": "01_强制规则/文档学习流程.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T22:34:06",
+      "summary": "# 强制规则：资料学习与分发流程 v3.0  ## 触发条件 厂长通过 Telegram / Discord / WhatsApp 发送以下任何一种内容： - 文档附件（PDF/TXT/MD/DOC/"
+    },
+    "7dbf19f5a625": {
+      "file": "01_强制规则/文档脱敏规范.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T18:02:52.569178",
+      "summary": "# 强制规则：文档脱敏规范  ## 核心原则 **任何发送到外部的内容都必须脱敏**  ## 必须删除的信息  ### 1. 认证信息 - API key（所有平台） - 密码 - Token - 证"
+    },
+    "1eaa1ccf4bb1": {
+      "file": "01_强制规则/浏览器操作规范.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T17:24:01.584705",
+      "summary": "# 强制规则：浏览器操作规范  ## 核心原则 **Kitt 不直接操作浏览器抓外链，必须派 Scout**  ## 浏览器 Profile - **openclaw**：主力 profile，所有 "
+    },
+    "e910214dc234": {
+      "file": "01_强制规则/中文语境适配规则.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T08:44:52",
+      "summary": "# 中文语境适配规则.md —— 让Kitt更像中国通  ## 1. 语言风格 - **正式程度**：对厂长直接，用“你”或“厂长”；对外部（客户、合作伙伴）用“您”，但避免过度客套。 - **语气助"
+    },
+    "da7d167deac4": {
+      "file": "01_强制规则/记忆体系规则.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T22:48:29.468593",
+      "summary": "# 记忆体系规则（2026-02-24 合并版）  ## 铁规：记忆优先 回答涉及以下话题时，**必须先 memory_search 查记忆，禁止凭上下文瞎答**： - 兵团成员 / 模型配置 / F"
+    },
+    "93d19db0977d": {
+      "file": "01_强制规则/文档清理安全流程.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T21:32:27.502047",
+      "summary": "# 文档清理安全流程 v1.0  ## 核心原则 **删除前必须比对内容，不能只看时间和文件名**  ## 安全流程  ### 1. 识别冗余文档 ```bash # 列出所有相关文档 find me"
+    },
+    "4ab4a619bdc9": {
+      "file": "01_强制规则/资源总览.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T23:19:22.714917",
+      "summary": "# Kitt 资源总览（2026-02-24 更新）  ## Agent 编制 | Agent | 模型 | 渠道 | 角色 | 状态 | |-------|------|------|------|"
+    },
+    "3e93b777985d": {
+      "file": "01_强制规则/Fallback链配置v2.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T18:09:02.424245",
+      "summary": "# 强制规则：Fallback 链配置（2026-02-24 v2.1）  ## 核心原则 **免费模型优先，付费模型兜底，确保不失联**  ## 当前资源（2026-02-24）  ### 免费资源"
+    },
+    "c51bce97d852": {
+      "file": "01_强制规则/工作模式.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T19:06:33.718129",
+      "summary": "# 工作模式（2026-02-24 合并版）  ## 运行模式 - **24/7 运行**：永不提休息、睡觉、明天 - **持续执行**：有待办任务立即继续，不等指令 - **主动推进**：遇到阻塞派"
+    },
+    "442962e68db6": {
+      "file": "01_强制规则/_INDEX.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T19:07:43.981724",
+      "summary": "# 01_强制规则 索引（2026-02-24 重整版）  ## 核心架构（必读） | 文件 | 内容 | |------|------| | 排兵布阵.md | **唯一调度真相** — 5 age"
+    },
+    "23a453e3ce66": {
+      "file": "01_强制规则/黄金修正库.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:50:07",
+      "summary": "# 黄金修正库（厂长亲改案例 + 自动质检拦截）  > 自动同步自 ChromaDB | 2026-02-22 02:50 | 2 条记录   ## 记录 1 来源: tone_correction "
+    },
+    "350e7c94c0aa": {
+      "file": "01_强制规则/防休眠配置.md",
+      "tags": [
+        "01_强制规则"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T18:24:22.474771",
+      "summary": "# 强制规则：防休眠配置  ## 问题 macOS 合盖后会休眠，导致 Gateway 暂停，失联。  ## 解决方案  ### 方案1：系统设置（推荐） 1. 打开\"系统设置\" 2. 进入\"电池\" "
+    },
+    "67f469fc66b4": {
+      "file": "10_项目/文稿生成系统架构设计.md",
+      "tags": [
+        "10_项目"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T23:14:48.702837",
+      "summary": "# 文稿生成系统架构设计  > 设计人：Kitt (claude-opus-4-6-max) > 日期：2026-02-23 > 版本：v1.0  ---  ## 1. 调用方式  ### 设计原则 "
+    },
+    "0c52f8c61db9": {
+      "file": "10_项目/超级大脑-模型军团.md",
+      "tags": [
+        "10_项目"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T18:21:44",
+      "summary": "# Kitt 超级大脑 — 模型军团路由规则 > 项目代号：SuperBrain > 创建：2026-02-19 > 状态：Phase 1 实施中  ## 核心理念 Kitt 是总指挥，不是传话筒。 "
+    },
+    "b7c105dbdd7f": {
+      "file": "10_项目/Kitt迭代成长计划.md",
+      "tags": [
+        "10_项目"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T12:13:59",
+      "summary": "# Kitt 迭代成长计划  ## 核心理念 **取长补短，多模型协作**。每个模型都有擅长的领域，Kitt通过向其他模型学习来持续进化。  ## 迭代流程  ### 第1步：发现短板 Kitt在日常"
+    },
+    "de9700ede2f5": {
+      "file": "20_领域/女儿教育/汉字图像联想库.md",
+      "tags": [
+        "20_领域"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T08:49:48",
+      "summary": "# 汉字图像联想库  ## 设计思路 将汉字的形状转化为有趣图像，帮助三年级学生记忆。  ## 一级汉字（100个）  ### 象形类 - **日** → 太阳（圆形，中间一点是太阳黑子） - **月"
+    },
+    "150b9287ee6a": {
+      "file": "20_领域/女儿教育/_INDEX.md",
+      "tags": [
+        "20_领域"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T08:49:08",
+      "summary": "# 女儿教育模块 > 厂长女儿（三年级）AI辅助教育资源  | 文件 | 描述 | |---|---| | 汉字图像联想库.md | 300个常用汉字图像记忆法 | | Minecraft教育模组.m"
+    },
+    "6a6b2b10f8a0": {
+      "file": "80_收藏/2026-02-20-AI技术三篇.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:46:42",
+      "summary": "# 2026-02-20 AI技术学习摘要（完整版）  ## 文章1: Claude Code 的 Prompt Caching 实战经验 **作者**: Thariq (Claude Code 团队"
+    },
+    "2af24b03113b": {
+      "file": "80_收藏/2026-02-18-真分身理念与OpenViking.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:52:34",
+      "summary": "# 2026-02-18 真分身理念与 OpenViking (@AI_Jasonyu)  ## 来源 - Author: @AI_Jasonyu (鱼总聊AI) - Date: 2026-02-17"
+    },
+    "de8187caa330": {
+      "file": "80_收藏/2026-02-18-本地IssueDriven开发.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:52:34",
+      "summary": "# 2026-02-18 本地 Issue Driven 开发 (@YuLin807)  ## 来源 - Author: @YuLin807 (Qingyue) - Date: 2026-02-18 "
+    },
+    "49d4547f7775": {
+      "file": "80_收藏/2026-02-18-OpenClaw-v2026.2.15更新解读.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:52:34",
+      "summary": "# 2026-02-18 OpenClaw v2026.2.15 更新解读 (@BillTheInvestor)  ## 来源 - Author: @BillTheInvestor - Date: 2"
+    },
+    "08d52f53b3de": {
+      "file": "80_收藏/2026-02-20_Claude-Prompt-Caching与AI生图构图.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:47:53",
+      "summary": "# 2026-02-20 收藏摘要  ## 来源 - Discord #收藏频道 - 时间：2026-02-20 08:21-08:25  ## 内容1：Claude Code 的 Prompt Ca"
+    },
+    "045a36549991": {
+      "file": "80_收藏/2026-02-20_GCP免费VPS部署方案.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:47:53",
+      "summary": "# GCP 谷歌云永久免费 VPS 部署方案  **来源**: [X @gxjdian](https://x.com/gxjdian/status/2024749034951627257)   **收"
+    },
+    "28ffb995d3e9": {
+      "file": "80_收藏/2026-02-20-Nowledge-Mem-v0.6.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:46:42",
+      "summary": "# Nowledge Mem v0.6 学习摘要  **主题**：连接与自主 (Connect & Autonomy)   **来源**：Wey Gu (Nowledge Mem 创始人)   **发"
+    },
+    "2c9153b8c530": {
+      "file": "80_收藏/2026-02-18-AI自主开发闭环思考.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:52:34",
+      "summary": "# 2026-02-18 AI 自主开发闭环思考 (@Yonah_x)  ## 来源 - Author: @Yonah_x (汉松) - Date: 2026-02-17 - Link: https:"
+    },
+    "1a0fe1f01695": {
+      "file": "80_收藏/2026-02-18-RF-DETR本地视觉.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:53:43",
+      "summary": "# 2026-02-18 本地实时视觉模型：RF-DETR (@berryxia)  ## 来源 - Author: @berryxia (推文误写为 Rf-def) - Correct Projec"
+    },
+    "9e5994af6bfc": {
+      "file": "80_收藏/2026-02-18-BetterCapture-macOS录屏.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:53:43",
+      "summary": "# 2026-02-18 BetterCapture: macOS 开源录屏工具 (@gxjdian)  ## 来源 - Author: @gxjdian (纯棉短裤) - Date: 2026-02"
+    },
+    "22bc8ddfde2c": {
+      "file": "80_收藏/2026-02-18-ai-daily-digest.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:52:34",
+      "summary": "# 2026-02-18 ai-daily-digest 自动日报系统 (@wlzh)  ## 来源 - Author: M. @wlzh - Link: https://x.com/wlzh/sta"
+    },
+    "1856dad92433": {
+      "file": "80_收藏/2026-02-18-Portless-Vercel端口工具.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:53:43",
+      "summary": "# 2026-02-18 Portless: Vercel 端口转发工具 (@GeekBB)  ## 来源 - Author: @GeekBB (Geek) - Date: 2026-02-17 - "
+    },
+    "06d6710ae48b": {
+      "file": "80_收藏/2026-02-18-Codexbot-OpenClaw助手.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:53:43",
+      "summary": "# 2026-02-18 Codexbot: 基于 GPT-5.3 的云端开发 Agent (@biggor888)  ## 来源 - Author: @biggor888 (Samgor 三哥玩AI"
+    },
+    "7967ffa53a6d": {
+      "file": "80_收藏/2026-02-17-x解读.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-17T13:50:10",
+      "summary": "# X 解读 2026-02-17  ## 1. @cathrynlavery — OpenClaw 记忆系统搭建指南 - 来源：https://x.com/cathrynlavery/status/"
+    },
+    "2ec49573acf2": {
+      "file": "80_收藏/2026-02-18-纯文本人生操作系统.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:52:34",
+      "summary": "# 2026-02-18 纯文本人生操作系统 (@QingQ77)  ## 来源 - Author: @QingQ77 - Date: 2026-02-17 - Link: https://x.com"
+    },
+    "788536bd59c6": {
+      "file": "80_收藏/2026-02-21_tweet-by-yulin807-fri-feb-20-094152-0000-2026.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:11:39",
+      "summary": "--- uuid: 2eee9287-c5c9-440a-90c9-19d68e8ccd3d source: \"https://x.com/yulin807/status/20247815388027"
+    },
+    "4113b1beb03c": {
+      "file": "80_收藏/2026-02-18-AppStoreConnectCLI-Agent友好.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:53:43",
+      "summary": "# 2026-02-18 App Store Connect CLI: Agent 友好的发布工具 (@tualatrix)  ## 来源 - Author: @tualatrix (图拉鼎) - D"
+    },
+    "5b5cabafeb7b": {
+      "file": "80_收藏/2026-02-18-Framer设计灵感库.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:53:43",
+      "summary": "# 2026-02-18 Framer Gallery: 设计灵感库 (@zuozizhen)  ## 来源 - Author: @zuozizhen (左子祯) - Date: 2026-02-17"
+    },
+    "c97892b6f327": {
+      "file": "80_收藏/2026-02-16-x解读.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-16T22:47:23",
+      "summary": "# 2026-02-16 X 解读汇总  ## 1. Seedance 2.0 提示词体系 来源：@Huanusa + @Jackywine - 提示词万能公式：[主体] + [动作] + [场景] "
+    },
+    "a725bc379d2f": {
+      "file": "80_收藏/2026-02-18-RevealJS-Skill.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:52:34",
+      "summary": "# 2026-02-18 Reveal.js Skill (告别 PPT)  ## 来源 - Author: @QingQ77 - Date: 2026-02-18 - Link: https://x"
+    },
+    "32c4570a3983": {
+      "file": "80_收藏/2026-02-18-seedance审查绕过策略.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:52:34",
+      "summary": "# Seedance 2.0 审查绕过策略  来源：@john87445528 (2026-02-17) 链接：https://x.com/john87445528/status/2023660939"
+    },
+    "97a4c76e4064": {
+      "file": "80_收藏/2026-02-18-跨AI协作bridge.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:52:34",
+      "summary": "# 2026-02-18 跨AI工具协作方案 (@blackanger)  ## 来源 - Author: AlexZ @blackanger - Link: https://x.com/blacka"
+    },
+    "5305eb0a5a51": {
+      "file": "80_收藏/2026-02-18-NotebookLM数字分身.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:52:34",
+      "summary": "# 2026-02-18 零代码克隆名人分身 (NotebookLM)  ## 来源 - Author: @Cheery9998 (推荐), @MinLiBuilds (原文) - Link: htt"
+    },
+    "1b7e5f9c1147": {
+      "file": "80_收藏/2026-02-18-OpenClaw架构吐槽.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:52:34",
+      "summary": "# 2026-02-18 OpenClaw 架构深度吐槽 (@0xCherry)  ## 来源 - Author: @0xcherry (车厘子) - Date: 2026-02-17 - Link:"
+    },
+    "37f26fce334d": {
+      "file": "80_收藏/2026-02-20-LobsterAI-测评.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:46:42",
+      "summary": "# LobsterAI 实测体验报告  **作者**：AI进化论-花生   **来源**：https://x.com/AlchainHust/status/2024467001385660670   "
+    },
+    "0d1281309864": {
+      "file": "80_收藏/_INDEX.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-20T23:05:18",
+      "summary": "# 收藏索引 > 外部内容的摘要存档  | 文件 | 来源 | 摘要 | |---|---|---| | 2026-02-18-AI自主开发闭环思考.md | X | AI 自主开发闭环 | | 20"
+    },
+    "89776838d630": {
+      "file": "80_收藏/2026-02-18-x解读.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T22:52:34",
+      "summary": "# 2026-02-18 X 解读汇总  ## 1. @VersunPan — NowledgeMem vs qmd 记忆系统对比 ⭐⭐⭐⭐ 来源：https://x.com/VersunPan/st"
+    },
+    "17e798029671": {
+      "file": "80_收藏/2026-02-22_AI生图提示词精简法则.md",
+      "tags": [
+        "80_收藏"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T04:00:36.479514",
+      "summary": "# AI生图提示词精简法则  **来源**：https://x.com/voxcatai/status/2025198403836109077   **作者**：VoxCat (@VoxcatAI) "
+    },
+    "755f9d107086": {
+      "file": "04_内容素材/开工第一课_安全生产演讲稿.md",
+      "tags": [
+        "04_内容素材"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T22:02:45.209427",
+      "summary": "# 开工第一课——守好安全底线，护好幸福家园  > 来源：豆包生成 | 日期：2026-02-24  各位兄弟姐妹们，大家新年好！  度过了喜庆祥和的春节，咱们带着家人的牵挂，重新回到了这个并肩打拼的"
+    },
+    "e59652c88722": {
+      "file": "07_版本控制/进化提案模板.md",
+      "tags": [
+        "07_版本控制"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T19:21:15.212383",
+      "summary": "# 进化提案模板  ## 提案信息 - **日期**：YYYY-MM-DD - **版本**：vX.X - **提案人**：kitt / jimmy / 外链模型 - **状态**：待审批 / 已批准"
+    },
+    "73cd0e64fbab": {
+      "file": "07_版本控制/版本日志.md",
+      "tags": [
+        "07_版本控制"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T23:19:00.424703",
+      "summary": "# 版本日志  ## SOUL v2.1（2026-02-24） **主题**：路由规则精确化  **变更内容**： - 重写：快速决策流程（5条量化条件 + 优先级瀑布） - 精确化：意图桶映射表（"
+    },
+    "6f21336ab900": {
+      "file": "07_版本控制/soul_routing_优化_2026-02-24.md",
+      "tags": [
+        "07_版本控制"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T23:18:50.621667",
+      "summary": "# SOUL.md 路由规则优化 — 2026-02-24  **版本**: v2.0 → v2.1   **执行者**: deep（subagent）   **审核**: 待厂长确认  ---  #"
+    },
+    "502b0c09816b": {
+      "file": "07_版本控制/heartbeat_workflow_优化_2026-02-24.md",
+      "tags": [
+        "07_版本控制"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T23:16:35.082840",
+      "summary": "# HEARTBEAT.md & WORKFLOW_AUTO.md 优化报告 > 日期: 2026-02-24 > 执行者: deep (subagent)  ## 优化前状态  | 文件 | 行数 "
+    },
+    "a4e004329d8f": {
+      "file": "07_版本控制/进化提案_2026-02-24.md",
+      "tags": [
+        "07_版本控制"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T06:05:44.274210",
+      "summary": "# 进化提案 2026-02-24  ## 发现的问题 1. **模型切换失败**：尝试从mynewapi/claude-sonnet-4-6切回Primary模型（siliconflow/deeps"
+    },
+    "1b2d4414a9d4": {
+      "file": "07_版本控制/_INDEX.md",
+      "tags": [
+        "07_版本控制"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T23:07:56.278577",
+      "summary": "# 07_版本控制索引 > 版本控制与进化记录  | 文件 | 摘要 | |---|---| | 版本日志.md | 待补充摘要 | | 评审委员会.md | 待补充摘要 | | 进化提案模板.md "
+    },
+    "77710143631b": {
+      "file": "03_语义记忆/提示词工程最新进展-2026W08.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T00:27:41",
+      "summary": "# 提示词工程最新进展 (2026年2月12-19日)  ## 一、主要大模型最新提示词最佳实践  ### 1.1 Claude / GPT / Gemini 对比更新  **模型发布新版本 (202"
+    },
+    "1052cedaf8b8": {
+      "file": "03_语义记忆/厂长交互模式.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-15T17:20:06",
+      "summary": "# 语义记忆：厂长交互模式  ## 核心模式（≥3次验证）  ### 零反问原则 厂长说\"配\"就配，说\"装\"就装，说\"好的\"就全部执行。 不要问\"要不要\"、\"先处理哪个\"、\"你选哪个\"。 直接做最优方"
+    },
+    "130e253c64a2": {
+      "file": "03_语义记忆/X内容抓取方法.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-16T19:42:47",
+      "summary": "# 语义记忆：X 内容抓取方法  ## 免费抓取方案（2026-02-16 验证可用）  ### api.fxtwitter.com（推荐） - 将 x.com 替换为 api.fxtwitter.c"
+    },
+    "e02ad5792814": {
+      "file": "03_语义记忆/Seedance2.0提示词实战进阶.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T02:28:26",
+      "summary": "# 语义记忆：Seedance 2.0 提示词实战进阶  ## 核心认知升级：从\"描述\"到\"导演\"  Seedance 2.0 的提示词不再是简单的文本描述，而是**导演指令**。大神们已经总结出从基"
+    },
+    "7b2320bd6e7f": {
+      "file": "03_语义记忆/个人进化与一人公司方法论.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T03:20:17",
+      "summary": "# 个人进化与一人公司方法论  来源：Dan Koe Human 3.0 框架 via @berryxia (2026-02-18)  ## D-U-D 进化循环（可复用模型）  核心机制：成长不是线"
+    },
+    "8563e3c2880d": {
+      "file": "03_语义记忆/Google-Gemini提示词最佳实践-2026.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T15:03:06",
+      "summary": "# Google Gemini 提示词最佳实践（2026）  > 学习日期：2026-02-19 | 来源：Google官方文档 + PromptBuilder Gemini 3 Playbook +"
+    },
+    "1685b11579fa": {
+      "file": "03_语义记忆/Nowledge-EVOLVES记忆模型.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34.254768",
+      "summary": "# 语义记忆：Nowledge EVOLVES 记忆模型  ## 来源 Wey Gu / Nowledge Mem v0.6（2026-02-20 收藏消化）  ## 核心架构：三层记忆 1. **T"
+    },
+    "72e906041b44": {
+      "file": "03_语义记忆/内容营销自动化工具-2026.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:20:52.349229",
+      "summary": "# 内容营销自动化工具研究报告（2025-2026）  > 研究时间：2026-02-22   > 适用场景：制造业+短视频营销、一人公司/小团队、预算有限的创业者  ---  ## 一、主流社媒管理"
+    },
+    "c70e573d969d": {
+      "file": "03_语义记忆/Prompt-Caching架构实战.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34.269557",
+      "summary": "# 语义记忆：Prompt Caching 架构实战  ## 来源 Claude Code 团队 Thariq 分享（2026-02-20 收藏消化）  ## 核心原则 Prompt caching "
+    },
+    "a51f26ea10b1": {
+      "file": "03_语义记忆/写作风格分析方法论_dontbesilent案例.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-17T09:53:05",
+      "summary": "# 写作风格分析方法论：dontbesilent 案例  来源：[dontbesilent 文风分析报告](https://x.com/dontbesilent12/status/2023370066"
+    },
+    "3a737aae7f0e": {
+      "file": "03_语义记忆/OpenViking-Claude-Plugin研究.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T08:03:05.672979",
+      "summary": "# OpenViking Claude Memory Plugin 研究笔记  > 来源: https://github.com/volcengine/OpenViking/tree/main/exa"
+    },
+    "5d575b6b24c1": {
+      "file": "03_语义记忆/黄总龙虾4兄弟架构分析.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-20T18:16:50",
+      "summary": "# 黄总《龙虾4兄弟的AI协作实战》架构分析  > 来源：https://x.com/servasyy_ai/status/2020475413055885385 > 分析时间：2026-02-20 "
+    },
+    "e8d8761dce7e": {
+      "file": "03_语义记忆/Claude-Skills资源大库.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34.218597",
+      "summary": "# Claude Skills 资源大库（2026-02-19）  来源：https://x.com/0xluffy_eth/status/2024424223369023890  ## 10 个高质"
+    },
+    "ada450876a10": {
+      "file": "03_语义记忆/OpenViking-2026-02-24-最新进展.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T00:44:21.147411",
+      "summary": "# OpenViking 最新进展 - 2026-02-24  ## 版本更新：v0.1.18（2026-02-23）  ### 重大新功能 1. **Claude Memory Plugin 示例*"
+    },
+    "86cf25a31527": {
+      "file": "03_语义记忆/外部顾问-架构审视报告.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T00:36:43",
+      "summary": "# 架构审视报告：Kitt AI 助手系统架构分析  **报告时间**：2026-02-19 01:15   **分析人员**：资深AI系统架构顾问   **审查范围**：Kitt v3.0 整体架构"
+    },
+    "f021ee20c4ca": {
+      "file": "03_语义记忆/Seedance2.0提示词方法论v2.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34.276735",
+      "summary": "# Seedance 2.0 提示词方法论 v2（2026-02-21 升级）  来源：全网最新教程整合（CSDN 80+提示词指南、官方59套提示词拆解、redreamality完整Playbook"
+    },
+    "f2dec28f5078": {
+      "file": "03_语义记忆/AI-Agent架构理念集.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34.201918",
+      "summary": "# 语义记忆：AI Agent 架构理念集（2026-02-18 四篇合并）  ## 来源 @Yonah_x / @QingQ77 / @YuLin807 / @AI_Jasonyu（2026-02-"
+    },
+    "5131bc17ef92": {
+      "file": "03_语义记忆/厂长写作风格分析.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-15T17:58:34",
+      "summary": "# 语义记忆：厂长写作风格分析  ## 样本来源 1. 公司大会演讲稿（精心准备版） 2. 九大机制分享（语音转文字，即兴版）  ## 核心风格特征  ### 语言混搭（最大特色） - 文言 + 白话"
+    },
+    "bb36d842365d": {
+      "file": "03_语义记忆/媒介双面表达系统.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-16T00:28:31",
+      "summary": "# 媒介双面表达系统  来源：dontbesilent 105万字分析（Claude Code，2026-02-15） 数据：10,672条推文（76万字）+ 163篇短视频文稿（29万字）  ## "
+    },
+    "92e6db1be0d8": {
+      "file": "03_语义记忆/AI生图-镜面倒影构图法.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34.211570",
+      "summary": "# 语义记忆：AI 生图 - 镜面倒影构图法  ## 来源 VoxCat（2026-02-20 收藏消化）  ## 核心公式 镜面倒影 = 镜面载体 + 分割线位置 + 反射级别(L1-L4) + 虚"
+    },
+    "11d85f88b43f": {
+      "file": "03_语义记忆/PPT生成方案.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T11:24:10",
+      "summary": "# 语义记忆：PPT 生成方案  ## 核心方案：Reveal.js Skill - **来源**：memory/收藏/2026-02-18-RevealJS-Skill.md - **仓库**：gi"
+    },
+    "c8ab437db4e1": {
+      "file": "03_语义记忆/本地视觉方案.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T11:31:16",
+      "summary": "# 语义记忆：本地视觉与云边协同方案  ## 核心理念：小模型吹哨，大模型干活 利用轻量级本地模型（如 RF-DETR）进行 7x24 小时低功耗监控，发现特定事件（Trigger）后，唤醒云端多模态"
+    },
+    "f86ca044bc9b": {
+      "file": "03_语义记忆/Seedance审查绕过策略.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34.283484",
+      "summary": "# 语义记忆：Seedance 2.0 审查绕过策略  ## 来源 @john87445528（2026-02-17），2026-02-21 消化  ## 背景 Seedance 2.0 加强审查，大"
+    },
+    "dfe644f75cf1": {
+      "file": "03_语义记忆/写作风格Skill方法论.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-15T17:51:29",
+      "summary": "# 语义记忆：写作风格Skill方法论  来源：宝玉(@dotey) 2026-02-15  ## 核心洞察 - \"去AI味\"提示词是错的方向——所有人用同一套去AI味提示词，产出又变成新的同质化（A"
+    },
+    "ac9a002c8de9": {
+      "file": "03_语义记忆/Gemini-Flash性能测试-红太阳场景.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34.240290",
+      "summary": "# Gemini Flash 性能测试 — 红太阳数控场景  > 测试时间：2026-02-20 00:14 CST > 目标模型：google/gemini-2.5-flash > 实际情况：**G"
+    },
+    "8cb8a1a8a69d": {
+      "file": "03_语义记忆/多Agent协作架构模式.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T03:20:43",
+      "summary": "# 多Agent协作架构模式  ## 两种范式对比  | 维度 | 计划经济式（中心编排） | 自由市场式（协议协调） | |------|----------------------|-------"
+    },
+    "6c18cba4b22b": {
+      "file": "03_语义记忆/OpenClaw社区玩法参考.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-17T12:02:17",
+      "summary": "# 语义记忆：OpenClaw 社区玩法参考  ## Command Centre 概念 (2026-02-17) - 来源: @woocassh (Lukasz) 推文 - 概念: \"The Ope"
+    },
+    "b6a16f80f602": {
+      "file": "03_语义记忆/Claude-Skill幻灯片制作实战.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T17:00:43",
+      "summary": "# Claude Skill 幻灯片制作实战 — @wshuyi 踩坑总结  > 来源：https://wangshuyi.substack.com/p/claude-skill-1c7 > 作者：王"
+    },
+    "6d8eef438d1f": {
+      "file": "03_语义记忆/工具雷达-202602.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34.296952",
+      "summary": "# 语义记忆：工具雷达（2026-02-18 批次）  ## 来源 2026-02-18 收藏 6 篇工具类，2026-02-21 消化  ## 开发工具 | 工具 | 用途 | Agent 友好度 "
+    },
+    "ca6a0b800d1a": {
+      "file": "03_语义记忆/OpenClaw运维模式.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-15T17:20:32",
+      "summary": "# 语义记忆：OpenClaw 运维模式  ## gateway token mismatch 处理 当 gateway 重启后 config.patch 报 token mismatch： - 不要"
+    },
+    "5d2ead2f98a5": {
+      "file": "03_语义记忆/OpenClaw架构最佳实践.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-17T13:50:28",
+      "summary": "# 语义记忆：OpenClaw Agent 架构最佳实践  来源：3篇文章综合（Paolo Perazzo / Skywork / Shawn Harris，2026-02）  ## 四层架构（Pao"
+    },
+    "8418c507fda3": {
+      "file": "03_语义记忆/GCP免费VPS方案.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34.228836",
+      "summary": "# 语义记忆：GCP 永久免费 VPS  ## 来源 @gxjdian（2026-02-20 收藏消化）  ## 要点 - GCP 提供永久免费 VPS（e2-micro，美国区域） - 可部署 Op"
+    },
+    "a4db68e0a70c": {
+      "file": "03_语义记忆/AI风格复刻方法论_TaXue案例.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-17T09:54:37",
+      "summary": " ## 3. 社区验证 (Validation) 来源：[@berryxia](https://x.com/berryxia/status/2023529235445678387) (2026-02-"
+    },
+    "8937ec96324c": {
+      "file": "03_语义记忆/Anthropic-Claude提示词指南-2026.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T02:02:30",
+      "summary": "# Anthropic Claude 提示词工程指南 2026  > 来源：platform.claude.com 官方文档 | 整理日期：2026-02-19  ## 核心技巧（按效果排序）  ##"
+    },
+    "8cb9d319aec8": {
+      "file": "03_语义记忆/B2B获客开源工具深度解析.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-17T21:40:07",
+      "summary": "# 语义记忆：B2B获客开源工具深度解析  ## 核心趋势：AI驱动的自动化获客系统  2026年B2B获客工具已从传统CRM转向AI驱动的自动化系统，开源项目在这一领域发展迅速。  ## 三大核心开"
+    },
+    "621b4f32d4d0": {
+      "file": "03_语义记忆/Seedance2.0实战运镜提示词案例.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T01:47:23.847587",
+      "summary": "# 语义记忆：Seedance 2.0 实战运镜提示词案例  > 来源：X用户分享（2026-02-22） > 标签：Seedance 2.0、运镜词、视频生成、电影剧照、实战案例  ## 核心玩法："
+    },
+    "aac4c964fe98": {
+      "file": "03_语义记忆/OpenViking-2026-02-19-updates.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T10:07:58",
+      "summary": "# OpenViking 项目动态追踪 - 2026年2月19日  ## GitHub 近期发布  ### v0.1.17 (2026-02-14) - 最新稳定版本 - 包含多项稳定性改进  ###"
+    },
+    "eda2a10f52a0": {
+      "file": "03_语义记忆/宝玉_提示词救不了平庸的AI写作.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-20T18:25:51",
+      "summary": "# 宝玉《提示词救不了平庸的 AI 写作》  > 来源：https://x.com/dotey/status/2024553209352622214 > 作者：宝玉 @dotey > 时间：2026-"
+    },
+    "708ad70e72fd": {
+      "file": "03_语义记忆/OpenClaw多Agent协作架构.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T23:09:07",
+      "summary": "# OpenClaw 多 Agent 协作架构解析  > 来源：余温 @gkxspace — https://x.com/gkxspace/status/2024093343118950463 > 日"
+    },
+    "9dbc176cad14": {
+      "file": "03_语义记忆/网络环境策略.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-15T17:20:20",
+      "summary": "# 语义记忆：网络环境策略  ## 环境特征 - 位置：中国济南 - 代理工具：Clash Verge（非 Surge） - 混合端口：127.0.0.1:7897 - TUN 模式：不稳定，IPv4"
+    },
+    "c81ca67dc366": {
+      "file": "03_语义记忆/LobsterAI竞品分析.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34.247265",
+      "summary": "# 语义记忆：LobsterAI 竞品分析  ## 来源 AI进化论-花生 实测（2026-02-19），2026-02-20 收藏消化  ## 定位 中国版 OpenClaw 平替，面向非技术用户（"
+    },
+    "adfd617a2c66": {
+      "file": "03_语义记忆/跨AI工具协作方案.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34.306283",
+      "summary": "# 语义记忆：跨 AI 工具协作方案  ## 来源 @blackanger（2026-02-18 收藏，2026-02-21 消化）  ## 核心方法 - 创建 `~/.teams/projects/"
+    },
+    "f620ac3408e8": {
+      "file": "03_语义记忆/AI-Agent框架最新进展-2026.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:10:07.472688",
+      "summary": "# AI Agent 框架最新进展（2025-2026）  > 研究时间：2026-02-22   > 研究范围：LangChain/LangGraph v1.0+、CrewAI、AutoGen v0"
+    },
+    "1d58fc422c10": {
+      "file": "03_语义记忆/_INDEX.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T23:07:56.277404",
+      "summary": "# 03_语义记忆索引 > 语义记忆库（中文目录）  | 文件 | 摘要 | |---|---| | 2026-02-17-github学习.md | 记忆管理与学习 | | AI-Agent架构理念"
+    },
+    "c4970ebe3094": {
+      "file": "03_语义记忆/AI图片生成-双参考图锁定提示词架构.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T01:31:08.713082",
+      "summary": "# 语义记忆：AI图片生成 - 双参考图高精度锁定提示词架构  > 来源：X用户 @john87445528 / @adam38363368936（2026-02-22） > 标签：提示词工程、图片生"
+    },
+    "b9c0925d90ab": {
+      "file": "03_语义记忆/OpenClaw架构深度分析.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34",
+      "summary": "# 语义记忆：OpenClaw 架构深度分析（v2026.2.15）  ## 来源 @0xCherry 架构吐槽 + @BillTheInvestor 更新解读（2026-02-18 收藏，2026-"
+    },
+    "7e7ec2f13e0f": {
+      "file": "03_语义记忆/多Agent协作架构.md",
+      "tags": [
+        "03_语义记忆"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:23:34",
+      "summary": "# 语义记忆：多 Agent 协作架构（Common Ground + Issue Driven）  ## 来源 @LotusDecoder / @ii_posts（Common Ground）+ @"
+    },
+    "773ca364aa18": {
+      "file": "05_日常日志/模型绩效.md",
+      "tags": [
+        "05_日常日志"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T20:43:04.505910",
+      "summary": "# 模型绩效追踪（ELO 评分系统）  > 每次任务完成后更新，用于激励/淘汰决策  ## 当前 ELO 排名  | 模型 | 当前 ELO | 段位 | 主要任务类型 | |------|-----"
+    },
+    "2bfa4de8f192": {
+      "file": "05_日常日志/2026-02-18.md",
+      "tags": [
+        "05_日常日志"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T00:22:52",
+      "summary": "# 2026-02-18  ## 系统状态 - SiliconFlow DeepSeek V3.2 持续高频限流（日志: `API rate limit reached`），23:11-23:19 时"
+    },
+    "0340f033f824": {
+      "file": "05_日常日志/2026-02-19.md",
+      "tags": [
+        "05_日常日志"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T21:26:38",
+      "summary": "# 2026-02-19 关键事件  ## ai-web-agent v0.4 全通 - 豆包 Web 自动化完整链路跑通：发消息→等回复→hover触发工具栏→Playwright原生click复制"
+    },
+    "15447a798d90": {
+      "file": "05_日常日志/2026-02-22.md",
+      "tags": [
+        "05_日常日志"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T23:30:13.682367",
+      "summary": "# 2026-02-22 工作日志（最终版）  ## 今日成果总结  ### 1. Discord 配置 ✅ - Bot 接入：@Kitt - 配对完成 - 通道正常运行  ### 2. 模型配置优化"
+    },
+    "6c54bbb2c0fe": {
+      "file": "05_日常日志/2026-02-16.md",
+      "tags": [
+        "05_日常日志"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-16T23:28:15",
+      "summary": "# 2026-02-16 关键事件  ## Discord 完整接入 - Bot: Kitt, Guild: Kitt HQ (1472845763007611044) - 7个频道已建：日常/工作/"
+    },
+    "4387048616f0": {
+      "file": "05_日常日志/2026-02-23.md",
+      "tags": [
+        "05_日常日志"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T22:56:09.649130",
+      "summary": "# 2026-02-23 工作日志  ## 完成 1. **实战提示词系统 v2** — 17 个场景全覆盖（朋友圈/通报/报告/评语/视频脚本/客户沟通/管理能力），保存在 `memory/02_知"
+    },
+    "8e9e2a376bf1": {
+      "file": "05_日常日志/2026-02-17.md",
+      "tags": [
+        "05_日常日志"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-17T13:51:32",
+      "summary": "# 2026-02-17 关键事件  ## X 解读 3 条 1. @cathrynlavery — 5 文件构建 AI 员工（SOUL/IDENTITY/USER/TOOLS/MEMORY），\"NO"
+    },
+    "e0d5ab15256d": {
+      "file": "05_日常日志/2026-02-24.md",
+      "tags": [
+        "05_日常日志"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-24T22:57:41.832173",
+      "summary": "# 2026-02-24 工作日志  ## 完成 1. **云端备份修复** — 解决 iCloud 双向同步导致的套娃问题，同步脚本升级到 v4.0（先清后写+exclude-from），launc"
+    },
+    "ebd6121cb008": {
+      "file": "05_日常日志/2026-02-20.md",
+      "tags": [
+        "05_日常日志"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-20T23:06:38",
+      "summary": "# 2026-02-20 日志  ## 今日完成  ### 1. 提示词系统搭建完成 - **3 个方向全部学习完成**：   - 营销提示词（落地页、SEO、广告投放）→ `memory/02_知识"
+    },
+    "729b6b8f303e": {
+      "file": "05_日常日志/2026-02-21.md",
+      "tags": [
+        "05_日常日志"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T19:25:11",
+      "summary": "# 2026-02-21 日志  ## 今日完成  ### 1. 系统稳定性修复 - 凌晨代理抽风导致 Discord/WhatsApp/Telegram 全断，厂长手动重启 - Fallback 链"
+    },
+    "55bfc9733f9f": {
+      "file": "05_日常日志/2026-02-15.md",
+      "tags": [
+        "05_日常日志"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T18:16:20.188633",
+      "summary": "# 2026-02-15  - 09:50 用户上线，通过 webchat (openclaw-tui) 打招呼 - 09:53 WhatsApp gateway 重新连接 - 09:58 用户要求发"
+    },
+    "cfcc2a6a9596": {
+      "file": "05_日常日志/任务清单_2026-02-23.md",
+      "tags": [
+        "05_日常日志"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T20:32:46.598124",
+      "summary": "# 任务清单与优先级排序（2026-02-23 20:40）  ## P0 - 核心任务（厂长建造 Kitt 的初衷）  ### 1. 文稿生成系统 ⭐⭐⭐⭐⭐ **目标**：帮厂长完成日常文稿工作 "
+    },
+    "19a6f44f55e9": {
+      "file": "02_知识库/Agent配置说明v2.0.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T19:35:14",
+      "summary": "# Agent 配置说明 v2.0  ## Agent 列表  ### 1. main（默认） - **模型：** Gemini 2.5 Flash - **职责：** 快速整理抓取的文章和学习资料，"
+    },
+    "6c7ff9a0de1b": {
+      "file": "02_知识库/电工岗位作业指导书.summary.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T17:04:57",
+      "summary": "# 电工岗位可视化作业指导书 — 摘要 > 原文件: 红太阳电工岗位可视化作业指导书.docx > 适用: 全系列振动刀设备  ## 作业流程（12步标准化） 1. 持证上岗（特种作业操作证），熟悉电"
+    },
+    "ba0cae16cc2d": {
+      "file": "02_知识库/Windows部署指南.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T13:28:53.478693",
+      "summary": "# Windows 部署 Kitt 指南  ## 前提 - Windows 10/11 - 已安装 Git - 已安装 Node.js 22+  ## 步骤  ### 1. 安装 OpenClaw `"
+    },
+    "0ddd786e92e6": {
+      "file": "02_知识库/OpenClaw-Cron-Heartbeat-Compaction指南.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T02:01:08",
+      "summary": "# OpenClaw Cron / Heartbeat / Compaction 配置指南  > 来源：docs.openclaw.ai 官方文档 | 整理日期：2026-02-19  ## 一、Cr"
+    },
+    "ecb4e016ff07": {
+      "file": "02_知识库/2026年会演讲稿.summary.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T17:03:59",
+      "summary": "# 2026年会演讲稿 — 摘要 > 原文件: 2026年会演讲稿.docx > 标题: 《2026，别让兄弟流汗又流泪》  ## 核心主题 产销一体化改革 + 质量攻坚 + 从\"游击队\"到\"正规军\""
+    },
+    "47db0ccaa130": {
+      "file": "02_知识库/实战提示词系统v2.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T13:18:59.142878",
+      "summary": "---  # 济南红太阳数控 · 厂长实战提示词系统  ---  ## A. 朋友圈文案  ---  ### A1. 产品推广（新设备/新功能）  场景：新设备上线、功能升级、技术突破时发朋友圈  输"
+    },
+    "f7a78e293d0c": {
+      "file": "02_知识库/问其他AI的问题清单.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T01:32:22",
+      "summary": "# 需要厂长帮忙问其他 AI 的问题  > 用法：运行 `~/bin/kitt-brain-export.sh clipboard` 复制大脑上下文到剪贴板，然后粘贴到对应 AI 的对话框，再加上下面"
+    },
+    "1e382dd20a3d": {
+      "file": "02_知识库/X推文深度分析_2026-02-22.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T19:07:39.834597",
+      "summary": "# X 推文深度分析（2026-02-22）  ## 推文1：ClaudeCode 工作流编排规范  **作者：** NerdC (@cryptonerdcn)   **链接：** https://x"
+    },
+    "26be9acd92cf": {
+      "file": "02_知识库/OpenClaw多Agent配置指南.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T01:54:32",
+      "summary": "# OpenClaw 多 Agent 配置指南  ## 核心概念  ### 1. 什么是 Agent？ 一个 **Agent** 是拥有完整独立环境的智能体，包含： - **工作空间 (Workspa"
+    },
+    "46e9a93fd5bb": {
+      "file": "02_知识库/openclaw-architecture.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T22:23:38",
+      "summary": "# OpenClaw 配置架构说明（2026-02-19）  ## 系统概览 - **版本**：OpenClaw 2026.2.14 - **部署**：本地 Mac（M1 16GB） - **用途**"
+    },
+    "9dc7fcb8cd5b": {
+      "file": "02_知识库/openclaw-architecture-en.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T22:24:44",
+      "summary": "# OpenClaw Configuration Architecture (2026-02-19)  ## System Overview - Version: OpenClaw 2026.2.14"
+    },
+    "364341b97591": {
+      "file": "02_知识库/文案生成提示词模板.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-20T00:08:07",
+      "summary": "# 文案生成提示词模板  > 基于 baoyu-skills 项目研究，针对红太阳数控内容IP场景定制  ## 项目背景  **红太阳数控内容IP场景**： - 制造业知识分享（数控技术、加工工艺、设"
+    },
+    "96e3ba837493": {
+      "file": "02_知识库/VibeCoding分水岭分析.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T19:40:56.094155",
+      "summary": "# Vibe Coding 分水岭分析（Roland）  **来源：** https://x.com/roland_wayneoz/status/2025369818841678031   **作者："
+    },
+    "60af96e9ff95": {
+      "file": "02_知识库/品牌标识执行通知.summary.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T17:04:46",
+      "summary": "# 关于统一红太阳设备外观品牌标识的执行通知 — 摘要 > 原文件: 关于统一红太阳设备外观品牌标识的执行通知.pdf > 发布日期: 2026-02-03  ## 三大强制规定  1. **钣金 L"
+    },
+    "d690583d54ca": {
+      "file": "02_知识库/总裁九大机制.summary.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T17:04:32",
+      "summary": "# 总裁九大机制 — 摘要 > 原文件: 《总裁九大机制》分享.pptx  ## 九大机制全景  | # | 机制 | 解决什么 | 核心观点 | |---|---|---|---| | 01 | 文"
+    },
+    "8cef25756307": {
+      "file": "02_知识库/YouTube学习频道清单.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-20T00:08:20",
+      "summary": "# YouTube 学习频道清单（2026-02-20）  来源：https://x.com/Crypto_QianXun/status/2024002192567599469  ## 制造业/工程相"
+    },
+    "974dd19cb103": {
+      "file": "02_知识库/Kitt兵团调度手册.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T17:53:32",
+      "summary": "# Kitt 兵团调度手册  ## 概述 Kitt 是调度中枢，不是执行者。所有外部操作都通过派兵完成。  ## 兵团成员  ### Scout-Perplexity - **职能**：实时搜索 + "
+    },
+    "b5ec39645e2f": {
+      "file": "02_知识库/Perplexity多模型配置指南.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T17:31:38.955985",
+      "summary": "# Perplexity 多模型配置指南  ## 当前配置（已完成）  **配置时间**: 2026-02-23 17:25   **状态**: ✅ 已配置  ### 三个常驻标签页  | 标签页 |"
+    },
+    "4b4c7235408a": {
+      "file": "02_知识库/提示词工程研究-2026.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T20:21:56",
+      "summary": "# 提示词工程研究笔记 — 2026.02.21  ## 一、业界泄露提示词对标分析  ### 数据来源 - GitHub: x1xhlol/system-prompts-and-models-of-"
+    },
+    "741f51e14ea0": {
+      "file": "02_知识库/OpenClaw多模型管理.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T00:30:44",
+      "summary": "# OpenClaw 多模型管理  ## 1. 多模型切换时的上下文/记忆管理机制  ### 上下文完整性传递 当 failover 切换模型时，**上下文是完整传递的**，因为 OpenClaw 的"
+    },
+    "c95aff8606ff": {
+      "file": "02_知识库/营销提示词模板.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-20T00:02:40",
+      "summary": "# 营销提示词模板 - 红太阳数控（CNC设备制造）  > 基于 GitHub marketingskills 项目提炼，专为 B2B 工业设备营销场景设计   > 更新时间：2026-02-20  "
+    },
+    "7ec6e0bb7cbf": {
+      "file": "02_知识库/关于统一红太阳设备外观品牌标识的执行通知.summary.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T17:08:03",
+      "summary": "# 关于统一红太阳设备外观品牌标识的执行通知 摘要  > 发文单位：济南红太阳数控有限公司 | 日期：2026年2月3日  ## 目的 提升\"红太阳\"品牌辨识度，打造差异化竞争优势。  ## 三项强制"
+    },
+    "b50667a3f9c0": {
+      "file": "02_知识库/Kitt优化方案v2.0.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T19:12:59",
+      "summary": "# Kitt v2.0 优化方案（基于今日学习）  **制定时间：** 2026-02-22 19:30   **基于：** ClaudeCode 工作流 + OpenClaw 更新 + Kitt 实"
+    },
+    "84eb35f95cdb": {
+      "file": "02_知识库/CLAUDE.md工作流完整解读.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T19:09:46.682155",
+      "summary": "# CLAUDE.md - 10x 工程师工作流（Boris Cherny）  **来源：** NerdC (@cryptonerdcn) 转发   **原作者：** Boris Cherny（Ant"
+    },
+    "b415a40a2ed2": {
+      "file": "02_知识库/关于2025年度人为严重损坏配件及操作事故的考核通报.summary.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T17:08:18",
+      "summary": "# 关于2025年度人为严重损坏配件及操作事故的考核通报 摘要  > 发文单位：济南红太阳数控有限公司 > 注：原文为扫描件（图片PDF），以下为图像识别提取内容，部分细节可能不完全准确  ## 文件"
+    },
+    "d0ada072032a": {
+      "file": "02_知识库/2025考核通报.summary.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T17:05:08",
+      "summary": "# 关于2025年度人为严重损坏配件及操作事故的考核通报 — 摘要 > 原文件: 关于2025年度人为严重损坏配件及操作事故的考核通报.pdf > 注意: 该 PDF 为扫描件/图片格式，无法提取文字"
+    },
+    "01069eecc82a": {
+      "file": "02_知识库/红太阳企业文化手册.summary.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T17:04:14",
+      "summary": "# 红太阳数控企业文化手册 — 摘要 > 原文件: 红太阳数控企业文化手册.docx > 版本: 2026  ## 使命 以智慧精工，成就客户工业梦想。  ## 愿景 打造受人尊敬的智能裁切品牌，构建"
+    },
+    "7b44febe2295": {
+      "file": "02_知识库/《总裁九大机制》分享.summary.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T17:07:47",
+      "summary": "# 《总裁九大机制》分享 摘要  > 来源：Kimi AI 整理 | 日期：2025/08/01  ## 九大机制全景  | 序号 | 机制 | 定位 | 解决的问题 | |------|------"
+    },
+    "c1dbc632daf4": {
+      "file": "02_知识库/红太阳电工岗位可视化作业指导书.summary.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T17:07:11",
+      "summary": "# 红太阳电工岗位可视化作业指导书 摘要  > 文件代号：HTY-004 | 编制：步国军 | 日期：2025.4.19  ## 基本信息 - 岗位：电工 - 适用机型：全系列机型 - 上工序：配电板"
+    },
+    "5be227d0df81": {
+      "file": "02_知识库/大脑注入方案.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-19T01:31:23",
+      "summary": "# 大脑注入方案：如何把 Kitt 记忆发给其他 AI  ## 目标 让 Grok/Gemini/千问/Kimi 等外部 AI 读取 Kitt 的核心记忆，以\"外部顾问\"身份提供改进建议。  ## 方"
+    },
+    "37ef9617c5b5": {
+      "file": "02_知识库/视频制作提示词模板.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-20T00:06:07",
+      "summary": "# 视频制作提示词模板库  > 针对红太阳数控的工业制造场景优化，适用于抖音/TikTok/YouTube等平台  ---  ## 模板 1：15秒产品展示脚本（抖音/TikTok）  ### 场景说"
+    },
+    "d6aa8a38eb10": {
+      "file": "02_知识库/OpenClaw-QA.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T12:20:00",
+      "summary": "# OpenClaw 社区 QA 精选  ## 来源 - Site: https://ythx-101.github.io/openclaw-qa/ - Author: Community / @Yu"
+    },
+    "935db01cc248": {
+      "file": "02_知识库/OpenClaw史诗级更新完整解读.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T19:09:01.683235",
+      "summary": "# OpenClaw 史诗级更新完整解读（Annie 所长）  **来源：** https://x.com/web3annie/status/2025471025962783039   **作者：**"
+    },
+    "a74af55cc27c": {
+      "file": "02_知识库/Kitt-v2.0升级方案.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T10:38:36",
+      "summary": "# Kitt v2.0 升级日志与 Coze 智能客服完整配置指南 (HTY CNC版)  日期：2026-02-20 来源：Gemini 3 Pro 在 NotebookLM 中生成  ## 一、K"
+    },
+    "36d7d153d2ce": {
+      "file": "02_知识库/Seedance2.0提示词速查手册.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-21T15:02:03",
+      "summary": "# Seedance 2.0 提示词速查手册（2026-02-21 Scout 整理）  > 来源：Scout（豆包）深度搜索 + 15篇资料综合整理  ## 万能公式  **主体 + 动作 + 场景"
+    },
+    "9a4e92c698bf": {
+      "file": "02_知识库/OpenClaw多Agent玩法分析.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T19:39:20.802465",
+      "summary": "# OpenClaw 多 Agent 玩法分析（sitin）  **来源：** https://x.com/sitinme/status/2025435006819336311   **作者：** s"
+    },
+    "530ddb94415c": {
+      "file": "02_知识库/营销案例库_RAG.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:50:07",
+      "summary": "# 营销案例库（降本增效话术 + 客户案例）  > 自动同步自 ChromaDB | 2026-02-22 02:50 | 22 条记录   ## 记录 1 来源: company_profile  "
+    },
+    "dbab4d3eae77": {
+      "file": "02_知识库/_INDEX.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-23T23:07:56.274503",
+      "summary": "# 02_知识库索引 > 结构化知识库，供 Kitt 快速查阅  | 文件 | 摘要 | |---|---| | 2025考核通报.summary.md | 待补充摘要 | | 2026年会演讲稿.s"
+    },
+    "58483f52261d": {
+      "file": "02_知识库/红太阳数控企业文化手册.summary.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-18T17:02:58",
+      "summary": "# 红太阳数控企业文化手册 摘要  > RED SUN CNC CULTURE CODE (2026)  ## 序言 红太阳不只是制造冰冷机器的工厂，而是一群有情义、有梦想的人共同修行的道场。对外成就"
+    },
+    "66173a5e0101": {
+      "file": "02_知识库/管理学习/制造业数字化转型-2026.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-22T02:50:52.483346",
+      "summary": "# 制造业数字化转型实战指南（2025-2026） ## 对标 HTYCNC 战略机制  > 研究时间：2026年2月   > 适用对象：50-200人规模 CNC 精密加工厂   > 核心方法：诊断"
+    },
+    "1a4140a84421": {
+      "file": "02_知识库/文学/滕王阁序.md",
+      "tags": [
+        "02_知识库"
+      ],
+      "priority": 5,
+      "created_at": "2026-02-20T09:39:26",
+      "summary": "# 《滕王阁序》（唐·王勃）  ## 核心价值 不仅是辞藻华丽的骈文巅峰，更是**“怀才不遇但志气不坠”**的心理建设范本。对于管理者而言，是提升**逆商**和**心力**的绝佳素材。  ## 记忆逻"
+    }
+  },
+  "tags": {},
+  "stats": {
+    "total": 167,
+    "last_gc": "2026-02-24T23:19:52.221818",
+    "last_reindex": "2026-02-24T23:19:52.196097"
+  }
+}
