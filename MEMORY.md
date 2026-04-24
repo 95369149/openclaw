@@ -156,3 +156,5 @@
 - [2026-04-24_deep_X推文摘要] 2026-04-24 X 推文摘要：今天新增内容里，真正有价值的信号集中在 4 条：
 - [2026-04-24_gbrain_daily_check] gbrain daily check — 2026-04-24：- Repo present: `/Users/apple/.openclaw/workspace/gbrain`
 - [2026-04-24_x_digest] X 情报日报 2026-04-24：抓取账号：11 个 | 通过过滤：37 条
+
+- [2026-04-24_learning_ingest] - 本轮处理文件数：2：- 新增/更新概念数：2/3
