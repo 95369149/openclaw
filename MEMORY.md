@@ -150,3 +150,9 @@
 - [2026-04-23_sino_notebooklm_study_plan] NotebookLM 陪跑式专属老师落地方案：**目标对象**：小学三年级女孩
 
 - [长方形周长_NotebookLM素材包] 长方形周长 · NotebookLM 素材包：> 适用对象：小学三年级 | 版本：v1.0 | 日期：2026-04-23
+
+### 2026-04-24 (Dream 自动整合)
+- [2026-04-24_daily_lead_collect] 每日线索自动采集报告：- 日期：2026-04-24
+- [2026-04-24_deep_X推文摘要] 2026-04-24 X 推文摘要：今天新增内容里，真正有价值的信号集中在 4 条：
+- [2026-04-24_gbrain_daily_check] gbrain daily check — 2026-04-24：- Repo present: `/Users/apple/.openclaw/workspace/gbrain`
+- [2026-04-24_x_digest] X 情报日报 2026-04-24：抓取账号：11 个 | 通过过滤：37 条
