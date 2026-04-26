@@ -165,3 +165,7 @@
 - [2026-04-25_x_digest] X 情报日报 2026-04-25：抓取账号：11 个 | 通过过滤：30 条
 
 - [2026-04-25_learning_ingest] 2026-04-25 11:00 每日知识编译：- 本轮处理文件数：3
+
+### 2026-04-26 (Dream 自动整合)
+- [2026-04-26_deep_X推文摘要] 2026-04-26 X 推文消化摘要：> 来源：`memory/ideas.md` 今日新增段落（2026-04-26 07:44，v2.0 已过滤）
+- [2026-04-26_gbrain_daily_check] gbrain daily check — 2026-04-26：- Repo: `/Users/apple/.openclaw/workspace/gbrain` exists.
