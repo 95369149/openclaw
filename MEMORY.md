@@ -173,3 +173,9 @@
 - [2026-04-26_jimmy_huashu_design学习笔记] Huashu Design 安装与学习笔记：- 时间：2026-04-26
 
 - [2026-04-26_learning_ingest] learning_ingest_batch 2026-04-26 11:00：- 本轮处理文件数：2
+
+### 2026-04-27 (Dream 自动整合)
+- [2026-04-27_daily_lead_collect] 每日线索自动采集报告 — 2026-04-27：- 执行时间: 2026-04-27 08:32:06 CST → 08:32:18 CST
+- [2026-04-27_deep_X推文摘要] 2026-04-27 X 推文消化摘要：- 任务时间：2026-04-27 07:47（Asia/Shanghai）
+- [2026-04-27_gbrain_daily_check] gbrain daily check — 2026-04-27：- Repo: `/Users/apple/.openclaw/workspace/gbrain` exists.
+- [2026-04-27_x_digest] X 情报日报 2026-04-27：抓取账号：11 个 | 通过过滤：19 条
