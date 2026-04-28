@@ -181,3 +181,8 @@
 - [2026-04-27_x_digest] X 情报日报 2026-04-27：抓取账号：11 个 | 通过过滤：19 条
 
 - [2026-04-27_learning_ingest] 2026-04-27 11:01 learning_ingest：- 本轮处理文件数：2
+
+### 2026-04-28 (Dream 自动整合)
+- [2026-04-28_daily_lead_collect] 每日线索采集报告 — 2026-04-28 (周二)：**执行时间**: 08:30 CST | **耗时**: ~2 分钟
+- [2026-04-28_deep_X推文摘要] X 情报日报 2026-04-28：> 抓取 12 账号 | 通过过滤 15 条 | 深度摘要 5 个信号
+- [2026-04-28_gbrain_daily_check] gbrain Daily Health Check — 2026-04-28 07:15 CST：**Repo:** `/Users/apple/.openclaw/workspace/gbrain` — exists ✓
