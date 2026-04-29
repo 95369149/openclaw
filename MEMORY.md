@@ -188,3 +188,9 @@
 - [2026-04-28_gbrain_daily_check] gbrain Daily Health Check — 2026-04-28 07:15 CST：**Repo:** `/Users/apple/.openclaw/workspace/gbrain` — exists ✓
 
 - [2026-04-28_learning_ingest] 2026-04-28 每日知识编译：- **处理文件数**：2
+
+### 2026-04-29 (Dream 自动整合)
+- [2026-04-29_daily_lead_collect] 每日线索采集报告 — 2026-04-29 (周三)：**执行时间**: 08:30 CST
+- [2026-04-29_deep_X推文摘要] X 情报消化日报 — 2026-04-29：> 抓取账号：11 | 通过五维过滤：24条 | 过滤后精华：7条高价值信号
+- [2026-04-29_gbrain_daily_check] gbrain Daily Health Check — 2026-04-29：**Time**: 07:21 CST
+- [2026-04-29_x_digest] X 情报日报 2026-04-29：抓取账号：11 个 | 通过过滤：24 条
