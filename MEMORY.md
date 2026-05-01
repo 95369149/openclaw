@@ -205,3 +205,6 @@
 
 ### 2026-05-01 (Dream 自动整合)
 - [2026-05-01_gbrain_daily_check] gbrain Daily Check — 2026-05-01：- **Repo**: `/Users/apple/.openclaw/workspace/gbrain` — exists, clean working tree
+
+- [2026-05-01_daily_lead_collect] 每日线索自动采集报告：**日期**: 2026-05-01 (周五, 工作日)
+- [2026-05-01_deep_X推文摘要] X 情报日报 2026-05-01：> 抓取账号：10 个 | 通过过滤：29 条 | 扫描时间 07:42
