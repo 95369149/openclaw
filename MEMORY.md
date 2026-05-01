@@ -208,3 +208,21 @@
 
 - [2026-05-01_daily_lead_collect] 每日线索自动采集报告：**日期**: 2026-05-01 (周五, 工作日)
 - [2026-05-01_deep_X推文摘要] X 情报日报 2026-05-01：> 抓取账号：10 个 | 通过过滤：29 条 | 扫描时间 07:42
+
+## Promoted From Short-Term Memory (2026-05-02)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-27.md:4:4 -->
+- 三条公开抓取链路，不走官方 X API，不需要 cookie： [score=0.822 recalls=0 avg=0.620 source=memory/2026-04-27.md:4-4]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-27.md:8:8 -->
+- curl -s "https://api.fxtwitter.com/status/<tweet_id>" [score=0.822 recalls=0 avg=0.620 source=memory/2026-04-27.md:8-8]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-27.md:10:10 -->
+- 返回 JSON，含 tweet.text、article.content.blocks [score=0.822 recalls=0 avg=0.620 source=memory/2026-04-27.md:10-10]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-27.md:14:14 -->
+- curl -s "https://r.jina.ai/http://x.com/<user>/status/<tweet_id>" [score=0.822 recalls=0 avg=0.620 source=memory/2026-04-27.md:14-14]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-27.md:16:16 -->
+- 返回 Markdown 可读文本 [score=0.822 recalls=0 avg=0.620 source=memory/2026-04-27.md:16-16]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-27.md:20:20 -->
+- curl -s "https://cdn.syndication.twimg.com/tweet-result?id=<tweet_id>&token=x" [score=0.822 recalls=0 avg=0.620 source=memory/2026-04-27.md:20-20]
+
+### 2026-05-02 (Dream 自动整合)
+- [2026-05-02_gbrain_daily_check] gbrain Daily Check — 2026-05-02 07:15 CST：- **Repo**: ✅ Present at `/Users/apple/.openclaw/workspace/gbrain`
