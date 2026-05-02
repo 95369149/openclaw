@@ -226,3 +226,6 @@
 
 ### 2026-05-02 (Dream 自动整合)
 - [2026-05-02_gbrain_daily_check] gbrain Daily Check — 2026-05-02 07:15 CST：- **Repo**: ✅ Present at `/Users/apple/.openclaw/workspace/gbrain`
+
+- [2026-05-02_deep_X推文摘要] X 推文每日消化简报 — 2026-05-02：> 来源：ideas.md v2.0 已过滤 | 扫描时间 07:42 CST
+- [2026-05-02_x_digest] X 情报日报 2026-05-02：抓取账号：11 个 | 通过过滤：46 条
