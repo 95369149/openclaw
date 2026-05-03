@@ -229,3 +229,12 @@
 
 - [2026-05-02_deep_X推文摘要] X 推文每日消化简报 — 2026-05-02：> 来源：ideas.md v2.0 已过滤 | 扫描时间 07:42 CST
 - [2026-05-02_x_digest] X 情报日报 2026-05-02：抓取账号：11 个 | 通过过滤：46 条
+
+## Promoted From Short-Term Memory (2026-05-03)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-27.md:23:23 -->
+- 优先级：FxTwitter > Jina > 其他工具（agent-reach/bird/x-to-markdown/agent-browser 均需要 cookie） [score=0.856 recalls=0 avg=0.620 source=memory/2026-04-27.md:23-23]
+
+### 2026-05-03 (Dream 自动整合)
+- [2026-05-03_deep_X推文摘要] X 情报日报 2026-05-03（周日）：> 抓取时间：09:00 CST | 监控账号：10 个 | 通过过滤：13 条
+- [2026-05-03_gbrain_daily_check] gbrain Daily Health Check — 2026-05-03：**Status**: ⚠️ Update available
