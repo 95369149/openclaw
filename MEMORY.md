@@ -246,3 +246,7 @@
 - [2026-05-04_xiaoxiaodong01_提示词倒序抓取落地] @xiaoxiaodong01 提示词相关倒序抓取落地：抓取时间：2026-05-04
 - [2026-05-04_xiaoxiaodong01_最近一周提示词资产提纯] @xiaoxiaodong01 最近一周提示词资产提纯：生成时间：2026-05-04
 - [2026-05-04_zhongying14_AI人像Prompt拍摄方案框架] AI 人像 Prompt 拍摄方案框架｜麻酱AI实验室：来源：`https://x.com/zhongying14/status/2050973647548866765`
+
+### 2026-05-07 (Dream 自动整合)
+- [red_sun_ai_project_validation_template] 红太阳 AI 项目验证模板（借鉴 codex-startup-pressure-test-skill）：> 核心思想：在写代码前，先验证 idea 是不是幻觉。
+- [x_digest_optimization] X 情报日报优化方案：1. **0-10 分评分机制**
