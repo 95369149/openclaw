@@ -256,3 +256,6 @@
 ### 2026-05-08 (Dream 自动整合)
 - [2026-05-08_kitt_anthropic_skill_guide_精要] Anthropic 官方《Skill 构建完全指南》33 页 · 精要 + Kitt 系统优化清单：- 日期：2026-05-08
 - [2026-05-08_kitt_md2wechat_skill_评估] md2wechat-skill · 公众号自动化 CLI（极客杰尼） · 评估报告：- 日期：2026-05-08
+
+### 2026-05-09 (Dream 自动整合)
+- [2026-05-09_kitt_notebooklm_skill_P0优化与归档] notebooklm-kitt Skill P0 优化 + 废弃目录归档：- 日期：2026-05-09 00:30 GMT+8
