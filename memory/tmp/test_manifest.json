@@ -1,1 +1,0 @@
-{"schema_version":"1.0","task_id":"test_001","status":"done","files":[{"path":"/Users/apple/.openclaw/workspace/memory/tmp/test_manifest.md","action":"overwrite","encoding":"utf-8","content":"# 测试文件\n这是 apply_manifest.py 的测试。"}],"summary":"测试成功","notes":""}
